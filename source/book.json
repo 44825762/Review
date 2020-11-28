@@ -1,0 +1,44 @@
+{
+   "author": "GUORONG LI <44825762@163.com>",
+   "title": "计算机知识总结",
+   "description": "一路走来，总结自己在计算机方面需要用到的一些知识，温故而知新，也是极好的",
+   "plugins":[ 
+      "anchors",
+      "search-pro",
+      "back-to-top-button",
+      "livereload",
+      "chapter-fold",
+      "splitter",
+      "hide-element",
+      "pageview-count",
+      "tbfed-pagefooter",
+      "katex",
+      "github-buttons",
+      "alerts",
+      "sharing"
+      
+
+   ],
+   "pluginsConfig": {
+      "tbfed-pagefooter": {
+         "copyright": "Copyright &copy GUORONG LI 2020",
+         "modify_label": "该文件修订时间：",
+         "modify_format": "YYYY-MM-DD HH:mm:ss"
+     },
+      "hide-element": {
+          "elements": [".gitbook-link"]
+      },
+     "github-buttons": {
+      "repo": "44825762/Review",
+      "types": [
+          "star",
+          "watch",
+          "fork"
+      ],
+      "size": "small"
+      },
+      "theme-default": {
+        "showLevel": true
+    }
+  }
+}
