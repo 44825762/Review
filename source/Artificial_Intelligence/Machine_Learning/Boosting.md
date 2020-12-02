@@ -1,6 +1,26 @@
+#### 本页目录
 
-
-
+* [集成学习](#集成学习)
+    * [Boosting 方法 - 模型融合](#Boosting%20方法%20-%20模型融合)
+        * [Boosting 简介](#Boosting%20简介)
+        * [Forward Stagewise Additive Modeling - 前向分步加法模型](#Forward%20Stagewise%20Additive%20Modeling%20-%20前向分步加法模型)
+        * [四大 Boosting 算法](#四大%20Boosting%20算法)
+        * [Adaboost (Adaptive Boosting) 算法](#Adaboost)
+            * [adaboost 算法流程](#adaboost%20算法流程)
+            * [adaboost 误差界分析](#adaboost%20误差界分析)
+            * [adaboost 案例分析](#adaboost%20案例分析)
+        * [GBDT(Gradient Boosting Decision Tree) 梯度提升](#GBDT)
+            * [GBDT特征选择](#GBDT特征选择)
+            * [GBDT回归树](#GBDT回归树)
+            * [GBDT分类树](#GBDT分类树)
+            * [GBDT 例题](#GBDT%20例题)
+        * [XGBoost](#XGBoost)
+            * [GBDT特征选择](#GBDT特征选择)
+            * [XGBoost 与 GBDT 区别于联系](#XGBoost%20与%20GBDT%20区别于联系)
+            * [XGBoost原理](#XGBoost原理)
+            * [XGBoost推导](#XGBoost推导)
+            * [XGBoost 例题](#XGBoost%20例题)
+            * [XGBoost 高频题 ](#XGBoost%20高频题)
 
 ----
 ## 集成学习
@@ -140,7 +160,107 @@ L2Boosting全称：Least Squares Boosting；该算法由Buhlmann和Yu在2003年�
     * Shrinkage (算法的一个重要演进分枝，目前大部分源码都按该版本实现）
     * 理解它如何用于搜索排序则需要额外理解RankNet概念，之后便功德圆满。
 
-#### Regression Decision Tree(DT) 回归树
+* GBDT通过多轮迭代,每轮迭代产生一个弱分类器，每个分类器在上一轮分类器的残差基础上进行训练。 弱分类器一般会选择为CART TREE（也就是分类回归树）。
+* 每一轮预测和实际值有`残差`，下一轮根据残差再进行预测，最后将所有预测相加，就是结果。
+* GBDT中的树都是`回归树`，`不是分类树`，这点对理解GBDT相当重要（尽管`GBDT调整后也可用于分类但不代表GBDT的树是分类树`）。
+
+![GBDT 1](ML_img/gbdt_1.png)
+![GBDT 2](ML_img/gbdt_2.png)
+
+#### GBDT特征选择
+
+![GBDT 3](ML_img/gbdt_3.png)
+
+#### GBDT回归树
+
+![GBDT 4](ML_img/gbdt_4.png)
+![GBDT 5](ML_img/gbdt_5.png)
+![GBDT 6](ML_img/gbdt_6.png)
+![GBDT 7](ML_img/gbdt_7.png)
+
+#### GBDT分类树
+
+![GBDT 8](ML_img/gbdt_8.png)
+![GBDT 9](ML_img/gbdt_9.png)
+![GBDT 10](ML_img/gbdt_10.png)
+![GBDT 11](ML_img/gbdt_11.png)
+[多分类例题及代码实现](https://www.cnblogs.com/bnuvincent/p/9693190.html)
+
+#### GBDT 例题
+[例题1](https://blog.csdn.net/qq_22238533/article/details/79199605)
+* 李航 统计学习例题：
+![GBDT 12](ML_img/gbdt_12.png)
+![GBDT 13](ML_img/gbdt_13.png)
+![GBDT 14](ML_img/gbdt_14.png)
+
+-----
+
+### XGBoost
+
+#### XGBoost 与 GBDT 区别于联系
+
+![XGBoost 1](ML_img/xgboost_1.png)
+
+#### XGBoost原理
+
+![XGBoost 2](ML_img/xgboost_2.png)
+![XGBoost 3](ML_img/xgboost_3.png)
+![XGBoost 4](ML_img/xgboost_4.png)
+![XGBoost 5](ML_img/xgboost_5.png)
+![XGBoost 6](ML_img/xgboost_6.png)
+![XGBoost 7](ML_img/xgboost_7.png)
+![XGBoost 8](ML_img/xgboost_8.png)
+(https://blog.csdn.net/qq_22238533/article/details/79477547)
+
+#### XGBoost推导
+(https://zhuanlan.zhihu.com/p/92837676)
+
+![XGBoost 9](ML_img/xgboost_9.png)
+![XGBoost 10](ML_img/xgboost_10.png)
+![XGBoost 11](ML_img/xgboost_11.png)
+![XGBoost 12](ML_img/xgboost_12.png)
+![XGBoost 13](ML_img/xgboost_13.png)
+![XGBoost 14](ML_img/xgboost_14.png)
+![XGBoost 15](ML_img/xgboost_15.png)
+![XGBoost 16](ML_img/xgboost_16.png)
+![XGBoost 17](ML_img/xgboost_17.png)
+![XGBoost 18](ML_img/xgboost_18.png)
+![XGBoost 19](ML_img/xgboost_19.png)
+![XGBoost 20](ML_img/xgboost_20.png)
+![XGBoost 21](ML_img/xgboost_21.png)
+![XGBoost 22](ML_img/xgboost_22.png)
+![XGBoost 23](ML_img/xgboost_23.png)
+![XGBoost 24](ML_img/xgboost_24.png)
+
+
+
+#### XGBoost 例题
+(https://www.jianshu.com/p/ac1c12f3fba1)
+
+#### XGBoost 高频题
+
+![XGBoost 25](ML_img/xgboost_25.png)
+![XGBoost 26](ML_img/xgboost_26.png)
+![XGBoost 27](ML_img/xgboost_27.png)
+![XGBoost 28](ML_img/xgboost_28.png)
+![XGBoost 29](ML_img/xgboost_29.png)
+![XGBoost 30](ML_img/xgboost_30.png)
+![XGBoost 31](ML_img/xgboost_31.png)
+![XGBoost 32](ML_img/xgboost_32.png)
+![XGBoost 33](ML_img/xgboost_33.png)
+![XGBoost 34](ML_img/xgboost_34.png)
+![XGBoost 35](ML_img/xgboost_35.png)
+![XGBoost 36](ML_img/xgboost_36.png)
+![XGBoost 37](ML_img/xgboost_37.png)
+![XGBoost 38](ML_img/xgboost_38.png)
+![XGBoost 39](ML_img/xgboost_39.png)
+![XGBoost 40](ML_img/xgboost_40.png)
+
+------
+
+
+
+
 
 
 

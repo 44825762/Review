@@ -1,0 +1,2303 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Supervised machine learning algorithms · 计算机知识总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="GUORONG LI <44825762@163.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Unsupervised.html" />
+    
+    
+    <link rel="prev" href="ML_intro.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"44825762/Review","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">第一章 基础知识</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../basic/">
+            
+                <a href="../../basic/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../basic/network/">
+            
+                <a href="../../basic/network/">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../basic/network/HTTP.html">
+            
+                <a href="../../basic/network/HTTP.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    HTTP 协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../basic/network/HTTPS.html">
+            
+                <a href="../../basic/network/HTTPS.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    HTTP over SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../basic/network/TCP.html">
+            
+                <a href="../../basic/network/TCP.html">
+            
+                    
+                        <b>1.2.1.3.</b>
+                    
+                    TCP 协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../basic/network/UDP.html">
+            
+                <a href="../../basic/network/UDP.html">
+            
+                    
+                        <b>1.2.1.4.</b>
+                    
+                    UDP 协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../basic/network/IP.html">
+            
+                <a href="../../basic/network/IP.html">
+            
+                    
+                        <b>1.2.1.5.</b>
+                    
+                    IP 协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../basic/network/sub_net_computing.html">
+            
+                <a href="../../basic/network/sub_net_computing.html">
+            
+                    
+                        <b>1.2.1.6.</b>
+                    
+                    子网掩码计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../basic/network/common_port.html">
+            
+                <a href="../../basic/network/common_port.html">
+            
+                    
+                        <b>1.2.1.7.</b>
+                    
+                    常用端口相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../../basic/network/Socket-Programming-Basic.html">
+            
+                <a href="../../basic/network/Socket-Programming-Basic.html">
+            
+                    
+                        <b>1.2.1.8.</b>
+                    
+                    Socket 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../basic/algo/">
+            
+                <a href="../../basic/algo/">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../basic/algo/search.html">
+            
+                <a href="../../basic/algo/search.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    DFS BFS搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../basic/algo/Greedy.html">
+            
+                <a href="../../basic/algo/Greedy.html">
+            
+                    
+                        <b>1.2.2.2.</b>
+                    
+                    贪心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../basic/algo/DP.html">
+            
+                <a href="../../basic/algo/DP.html">
+            
+                    
+                        <b>1.2.2.3.</b>
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../basic/arch/">
+            
+                <a href="../../basic/arch/">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    体系结构与操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../basic/arch/Arch.html">
+            
+                <a href="../../basic/arch/Arch.html">
+            
+                    
+                        <b>1.2.3.1.</b>
+                    
+                    体系结构基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../basic/arch/OS.html">
+            
+                <a href="../../basic/arch/OS.html">
+            
+                    
+                        <b>1.2.3.2.</b>
+                    
+                    操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../basic/arch/Concurrency.html">
+            
+                <a href="../../basic/arch/Concurrency.html">
+            
+                    
+                        <b>1.2.3.3.</b>
+                    
+                    并发技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../basic/arch/Memory-Management.html">
+            
+                <a href="../../basic/arch/Memory-Management.html">
+            
+                    
+                        <b>1.2.3.4.</b>
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../basic/arch/Disk-And-File.html">
+            
+                <a href="../../basic/arch/Disk-And-File.html">
+            
+                    
+                        <b>1.2.3.5.</b>
+                    
+                    磁盘与文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../basic/compiler/">
+            
+                <a href="../../basic/compiler/">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    编译原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../basic/compiler/Compiler-Arch.html">
+            
+                <a href="../../basic/compiler/Compiler-Arch.html">
+            
+                    
+                        <b>1.2.4.1.</b>
+                    
+                    编译器架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../basic/design_pattern/">
+            
+                <a href="../../basic/design_pattern/">
+            
+                    
+                        <b>1.2.5.</b>
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../basic/design_pattern/OO-Basic.html">
+            
+                <a href="../../basic/design_pattern/OO-Basic.html">
+            
+                    
+                        <b>1.2.5.1.</b>
+                    
+                    面向对象基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../basic/design_pattern/GOP.html">
+            
+                <a href="../../basic/design_pattern/GOP.html">
+            
+                    
+                        <b>1.2.5.2.</b>
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../basic/database/">
+            
+                <a href="../../basic/database/">
+            
+                    
+                        <b>1.2.6.</b>
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../../basic/database/Definition.html">
+            
+                <a href="../../basic/database/Definition.html">
+            
+                    
+                        <b>1.2.6.1.</b>
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../../basic/database/SQL_basic.html">
+            
+                <a href="../../basic/database/SQL_basic.html">
+            
+                    
+                        <b>1.2.6.2.</b>
+                    
+                    SQL基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../../basic/database/SQL_adv.html">
+            
+                <a href="../../basic/database/SQL_adv.html">
+            
+                    
+                        <b>1.2.6.3.</b>
+                    
+                    SQL优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../../basic/database/Index.html">
+            
+                <a href="../../basic/database/Index.html">
+            
+                    
+                        <b>1.2.6.4.</b>
+                    
+                    索引 和 锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="../../basic/database/Procedure.html">
+            
+                <a href="../../basic/database/Procedure.html">
+            
+                    
+                        <b>1.2.6.5.</b>
+                    
+                    存储过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.6" data-path="../../basic/database/Transaction.html">
+            
+                <a href="../../basic/database/Transaction.html">
+            
+                    
+                        <b>1.2.6.6.</b>
+                    
+                    事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.7" data-path="../../basic/database/Formula.html">
+            
+                <a href="../../basic/database/Formula.html">
+            
+                    
+                        <b>1.2.6.7.</b>
+                    
+                    范式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../basic/scm/">
+            
+                <a href="../../basic/scm/">
+            
+                    
+                        <b>1.2.7.</b>
+                    
+                    版本控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="../../basic/scm/Git.html">
+            
+                <a href="../../basic/scm/Git.html">
+            
+                    
+                        <b>1.2.7.1.</b>
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="../../basic/scm/SVN.html">
+            
+                <a href="../../basic/scm/SVN.html">
+            
+                    
+                        <b>1.2.7.2.</b>
+                    
+                    SVN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第二章 编程语言</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../Programming_language/C++/">
+            
+                <a href="../../Programming_language/C++/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    C++ 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../Programming_language/C++/basic_C++.html">
+            
+                <a href="../../Programming_language/C++/basic_C++.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    语法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../Programming_language/++/interview_C++.md">
+            
+                <span>
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    C++面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../Programming_language/Java/">
+            
+                <a href="../../Programming_language/Java/">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Java 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../Programming_language/Java/Java_basic.html">
+            
+                <a href="../../Programming_language/Java/Java_basic.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    语法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../Programming_language/Java/Java_interview.html">
+            
+                <a href="../../Programming_language/Java/Java_interview.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    Java 面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../Programming_language/Python/">
+            
+                <a href="../../Programming_language/Python/">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Python 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../Programming_language/Python/Python_basic.html">
+            
+                <a href="../../Programming_language/Python/Python_basic.html">
+            
+                    
+                        <b>2.3.1.</b>
+                    
+                    语法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../Programming_language/Python/Python_interview.html">
+            
+                <a href="../../Programming_language/Python/Python_interview.html">
+            
+                    
+                        <b>2.3.2.</b>
+                    
+                    Python 面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../Programming_language/Matlab/">
+            
+                <a href="../../Programming_language/Matlab/">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Matlab 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../Programming_language/Matlab/Matlab_basic.html">
+            
+                <a href="../../Programming_language/Matlab/Matlab_basic.html">
+            
+                    
+                        <b>2.4.1.</b>
+                    
+                    语法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../Programming_language/Matlab/Matlab_interview.html">
+            
+                <a href="../../Programming_language/Matlab/Matlab_interview.html">
+            
+                    
+                        <b>2.4.2.</b>
+                    
+                    Matlab 面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第三章 大数据</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../Big_data/">
+            
+                <a href="../../Big_data/">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    大数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    大数据基础
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" >
+            
+                <span>
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    Hadoop
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第四章 人工智能</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../AI_intro.html">
+            
+                <a href="../AI_intro.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    AI杂谈面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ML_intro.html">
+            
+                <a href="ML_intro.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Machine learning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.2.1" data-path="Supervised.html">
+            
+                <a href="Supervised.html">
+            
+                    
+                        <b>4.2.1.</b>
+                    
+                    Supervised machine learning algorithms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="Unsupervised.html">
+            
+                <a href="Unsupervised.html">
+            
+                    
+                        <b>4.2.2.</b>
+                    
+                    Unsupervised machine learning algorithms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="Boosting.html">
+            
+                <a href="Boosting.html">
+            
+                    
+                        <b>4.2.3.</b>
+                    
+                    模型优化-集成学习(模型融合)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="Optimization.html">
+            
+                <a href="Optimization.html">
+            
+                    
+                        <b>4.2.4.</b>
+                    
+                    模型优化-Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../Deep_Learning/Deep_learning.html">
+            
+                <a href="../Deep_Learning/Deep_learning.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Deep learning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../Deep_Learning/Specific.html">
+            
+                <a href="../Deep_Learning/Specific.html">
+            
+                    
+                        <b>4.3.1.</b>
+                    
+                    Specific artificial neural networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../Model_evaluation/Evaluation.html">
+            
+                <a href="../Model_evaluation/Evaluation.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Model evaluation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../data_mining/">
+            
+                <a href="../data_mining/">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    数据挖掘 Data mining
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../data_mining/Classification.html">
+            
+                <a href="../data_mining/Classification.html">
+            
+                    
+                        <b>4.5.1.</b>
+                    
+                    Classification and Regression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="../data_mining/Calculate.html">
+            
+                <a href="../data_mining/Calculate.html">
+            
+                    
+                        <b>4.5.2.</b>
+                    
+                    计算题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../computer_vision/">
+            
+                <a href="../computer_vision/">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    计算机视觉
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" >
+            
+                <span>
+            
+                    
+                        <b>4.6.1.</b>
+                    
+                    计算机视觉基础
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.2" >
+            
+                <span>
+            
+                    
+                        <b>4.6.2.</b>
+                    
+                    传统-边缘检测
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3" >
+            
+                <span>
+            
+                    
+                        <b>4.6.3.</b>
+                    
+                    传统-图像分割
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.4" >
+            
+                <span>
+            
+                    
+                        <b>4.6.4.</b>
+                    
+                    传统-人脸识别
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.5" >
+            
+                <span>
+            
+                    
+                        <b>4.6.5.</b>
+                    
+                    传统-目标检测
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.6" >
+            
+                <span>
+            
+                    
+                        <b>4.6.6.</b>
+                    
+                    深度学习-图像分类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.7" >
+            
+                <span>
+            
+                    
+                        <b>4.6.7.</b>
+                    
+                    深度学习-目标检测
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.8" >
+            
+                <span>
+            
+                    
+                        <b>4.6.8.</b>
+                    
+                    深度学习-图片/视频检索
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.9" >
+            
+                <span>
+            
+                    
+                        <b>4.6.9.</b>
+                    
+                    深度学习-语义分割
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../Nature_Inspired_Algorithms/">
+            
+                <a href="../Nature_Inspired_Algorithms/">
+            
+                    
+                        <b>4.7.</b>
+                    
+                    启发式算法 - Heuristic Algorithm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" >
+            
+                <span>
+            
+                    
+                        <b>4.7.1.</b>
+                    
+                    启发式搜索
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="../Nature_Inspired_Algorithms/GA.html">
+            
+                <a href="../Nature_Inspired_Algorithms/GA.html">
+            
+                    
+                        <b>4.7.2.</b>
+                    
+                    遗传算法 - genetic algorithm(GA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" >
+            
+                <span>
+            
+                    
+                        <b>4.7.3.</b>
+                    
+                    蚁群算法 - Ant Colony Optimization(ACO)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.4" >
+            
+                <span>
+            
+                    
+                        <b>4.7.4.</b>
+                    
+                    人工神经网络 - Artificial Neural Network(ANN)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.5" >
+            
+                <span>
+            
+                    
+                        <b>4.7.5.</b>
+                    
+                    粒子群算法 - Particle swarm optimization(PSO)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.6" >
+            
+                <span>
+            
+                    
+                        <b>4.7.6.</b>
+                    
+                    支持向量机 - Support Vector Machine(SVM)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.7" >
+            
+                <span>
+            
+                    
+                        <b>4.7.7.</b>
+                    
+                    朴素贝叶斯 - Naive Bayes classifier(NBC)
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../pattern_recongition/">
+            
+                <a href="../pattern_recongition/">
+            
+                    
+                        <b>4.8.</b>
+                    
+                    模式识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../NLP/">
+            
+                <a href="../NLP/">
+            
+                    
+                        <b>4.9.</b>
+                    
+                    NLP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../Recommend_System/">
+            
+                <a href="../Recommend_System/">
+            
+                    
+                        <b>4.10.</b>
+                    
+                    推荐系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第五章 AI 论文杂记</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../Paper_with_code/">
+            
+                <a href="../../Paper_with_code/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    AI 论文 State-of-The-Art
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../Paper_with_code/computer_vision/">
+            
+                <a href="../../Paper_with_code/computer_vision/">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    计算机视觉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../Paper_with_code/NLP/">
+            
+                <a href="../../Paper_with_code/NLP/">
+            
+                    
+                        <b>5.1.2.</b>
+                    
+                    NLP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../Phd/">
+            
+                <a href="../../Phd/">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    PhD 导师信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Supervised machine learning algorithms</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="&#x672C;&#x9875;&#x76EE;&#x5F55;"><a name="&#x672C;&#x9875;&#x76EE;&#x5F55;" class="plugin-anchor" href="#&#x672C;&#x9875;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x9875;&#x76EE;&#x5F55;</h4>
+<ul>
+<li><a href="#&#x6709;&#x76D1;&#x7763;&#x5B66;&#x4E60;">&#x6709;&#x76D1;&#x7763;&#x5B66;&#x4E60;</a><ul>
+<li><a href="#&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x548C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6BD4;&#x8F83;">&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x548C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6BD4;&#x8F83;</a></li>
+<li><a href="">&#x56DE;&#x5F52;&#x7B97;&#x6CD5;</a><ul>
+<li><a href="#Linear%20regression%20-%20&#x7EBF;&#x6027;&#x56DE;&#x5F52;">Linear regression - &#x7EBF;&#x6027;&#x56DE;&#x5F52; </a><ul>
+<li><a href="#&#x89E3;&#x6790;&#x6CD5;">&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x53C2;&#x6570;&#x6C42;&#x89E3;&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x89E3;&#x6790;&#x6CD5; </a></li>
+<li><a href="#&#x68AF;&#x5EA6;&#x4E0B;&#x964D;">&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x53C2;&#x6570;&#x6C42;&#x89E3;&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D; </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="">&#x5206;&#x7C7B;&#x7B97;&#x6CD5; - &#x9884;&#x6D4B;&#x7684;&#x53D8;&#x91CF;&#x662F;&#x79BB;&#x6563;&#x7684;</a><ul>
+<li><a href="#Logistic%20regression%20-%20&#x903B;&#x8F91;&#x56DE;&#x5F52;">Logistic regression - &#x903B;&#x8F91;&#x56DE;&#x5F52; </a><ul>
+<li><a href="#&#x7B80;&#x4ECB;">&#x903B;&#x8F91;&#x56DE;&#x5F52; - &#x7B80;&#x4ECB;</a></li>
+<li><a href="#&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;%20cost%20function">&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684; cost function</a></li>
+<li><a href="#&#x68AF;&#x5EA6;&#x4E0B;&#x964D;">&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x53C2;&#x6570;&#x6C42;&#x89E3;&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D; </a></li>
+<li><a href="#&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x53C2;&#x6570;&#x6C42;&#x89E3;%20&#xFF08;&#x6700;&#x5C0F;&#x5316;%20cost%20function,%20&#x6216;%20&#x6700;&#x5927;&#x5316;%20&#x6781;&#x5927;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#xFF09;">&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x53C2;&#x6570;&#x6C42;&#x89E3; &#xFF08;&#x6700;&#x5C0F;&#x5316; cost function, &#x6216; &#x6700;&#x5927;&#x5316; &#x6781;&#x5927;&#x4F3C;&#x7136;&#x51FD;&#x6570;)</a><ul>
+<li><a href="#&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;">&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;</a><ul>
+<li><a href="#&#x68AF;&#x5EA6;&#x4E0B;&#x4E95;&#x63A8;&#x5BFC;&#x8FC7;&#x7A0B;">&#x68AF;&#x5EA6;&#x4E0B;&#x4E95;&#x63A8;&#x5BFC;&#x8FC7;&#x7A0B;</a></li>
+<li><a href="#&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7684;&#x53EF;&#x884C;&#x6027;%20&#x89E3;&#x91CA;">&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7684;&#x53EF;&#x884C;&#x6027; &#x89E3;&#x91CA;</a></li>
+</ul>
+</li>
+<li><a href="#&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x725B;&#x987F;&#x6CD5;">&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x725B;&#x987F;&#x6CD5;</a><ul>
+<li><a href="#&#x725B;&#x987F;&#x6CD5;&#x63A8;&#x5BFC;">&#x725B;&#x987F;&#x6CD5;&#x63A8;&#x5BFC;</a></li>
+</ul>
+</li>
+<li><a href="#&#x6C42;&#x89E3;&#x6B63;&#x5219;&#x5316;">&#x6C42;&#x89E3;&#x6B63;&#x5219;&#x5316;</a><ul>
+<li><a href="#L1&#x6B63;&#x5219;&#x5316;">L1&#x6B63;&#x5219;&#x5316;</a></li>
+<li><a href="#L1&#x6B63;&#x5219;&#x5316;">L2&#x6B63;&#x5219;&#x5316;</a></li>
+</ul>
+</li>
+<li><a href="#&#x5E76;&#x884C;&#x5316;&#x6C42;&#x89E3;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6216;&#x725B;&#x987F;&#x6CD5;">&#x5E76;&#x884C;&#x5316; &#x6C42;&#x89E3; &#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6216;&#x725B;&#x987F;&#x6CD5;</a><ul>
+<li><a href="#&#x8BA1;&#x7B97;&#x6B65;&#x9AA4;">&#x8BA1;&#x7B97;&#x6B65;&#x9AA4;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Logistic%20regression%20-%20&#x903B;&#x8F91;&#x56DE;&#x5F52;">Softmax regression &#xFF08;SMR&#xFF09; - &#x53EF;&#x7528;&#x4E8E;&#x591A;&#x5206;&#x7C7B;</a><ul>
+<li><a href="#&#x4E00;&#x822C;&#x6B65;&#x9AA4;">SMR &#x4E00;&#x822C;&#x6B65;&#x9AA4;</a></li>
+<li><a href="#Softmax&#x5B9A;&#x4E49;">Softmax&#x5B9A;&#x4E49;</a></li>
+<li><a href="#Softmax&#x6A21;&#x578B;&#x5B9A;&#x4E49;">Softmax&#x6A21;&#x578B;&#x5B9A;&#x4E49;</a></li>
+<li><a href="#Softmax%20cost%20function%20-%20&#x5B9A;&#x4E49;&#x4E3A;%20&#x4EA4;&#x53C9;&#x71B5;">Softmax cost function - &#x5B9A;&#x4E49;&#x4E3A; &#x4EA4;&#x53C9;&#x71B5;</a></li>
+<li><a href="#Softmax%20Regression%20&#x591A;&#x5206;&#x7C7B;&#x4F8B;&#x5B50;">Softmax Regression &#x591A;&#x5206;&#x7C7B;&#x4F8B;&#x5B50;</a></li>
+<li><a href="#Softmax%20Regression%20&#x4E0E;%20logistic%20regression%20&#x7684;&#x8054;&#x7CFB;">Softmax Regression &#x4E0E; logistic regression &#x7684;&#x8054;&#x7CFB;</a></li>
+<li><a href="#Softmax%20Regression%20&#x8FC7;&#x62DF;&#x5408;&#x95EE;&#x9898;%20-%20&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x4E3A;%20%60&#x51CF;&#x5C11;&#x7279;&#x5F81;&#x6570;&#x91CF;%60%20&#x6216;%20%60&#x6B63;&#x5219;&#x5316;%60">Softmax Regression &#x8FC7;&#x62DF;&#x5408;&#x95EE;&#x9898; - &#x5904;&#x7406;&#x65B9;&#x6CD5;&#x4E3A;&#x51CF;&#x5C11;&#x7279;&#x5F81;&#x6570;&#x91CF;&#x6216;&#x6B63;&#x5219;&#x5316;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="">&#x56DE;&#x5F52;&#x5206;&#x7C7B;&#x90FD;&#x53EF;&#x4EE5;&#x7684;&#x7B97;&#x6CD5;</a><ul>
+<li><a href="#&#x51B3;&#x7B56;&#x6811;">&#x51B3;&#x7B56;&#x6811;</a><ul>
+<li><a href="#&#x51B3;&#x7B56;&#x6811;&#x5173;&#x952E;&#x95EE;&#x9898;">&#x51B3;&#x7B56;&#x6811;&#x5173;&#x952E;&#x95EE;&#x9898;</a></li>
+<li><a href="#&#x51B3;&#x7B56;&#x6811;&#x5B66;&#x4E60;">&#x51B3;&#x7B56;&#x6811;&#x5B66;&#x4E60;</a></li>
+<li><a href="#&#x51B3;&#x7B56;&#x6811;&#x4E0E;&#x6982;&#x7387;&#x5206;&#x5E03;">&#x51B3;&#x7B56;&#x6811;&#x4E0E;&#x6982;&#x7387;&#x5206;&#x5E03;</a></li>
+<li><a href="#&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6784;&#x9020;&#x7B97;&#x6CD5;">&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6784;&#x9020;&#x7B97;&#x6CD5;</a></li>
+<li><a href="#&#x51B3;&#x7B56;&#x6811;&#x7684;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;">&#x51B3;&#x7B56;&#x6811;&#x7684;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;</a></li>
+<li><a href="#ID%203&#x7B97;&#x6CD5;">ID3 &#x7B97;&#x6CD5;</a><ul>
+<li><a href="#ID3%20&#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;">ID3 &#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;</a></li>
+</ul>
+</li>
+<li><a href="#C4.5%20&#x7B97;&#x6CD5;">C4.5 &#x7B97;&#x6CD5;</a><ul>
+<li><a href="#C4.5%20&#x7B97;&#x6CD5;&#x6539;&#x8FDB;">C4.5 &#x7B97;&#x6CD5;&#x6539;&#x8FDB;</a></li>
+<li><a href="#C4.5%20&#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;">C4.5 &#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;</a></li>
+</ul>
+</li>
+<li><a href="#CART&#x6811;">CART&#x6811;</a><ul>
+<li><a href="#CART%20&#x5206;&#x7C7B;&#x6811;&#x6811;%20&#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;">CART &#x5206;&#x7C7B;&#x6811;&#x6811; &#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;</a></li>
+<li><a href="#CART&#x5206;&#x7C7B;&#x6811;&#x5BF9;&#x4E8E;&#x8FDE;&#x7EED;&#x7279;&#x5F81;&#x548C;&#x79BB;&#x6563;&#x7279;&#x5F81;&#x7684;&#x5904;&#x7406;">CART&#x5206;&#x7C7B;&#x6811;&#x5BF9;&#x4E8E;&#x8FDE;&#x7EED;&#x7279;&#x5F81;&#x548C;&#x79BB;&#x6563;&#x7279;&#x5F81;&#x7684;&#x5904;&#x7406;</a></li>
+<li><a href="#CART&#x5206;&#x7C7B;&#x6811;&#x7B97;&#x6CD5;">CART&#x5206;&#x7C7B;&#x6811;&#x7B97;&#x6CD5;</a></li>
+<li><a href="#CART&#x56DE;&#x5F52;&#x6811;&#x7B97;&#x6CD5;">CART&#x56DE;&#x5F52;&#x6811;&#x7B97;&#x6CD5;</a></li>
+<li><a href="#CART&#x6811;&#x7B97;&#x6CD5;&#x7684;&#x526A;&#x679D;">CART&#x6811;&#x7B97;&#x6CD5;&#x7684;&#x526A;&#x679D;</a></li>
+<li><a href="#CART&#x56DE;&#x5F52;&#x6811;&#x7B97;&#x6CD5;">CART&#x56DE;&#x5F52;&#x6811;&#x7B97;&#x6CD5;</a></li>
+<li><a href="#CART&#x4E2D;%20&#x7C7B;&#x522B;&#x4E0D;&#x5E73;&#x8861;%20&#x95EE;&#x9898;">CART&#x4E2D; &#x7C7B;&#x522B;&#x4E0D;&#x5E73;&#x8861; &#x95EE;&#x9898;</a></li>
+<li><a href="#CART&#x6811;&#x7F3A;&#x70B9;">CART&#x6811;&#x7F3A;&#x70B9;</a></li>
+</ul>
+</li>
+<li><a href="#&#x591A;&#x53D8;&#x91CF;&#x51B3;&#x7B56;&#x6811;_&#x659C;&#x51B3;&#x7B56;&#x6811;(OC1&#x7B97;&#x6CD5;">&#x591A;&#x53D8;&#x91CF;&#x51B3;&#x7B56;&#x6811;-&#x659C;&#x51B3;&#x7B56;&#x6811;(OC1&#x7B97;&#x6CD5;)</a>)</li>
+<li><a href="#&#x51B3;&#x7B56;&#x6811;&#x603B;&#x7ED3;">&#x51B3;&#x7B56;&#x6811;&#x603B;&#x7ED3;</a></li>
+<li><a href="#&#x51B3;&#x7B56;&#x6811;&#x4F8B;&#x5B50;">&#x51B3;&#x7B56;&#x6811;&#x4F8B;&#x5B50;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x3010;k-Nearest Neighbors (KNN)&#x3011;(&#x5F85;&#x8865;&#x5145;)</li>
+<li>&#x3010;&#x6734;&#x7D20;&#x8D1D;&#x53F6;&#x65AF;&#x3011;</li>
+<li>&#x3010;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60; - CNN &#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x3011;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="&#x6709;&#x76D1;&#x7763;&#x5B66;&#x4E60;"><a name="&#x6709;&#x76D1;&#x7763;&#x5B66;&#x4E60;" class="plugin-anchor" href="#&#x6709;&#x76D1;&#x7763;&#x5B66;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6709;&#x76D1;&#x7763;&#x5B66;&#x4E60;</h2>
+<ul>
+<li><p>&#x56DE;&#x5F52;&#x7B97;&#x6CD5; - &#x9884;&#x6D4B;&#x7684;&#x53D8;&#x91CF;&#x662F;&#x8FDE;&#x7EED;&#x7684;</p>
+<ul>
+<li>linear regression - &#x7EBF;&#x6027;&#x56DE;&#x5F52;</li>
+</ul>
+</li>
+<li><p>&#x5206;&#x7C7B;&#x7B97;&#x6CD5; - &#x9884;&#x6D4B;&#x7684;&#x53D8;&#x91CF;&#x662F;&#x79BB;&#x6563;&#x7684;</p>
+<ul>
+<li>logistic regression - &#x903B;&#x8F91;&#x56DE;&#x5F52; - &#xFF08;&#x7EDF;&#x8BA1;&#x65B9;&#x6CD5;&#xFF09;</li>
+<li>Softmax regression - &#x53EF;&#x7528;&#x4E8E;&#x591A;&#x5206;&#x7C7B;</li>
+<li>Decision Tree -  &#x51B3;&#x7B56;&#x6811;</li>
+<li>SVM - &#x652F;&#x6301;&#x5411;&#x91CF; - &#xFF08;&#x51E0;&#x4F55;&#x65B9;&#x6CD5;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x548C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6BD4;&#x8F83;"><a name="&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x548C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6BD4;&#x8F83;" class="plugin-anchor" href="#&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x548C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6BD4;&#x8F83;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x548C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6BD4;&#x8F83;</h3>
+<ul>
+<li>&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x56DE;&#x5F52;&#x95EE;&#x9898;&#xFF0C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x867D;&#x7136;&#x540D;&#x5B57;&#x53EB;&#x56DE;&#x5F52;&#xFF0C;&#x4F46;&#x662F;&#x66F4;&#x591A;&#x7528;&#x4E8E;&#x5206;&#x7C7B;&#x95EE;&#x9898;</li>
+<li>&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x8981;&#x6C42;&#x56E0;&#x53D8;&#x91CF;&#x662F;<code>&#x8FDE;&#x7EED;&#x6027;&#x6570;&#x503C;&#x53D8;&#x91CF;</code>&#xFF0C;&#x800C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x8981;&#x6C42;&#x56E0;&#x53D8;&#x91CF;&#x662F;<code>&#x79BB;&#x6563;&#x7684;&#x53D8;&#x91CF;</code></li>
+<li>&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x8981;&#x6C42;&#x81EA;&#x53D8;&#x91CF;&#x548C;&#x56E0;&#x53D8;&#x91CF;&#x5448;&#x7EBF;&#x6027;&#x5173;&#x7CFB;&#xFF0C;&#x800C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x4E0D;&#x8981;&#x6C42;&#x81EA;&#x53D8;&#x91CF;&#x548C;&#x56E0;&#x53D8;&#x91CF;&#x5448;&#x7EBF;&#x6027;&#x5173;&#x7CFB;</li>
+<li>&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x53EF;&#x4EE5;&#x76F4;&#x89C2;&#x7684;&#x8868;&#x8FBE;<code>&#x81EA;&#x53D8;&#x91CF;&#x548C;&#x56E0;&#x53D8;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;</code>&#xFF0C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x5219;&#x65E0;&#x6CD5;&#x8868;&#x8FBE;&#x53D8;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;</li>
+</ul>
+<h3 id="linear-regression---&#x7EBF;&#x6027;&#x56DE;&#x5F52;"><a name="linear-regression---&#x7EBF;&#x6027;&#x56DE;&#x5F52;" class="plugin-anchor" href="#linear-regression---&#x7EBF;&#x6027;&#x56DE;&#x5F52;"><i class="fa fa-link" aria-hidden="true"></i></a>Linear regression - &#x7EBF;&#x6027;&#x56DE;&#x5F52;</h3>
+<ul>
+<li>&#x7ED9;&#x5B9A;&#x6570;&#x636E;&#x96C6;D={(x1, y1), (x2, y2), ...}&#xFF0C;&#x6211;&#x4EEC;&#x8BD5;&#x56FE;&#x4ECE;&#x6B64;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x5B66;&#x4E60;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#xFF0C;&#x8FD9;&#x4E2A;&#x6A21;&#x578B;&#x5C3D;&#x53EF;&#x80FD;&#x51C6;&#x786E;&#x5730;&#x53CD;&#x5E94;x(i)&#x548C;y(i)&#x7684;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#xFF0C;&#x5C31;&#x662F;&#x5C5E;&#x6027;(x)&#x7684;&#x7EBF;&#x6027;&#x7EC4;&#x5408;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x8868;&#x793A;&#x4E3A;&#xFF1A;</li>
+</ul>
+<p><img src="ML_img/3.png" alt="linear regression"></p>
+<ul>
+<li><p>&#x901A;&#x4FD7;&#x7684;&#x7406;&#x89E3;&#xFF1A;x(i)&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4E2A;&#x5C5E;&#x6027;&#xFF08;&#x4F8B;&#x5982;&#x897F;&#x74DC;&#x4E66;&#x4E2D;&#x7684;&#x8272;&#x6CFD;&#xFF0C;&#x6839;&#x8482;&#xFF1B;Andrew ng&#x793A;&#x4F8B;&#x4E2D;&#x7684;&#x623F;&#x5C4B;&#x9762;&#x79EF;&#xFF0C;&#x5367;&#x5BA4;&#x6570;&#x91CF;&#x7B49;&#xFF09;&#xFF0C;theta(&#x6216;&#x8005;w/b)&#xFF0C;&#x5C31;&#x662F;&#x5BF9;&#x5E94;&#x5C5E;&#x6027;&#x7684;&#x53C2;&#x6570;&#xFF08;&#x6216;&#x8005;&#x6743;&#x91CD;&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x6839;&#x636E;&#x5DF2;&#x6709;&#x6570;&#x636E;&#x96C6;&#x6765;&#x6C42;&#x5F97;&#x5C5E;&#x6027;&#x7684;&#x53C2;&#x6570;&#xFF08;&#x76F8;&#x5F53;&#x4E8E;&#x6C42;&#x5F97;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x6A21;&#x578B;&#x6765;&#x5BF9;&#x4E8E;&#x65B0;&#x7684;&#x8F93;&#x5165;&#x6216;&#x8005;&#x65E7;&#x7684;&#x8F93;&#x5165;&#x6765;&#x8FDB;&#x884C;&#x9884;&#x6D4B;&#xFF08;&#x6216;&#x8005;&#x8BC4;&#x4F30;&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x4ECE;&#x4E0B;&#x56FE;&#x6765;&#x76F4;&#x89C2;&#x7406;&#x89E3;&#x4E00;&#x4E0B;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x4F18;&#x5316;&#x7684;&#x76EE;&#x6807;&#x2014;&#x2014;&#x56FE;&#x4E2D;&#x7EBF;&#x6BB5;&#x8DDD;&#x79BB;&#xFF08;&#x5E73;&#x65B9;&#xFF09;&#x7684;&#x5E73;&#x5747;&#x503C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6700;&#x5C0F;&#x5316;&#x5230;&#x5206;&#x5272;&#x9762;&#x7684;&#x8DDD;&#x79BB;&#x548C;&#x3002;</p>
+</li>
+<li><p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x6211;&#x4EEC;&#x5C3D;&#x91CF;&#x4F7F;&#x5F97;f(xi)&#x63A5;&#x8FD1;&#x4E8E;yi&#xFF0C;&#x90A3;&#x4E48;&#x95EE;&#x9898;&#x6765;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x8861;&#x91CF;&#x4E8C;&#x8005;&#x7684;&#x5DEE;&#x522B;&#xFF1F;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#xFF08;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#x7684;&#x51E0;&#x4F55;&#x610F;&#x4E49;&#x5C31;&#x662F;&#x6B27;&#x6C0F;&#x8DDD;&#x79BB;&#xFF09;&#x6700;&#x5C0F;&#x4E8C;&#x4E58;&#x6CD5;&#x3002;&#x6700;&#x5C0F;&#x4E8C;&#x4E58;&#x6CD5;&#x5373;&#x4E3A;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570; &#xFF08;loss function&#xFF09;&#x3002;</p>
+</li>
+</ul>
+<p><img src="ML_img/6.png" alt="linear regression 2"></p>
+<ul>
+<li>&#x8FD9;&#x91CC;&#xFF0C;&#x5C06;&#x4E0A;&#x5F0F;&#x4E2D;&#x7684; b &#x4E5F;&#x5411;&#x91CF;&#x5316;&#xFF0C;&#x5438;&#x7EB3;&#x5230; w &#x4E2D;&#x3002;</li>
+</ul>
+<p><img src="ML_img/linear_regression_2.png" alt="linear regression 2"></p>
+<ul>
+<li>&#x6B64;&#x65F6;&#xFF0C;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x7684;&#x76EE;&#x6807;&#x5C31;&#x662F;&#x6C42;&#x5F97;</li>
+</ul>
+<p><img src="ML_img/4.png" alt="linear regression 4"></p>
+<ul>
+<li><p>&#x8FD9;&#x91CC;&#xFF0C;argmin&#x662F;&#x6307;&#x6C42;&#x5F97;&#x6700;&#x5C0F;&#x503C;&#x65F6;&#x7684;w,b&#x7684;&#x53D6;&#x503C;</p>
+</li>
+<li><p>&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5B8C;&#x6210;&#x6C42;&#x89E3;&#xFF0C;&#x5F53;&#x7EF4;&#x5EA6;&#x4E0D;&#x9AD8;&#x65F6;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x89E3;&#x6790;&#x6CD5;&#x3002;&#x5F53;&#x5904;&#x7406;&#x9AD8;&#x7EAC;&#x5EA6;&#x6570;&#x636E;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6C42;&#x89E3;&#x3002;</p>
+<ul>
+<li><h4 id="&#x89E3;&#x6790;&#x6CD5;"><a name="&#x89E3;&#x6790;&#x6CD5;" class="plugin-anchor" href="#&#x89E3;&#x6790;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6790;&#x6CD5;</h4>
+<p><img src="ML_img/5.png" alt="linear regression 5"></p>
+<ul>
+<li>E&#x662F;&#x5173;&#x4E8E; (w,b)&#x7684;&#x51F8;&#x51FD;&#x6570;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x503C;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x6240;&#x6C42;&#x5373;&#x4E3A;E&#x4E3A;&#x6700;&#x5C0F;&#x662F;&#x7684; (w,b) &#x53D6;&#x503C;&#x3002;
+  <img src="ML_img/tu_func.png" alt="tu function"></li>
+<li>&#x5BF9;&#x4E8E;&#x51F8;&#x51FD;&#x6570;E&#x5173;&#x4E8E;w,b&#x5BFC;&#x6570;&#x90FD;&#x4E3A;&#x96F6;&#x65F6;&#xFF0C;&#x5C31;&#x5F97;&#x5230;&#x4E86;&#x6700;&#x4F18;&#x89E3;&#x3002;</li>
+<li>&#x82E5;&#x662F;&#x4E00;&#x7EF4;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x5206;&#x522B;&#x5BF9;w,b&#x6C42;&#x5BFC;&#xFF0C;&#x4EE4;&#x7B49;&#x5F0F;&#x4E3A;0&#xFF0C;&#x5373;&#x53EF;&#x8BA1;&#x7B97;&#x3002;</li>
+<li>&#x82E5;&#x662F;&#x591A;&#x7EF4;&#x6570;&#x636E;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x77E9;&#x9635;&#x3002;</li>
+<li>&#x6B64;&#x65F6;&#xFF0C;&#x89E3;&#x6790;&#x89E3;&#x4E3A;&#xFF1A;
+  <img src="ML_img/7.png" alt="linear regression 7"></li>
+</ul>
+<p><img src="ML_img/8.png" alt="linear regression 8"></p>
+</li>
+</ul>
+</li>
+<li><p>&#x4EE5;&#x4E0B;&#x662F;&#x591A;&#x5143;&#x7EBF;&#x6027;&#x56DE;&#x5F52; &#x6700;&#x5C0F;&#x4E8C;&#x4E58;&#x6CD5; &#x63A8;&#x5BFC;&#x8FC7;&#x7A0B;
+  <img src="ML_img/linear_formula.png" alt="linear formula"></p>
+<ul>
+<li><h4 id="&#x68AF;&#x5EA6;&#x4E0B;&#x964D;"><a name="&#x68AF;&#x5EA6;&#x4E0B;&#x964D;" class="plugin-anchor" href="#&#x68AF;&#x5EA6;&#x4E0B;&#x964D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x68AF;&#x5EA6;&#x4E0B;&#x964D;</h4>
+<ul>
+<li>&#x7531;&#x4E0A;&#x4E00;&#x6B65;&#xFF0C;&#x6839;&#x636E;&#x6700;&#x5C0F;&#x4E8C;&#x4E58;&#x6CD5;&#x5F97;&#x5230; cost function (&#x635F;&#x5931;&#x51FD;&#x6570;)&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x65B9;&#x6CD5;&#x6C42;&#x89E3;&#x635F;&#x5931;&#x51FD;&#x6570;&#x6700;&#x5C0F;&#x503C;&#x65F6;&#x7684;&#x53C2;&#x6570;&#x503C;&#x3002;&#xFF08;&#x6700;&#x4F18;&#x5316;&#x95EE;&#x9898;&#xFF09;</li>
+<li>&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5206;&#x522B;&#x4E3A;<ul>
+<li>batch gradient descent - &#x6279;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;: &#x6743;&#x91CD;&#x7684;&#x66F4;&#x65B0;&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x5168;&#x90E8;&#x8BAD;&#x7EC3;&#x96C6;&#x7684;&#x6570;&#x636E;</li>
+<li>Stochastic Gradient Descent, &#xFF08;SGD&#xFF09; - &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;: &#x5F53;&#x6570;&#x636E;&#x91CF;&#x7279;&#x522B;&#x5927;&#x65F6;&#xFF0C;<code>&#x5728;&#x8BA1;&#x7B97;&#x6700;&#x5FEB;&#x4E0B;&#x964D;&#x65B9;&#x5411;&#x65F6;&#xFF0C;&#x968F;&#x673A;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x626B;&#x63CF;&#x6240;&#x6709;&#x7684;&#x8BAD;&#x7EC3;&#x6570;&#x636E;</code>&#xFF0C;&#x8FD9;&#x6837;&#x5C31;<code>&#x52A0;&#x5FEB;&#x4E86;&#x8FED;&#x4EE3;&#x901F;&#x5EA6;</code>&#x3002; &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x5E76;&#x4E0D;&#x662F;&#x6CBF;&#x7740; cost function &#x4E0B;&#x964D;&#x6700;&#x5FEB;&#x7684;&#x65B9;&#x5411;&#x8FDB;&#x884C;&#xFF0C;&#x662F;&#x4EE5;&#x9707;&#x8361;&#x7684;&#x65B9;&#x5F0F;&#x8D8B;&#x5411;&#x6781;&#x5C0F;&#x70B9;&#x3002;</li>
+<li>&#x6279;&#x91CF;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;
+ <img src="ML_img/gradient_descent_3.png" alt="Gradient Descent 3">
+ <img src="ML_img/gradient_descent_4.png" alt="Gradient Descent 4"></li>
+<li>&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;
+  <img src="ML_img/gradient_descent_5.png" alt="Gradient Descent 5"></li>
+</ul>
+</li>
+</ul>
+<p><img src="ML_img/gradient_descent.png" alt="Gradient Descent 1">
+<img src="ML_img/gradient_descent_2.png" alt="Gradient Descent 2"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="logistic-regression---&#x903B;&#x8F91;&#x56DE;&#x5F52;"><a name="logistic-regression---&#x903B;&#x8F91;&#x56DE;&#x5F52;" class="plugin-anchor" href="#logistic-regression---&#x903B;&#x8F91;&#x56DE;&#x5F52;"><i class="fa fa-link" aria-hidden="true"></i></a>Logistic regression - &#x903B;&#x8F91;&#x56DE;&#x5F52;</h3>
+<ul>
+<li>Logistic &#x56DE;&#x5F52;&#x7684;&#x672C;&#x8D28;&#x662F;&#xFF1A;&#x5047;&#x8BBE;&#x6570;&#x636E;&#x670D;&#x4ECE;&#x8FD9;&#x4E2A;&#x5206;&#x5E03;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x6781;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;&#x505A;&#x53C2;&#x6570;&#x7684;&#x4F30;&#x8BA1;&#x3002;</li>
+<li><p>&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;&#x601D;&#x8DEF;&#x662F;&#xFF0C;&#x5148;&#x62DF;&#x5408;&#x51B3;&#x7B56;&#x8FB9;&#x754C;(&#x4E0D;&#x5C40;&#x9650;&#x4E8E;&#x7EBF;&#x6027;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x9879;&#x5F0F;)&#xFF0C;&#x518D;&#x5EFA;&#x7ACB;&#x8FD9;&#x4E2A;&#x8FB9;&#x754C;&#x4E0E;&#x5206;&#x7C7B;&#x7684;&#x6982;&#x7387;&#x8054;&#x7CFB;&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x4E86;&#x4E8C;&#x5206;&#x7C7B;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x6982;&#x7387;</p>
+</li>
+<li><p>&#x5B83;&#x8F93;&#x51FA;&#x4E00;&#x4E2A; 0 &#x5230; 1 &#x4E4B;&#x95F4;&#x7684;&#x79BB;&#x6563;&#x4E8C;&#x503C;&#x7ED3;&#x679C;&#x3002;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5B83;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x662F; 1 &#x5C31;&#x662F; 0&#x3002;</p>
+</li>
+<li>Logistic &#x56DE;&#x5F52;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x5176;&#x56FA;&#x6709;&#x7684; logistic &#x51FD;&#x6570;&#x4F30;&#x8BA1;&#x6982;&#x7387;&#xFF0C;&#x6765;&#x8861;&#x91CF;&#x56E0;&#x53D8;&#x91CF;&#xFF08;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x9884;&#x6D4B;&#x7684;&#x6807;&#x7B7E;&#xFF09;&#x4E0E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x81EA;&#x53D8;&#x91CF;&#xFF08;&#x7279;&#x5F81;&#xFF09;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x3002;</li>
+</ul>
+<p><img src="ML_img/logistic_regression_1.png" alt="Logistic regression 1"></p>
+<ul>
+<li><p>&#x903B;&#x8F91;&#x56DE;&#x5F52;<code>&#x4F18;&#x70B9;</code></p>
+<ul>
+<li>&#x76F4;&#x63A5;&#x5BF9;&#x5206;&#x7C7B;&#x7684;&#x6982;&#x7387;&#x5EFA;&#x6A21;&#xFF0C;&#x65E0;&#x9700;&#x5B9E;&#x73B0;&#x5047;&#x8BBE;&#x6570;&#x636E;&#x5206;&#x5E03;&#xFF0C;&#x4ECE;&#x800C;&#x907F;&#x514D;&#x4E86;&#x5047;&#x8BBE;&#x5206;&#x5E03;&#x4E0D;&#x51C6;&#x786E;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF1B;</li>
+<li>&#x4E0D;&#x4EC5;&#x53EF;&#x9884;&#x6D4B;&#x51FA;&#x7C7B;&#x522B;&#xFF0C;&#x8FD8;&#x80FD;&#x5F97;&#x5230;&#x8BE5;&#x9884;&#x6D4B;&#x7684;&#x6982;&#x7387;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E00;&#x4E9B;&#x5229;&#x7528;&#x6982;&#x7387;&#x8F85;&#x52A9;&#x51B3;&#x7B56;&#x7684;&#x4EFB;&#x52A1;&#x5F88;&#x6709;&#x7528;&#xFF1B;</li>
+<li>&#x5BF9;&#x6570;&#x51E0;&#x7387;&#x51FD;&#x6570;&#x662F;&#x4EFB;&#x610F;&#x9636;&#x53EF;&#x5BFC;&#x7684;&#x51F8;&#x51FD;&#x6570;&#xFF0C;&#x6709;&#x8BB8;&#x591A;&#x6570;&#x503C;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x6C42;&#x51FA;&#x6700;&#x4F18;&#x89E3;&#x3002;</li>
+<li>&#x5B9E;&#x73B0;&#x7B80;&#x5355;&#xFF0C;&#x5E7F;&#x6CDB;&#x7684;&#x5E94;&#x7528;&#x4E8E;&#x5DE5;&#x4E1A;&#x95EE;&#x9898;&#x4E0A;&#xFF1B;</li>
+<li>&#x5206;&#x7C7B;&#x65F6;&#x8BA1;&#x7B97;&#x91CF;&#x975E;&#x5E38;&#x5C0F;&#xFF0C;&#x901F;&#x5EA6;&#x5F88;&#x5FEB;&#xFF0C;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x4F4E;&#xFF1B;</li>
+<li>&#x4FBF;&#x5229;&#x7684;&#x89C2;&#x6D4B;&#x6837;&#x672C;&#x6982;&#x7387;&#x5206;&#x6570;&#xFF1B;</li>
+<li>&#x5BF9;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x800C;&#x8A00;&#xFF0C;&#x591A;&#x91CD;&#x5171;&#x7EBF;&#x6027;&#x5E76;&#x4E0D;&#x662F;&#x95EE;&#x9898;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;L2&#x6B63;&#x5219;&#x5316;&#x6765;&#x89E3;&#x51B3;&#x8BE5;&#x95EE;&#x9898;&#xFF1B;</li>
+<li>&#x8BA1;&#x7B97;&#x4EE3;&#x4EF7;&#x4E0D;&#x9AD8;&#xFF0C;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#x548C;&#x5B9E;&#x73B0;&#xFF1B;</li>
+</ul>
+</li>
+<li><p><code>&#x7F3A;&#x70B9;</code></p>
+<ul>
+<li>&#x5F53;&#x7279;&#x5F81;&#x7A7A;&#x95F4;&#x5F88;&#x5927;&#x65F6;&#xFF0C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;&#x6027;&#x80FD;&#x4E0D;&#x662F;&#x5F88;&#x597D;&#xFF1B;</li>
+<li>&#x5BB9;&#x6613;<code>&#x6B20;&#x62DF;&#x5408;</code>&#xFF0C;&#x4E00;&#x822C;&#x51C6;&#x786E;&#x5EA6;&#x4E0D;&#x592A;&#x9AD8;</li>
+<li>&#x4E0D;&#x80FD;&#x5F88;&#x597D;&#x5730;&#x5904;&#x7406;&#x5927;&#x91CF;&#x591A;&#x7C7B;&#x7279;&#x5F81;&#x6216;&#x53D8;&#x91CF;&#xFF1B;</li>
+<li>&#x53EA;&#x80FD;&#x5904;&#x7406;&#x4E24;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF08;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x884D;&#x751F;&#x51FA;&#x6765;&#x7684;softmax&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x591A;&#x5206;&#x7C7B;&#xFF09;&#xFF0C;&#x4E14;<code>&#x5FC5;&#x987B;&#x7EBF;&#x6027;&#x53EF;&#x5206;</code>&#xFF1B;</li>
+<li>&#x5BF9;&#x4E8E;&#x975E;&#x7EBF;&#x6027;&#x7279;&#x5F81;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#xFF1B;</li>
+</ul>
+</li>
+</ul>
+<p><img src="ML_img/logistic_regression_2.png" alt="Logistic regression 2"></p>
+<ul>
+<li><h4 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h4>
+<img src="ML_img/logistic_regression_22.png" alt="Logistic regression 22"></li>
+</ul>
+<p><img src="ML_img/logistic_regression_3.png" alt="Logistic regression 3"></p>
+<p><img src="ML_img/logistic_regression_4.png" alt="Logistic regression 4"></p>
+<h4 id="&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;-cost-function"><a name="&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;-cost-function" class="plugin-anchor" href="#&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;-cost-function"><i class="fa fa-link" aria-hidden="true"></i></a>&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684; cost function</h4>
+<p><img src="ML_img/logistic_regression_29.png" alt="Logistic regression 29"></p>
+<p><img src="ML_img/logistic_regression_30.png" alt="Logistic regression 30"></p>
+<p><img src="ML_img/logistic_regression_23.png" alt="Logistic regression 23"></p>
+<p><img src="ML_img/logistic_regression_24.png" alt="Logistic regression 24"></p>
+<p><img src="ML_img/logistic_regression_5.png" alt="Logistic regression 5"></p>
+<p><img src="ML_img/logistic_regression_31.png" alt="Logistic regression 31"></p>
+<h4 id="&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x53C2;&#x6570;&#x6C42;&#x89E3;-&#xFF08;&#x6700;&#x5C0F;&#x5316;-cost-function-&#x6216;-&#x6700;&#x5927;&#x5316;-&#x6781;&#x5927;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#xFF09;"><a name="&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x53C2;&#x6570;&#x6C42;&#x89E3;-&#xFF08;&#x6700;&#x5C0F;&#x5316;-cost-function-&#x6216;-&#x6700;&#x5927;&#x5316;-&#x6781;&#x5927;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#xFF09;" class="plugin-anchor" href="#&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x53C2;&#x6570;&#x6C42;&#x89E3;-&#xFF08;&#x6700;&#x5C0F;&#x5316;-cost-function-&#x6216;-&#x6700;&#x5927;&#x5316;-&#x6781;&#x5927;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x53C2;&#x6570;&#x6C42;&#x89E3; &#xFF08;&#x6700;&#x5C0F;&#x5316; cost function, &#x6216; &#x6700;&#x5927;&#x5316; &#x6781;&#x5927;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#xFF09;</h4>
+<p><img src="ML_img/logistic_regression_6.png" alt="Logistic regression 6"></p>
+<ul>
+<li><h5 id="&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;"><a name="&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;" class="plugin-anchor" href="#&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;</h5>
+<ul>
+<li><p><img src="ML_img/logistic_regression_7.png" alt="Logistic regression 7"></p>
+</li>
+<li><h6 id="&#x68AF;&#x5EA6;&#x4E0B;&#x4E95;&#x63A8;&#x5BFC;&#x8FC7;&#x7A0B;"><a name="&#x68AF;&#x5EA6;&#x4E0B;&#x4E95;&#x63A8;&#x5BFC;&#x8FC7;&#x7A0B;" class="plugin-anchor" href="#&#x68AF;&#x5EA6;&#x4E0B;&#x4E95;&#x63A8;&#x5BFC;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x68AF;&#x5EA6;&#x4E0B;&#x4E95;&#x63A8;&#x5BFC;&#x8FC7;&#x7A0B;</h6>
+<p><img src="ML_img/logistic_regression_25.png" alt="Logistic regression 25">
+<img src="ML_img/logistic_regression_26.png" alt="Logistic regression 26">
+<img src="ML_img/logistic_regression_27.png" alt="Logistic regression 27"></p>
+</li>
+<li><h6 id="&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7684;&#x53EF;&#x884C;&#x6027;-&#x89E3;&#x91CA;"><a name="&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7684;&#x53EF;&#x884C;&#x6027;-&#x89E3;&#x91CA;" class="plugin-anchor" href="#&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7684;&#x53EF;&#x884C;&#x6027;-&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7684;&#x53EF;&#x884C;&#x6027; &#x89E3;&#x91CA;</h6>
+<p><img src="ML_img/logistic_regression_28.png" alt="Logistic regression 28"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h5 id="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x725B;&#x987F;&#x6CD5;"><a name="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x725B;&#x987F;&#x6CD5;" class="plugin-anchor" href="#&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x725B;&#x987F;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x725B;&#x987F;&#x6CD5;</h5>
+<p>  <img src="ML_img/logistic_regression_8.png" alt="Logistic regression 8"></p>
+<ul>
+<li><h6 id="&#x725B;&#x987F;&#x6CD5;&#x63A8;&#x5BFC;"><a name="&#x725B;&#x987F;&#x6CD5;&#x63A8;&#x5BFC;" class="plugin-anchor" href="#&#x725B;&#x987F;&#x6CD5;&#x63A8;&#x5BFC;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x725B;&#x987F;&#x6CD5;&#x63A8;&#x5BFC;</h6>
+<p><img src="ML_img/logistic_regression_32.png" alt="Logistic regression 32"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x6C42;&#x89E3;&#x6B63;&#x5219;&#x5316;"><a name="&#x6C42;&#x89E3;&#x6B63;&#x5219;&#x5316;" class="plugin-anchor" href="#&#x6C42;&#x89E3;&#x6B63;&#x5219;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6C42;&#x89E3;&#x6B63;&#x5219;&#x5316;</h4>
+<ul>
+<li>&#x6B63;&#x5219;&#x5316;&#x662F;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x7B97;&#x6CD5;&#x548C;&#x601D;&#x60F3;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x4EA7;&#x751F;&#x8FC7;&#x62DF;&#x5408;&#x73B0;&#x8C61;&#x7684;&#x7B97;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x5316;&#x6765;&#x907F;&#x514D;&#x8FC7;&#x62DF;&#x5408;&#x3002;</li>
+</ul>
+<p><img src="ML_img/logistic_regression_9.png" alt="Logistic regression 9"></p>
+<ul>
+<li><h5 id="l1&#x6B63;&#x5219;&#x5316;"><a name="l1&#x6B63;&#x5219;&#x5316;" class="plugin-anchor" href="#l1&#x6B63;&#x5219;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>L1&#x6B63;&#x5219;&#x5316;</h5>
+<p>  <img src="ML_img/logistic_regression_10.png" alt="Logistic regression 10"></p>
+<ul>
+<li><p>&#x62C9;&#x666E;&#x62C9;&#x65AF;&#x5206;&#x5E03;</p>
+<p><img src="ML_img/logistic_regression_33.png" alt="Logistic regression 33"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h5 id="l2&#x6B63;&#x5219;&#x5316;"><a name="l2&#x6B63;&#x5219;&#x5316;" class="plugin-anchor" href="#l2&#x6B63;&#x5219;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>L2&#x6B63;&#x5219;&#x5316;</h5>
+<p>  <img src="ML_img/logistic_regression_11.png" alt="Logistic regression 11"></p>
+<ul>
+<li><p>&#x6B63;&#x6001;&#x5206;&#x5E03;</p>
+<p><img src="ML_img/logistic_regression_34.png" alt="Logistic regression 34"></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="ML_img/logistic_regression_12.png" alt="Logistic regression 12"></p>
+<p><img src="ML_img/logistic_regression_13.png" alt="Logistic regression 13"></p>
+<p><img src="ML_img/logistic_regression_14.png" alt="Logistic regression 14"></p>
+<p><img src="ML_img/logistic_regression_15.png" alt="Logistic regression 15"></p>
+<p><img src="ML_img/logistic_regression_16.png" alt="Logistic regression 16"></p>
+<h4 id="&#x5E76;&#x884C;&#x5316;&#x6C42;&#x89E3;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6216;&#x725B;&#x987F;&#x6CD5;"><a name="&#x5E76;&#x884C;&#x5316;&#x6C42;&#x89E3;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6216;&#x725B;&#x987F;&#x6CD5;" class="plugin-anchor" href="#&#x5E76;&#x884C;&#x5316;&#x6C42;&#x89E3;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6216;&#x725B;&#x987F;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E76;&#x884C;&#x5316;&#x6C42;&#x89E3;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6216;&#x725B;&#x987F;&#x6CD5;</h4>
+<ul>
+<li><p>&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;&#x5E76;&#x884C;&#x5316;&#x6700;&#x4E3B;&#x8981;&#x7684;&#x5C31;&#x662F;&#x5BF9;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x68AF;&#x5EA6;&#x8BA1;&#x7B97;&#x7684;&#x5E76;&#x884C;&#x5316;&#x3002;</p>
+</li>
+<li><p>&#x5E76;&#x884C; LR &#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x5728;&#x6C42;&#x89E3;&#x635F;&#x5931;&#x51FD;&#x6570;&#x6700;&#x4F18;&#x89E3;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x9488;&#x5BF9;&#x5BFB;&#x627E;&#x635F;&#x5931;&#x51FD;&#x6570;&#x4E0B;&#x964D;&#x65B9;&#x5411;&#x4E2D;&#x7684;&#x68AF;&#x5EA6;&#x65B9;&#x5411;&#x8BA1;&#x7B97;&#x4F5C;&#x4E86;&#x5E76;&#x884C;&#x5316;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x5728;&#x5229;&#x7528;&#x68AF;&#x5EA6;&#x786E;&#x5B9A;&#x4E0B;&#x964D;&#x65B9;&#x5411;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x5E76;&#x884C;&#x5316;&#x3002;</p>
+</li>
+<li><p>&#x6211;&#x4EEC;&#x770B;&#x5230;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x7684;&#x68AF;&#x5EA6;&#x5411;&#x91CF;&#x8BA1;&#x7B97;&#x4E2D;&#x53EA;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x5411;&#x91CF;&#x95F4;&#x7684;&#x70B9;&#x4E58;&#x548C;&#x76F8;&#x52A0;&#xFF0C;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5C06;&#x6BCF;&#x4E2A;&#x8FED;&#x4EE3;&#x8FC7;&#x7A0B;&#x62C6;&#x5206;&#x6210;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#x7684;&#x8BA1;&#x7B97;&#x6B65;&#x9AA4;&#xFF0C;&#x7531;&#x4E0D;&#x540C;&#x7684;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x72EC;&#x7ACB;&#x8BA1;&#x7B97;&#xFF0C;&#x7136;&#x540E;&#x5F52;&#x5E76;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x3002;</p>
+</li>
+<li><p>&#x6837;&#x672C;&#x77E9;&#x9635;&#x6309;&#x884C;&#x5212;&#x5206;&#xFF0C;&#x5C06;&#x6837;&#x672C;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x5206;&#x5E03;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x8BA1;&#x7B97;&#x8282;&#x70B9;&#xFF0C;&#x7531;&#x5404;&#x8BA1;&#x7B97;&#x8282;&#x70B9;&#x5B8C;&#x6210;&#x81EA;&#x5DF1;&#x6240;&#x8D1F;&#x8D23;&#x6837;&#x672C;&#x7684;&#x70B9;&#x4E58;&#x4E0E;&#x6C42;&#x548C;&#x8BA1;&#x7B97;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5F52;&#x5E76;&#xFF0C;&#x5219;&#x5B9E;&#x73B0;&#x4E86;&#x6309;&#x884C;&#x5E76;&#x884C;&#x7684; LR&#x3002;&#x6309;&#x884C;&#x5E76;&#x884C;&#x7684; LR &#x89E3;&#x51B3;&#x4E86;&#x6837;&#x672C;&#x6570;&#x91CF;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x4E2D;&#x4F1A;&#x5B58;&#x5728;&#x9488;&#x5BF9;&#x9AD8;&#x7EF4;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x8FDB;&#x884C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x4EC5;&#x4EC5;&#x6309;&#x884C;&#x8FDB;&#x884C;&#x5E76;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x65E0;&#x6CD5;&#x6EE1;&#x8DB3;&#x8FD9;&#x7C7B;&#x573A;&#x666F;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x56E0;&#x6B64;&#x8FD8;&#x9700;&#x8981;&#x6309;&#x5217;&#x5C06;&#x9AD8;&#x7EF4;&#x7684;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x62C6;&#x5206;&#x6210;&#x82E5;&#x5E72;&#x5C0F;&#x7684;&#x5411;&#x91CF;&#x8FDB;&#x884C;&#x6C42;&#x89E3;&#x3002;</p>
+</li>
+</ul>
+<p><img src="ML_img/logistic_regression_17.png" alt="Logistic regression 17"></p>
+<p><img src="ML_img/logistic_regression_18.png" alt="Logistic regression 18"></p>
+<ul>
+<li><h4 id="&#x8BA1;&#x7B97;&#x6B65;&#x9AA4;"><a name="&#x8BA1;&#x7B97;&#x6B65;&#x9AA4;" class="plugin-anchor" href="#&#x8BA1;&#x7B97;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BA1;&#x7B97;&#x6B65;&#x9AA4;</h4>
+<ul>
+<li>&#x5E76;&#x884C;&#x8BA1;&#x7B97;&#x603B;&#x5171;&#x4F1A;&#x88AB;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x5E76;&#x884C;&#x5316;&#x8BA1;&#x7B97;&#x6B65;&#x9AA4;&#x548C;&#x4E24;&#x4E2A;&#x7ED3;&#x679C;&#x5F52;&#x5E76;&#x6B65;&#x9AA4;</li>
+</ul>
+</li>
+</ul>
+<p><img src="ML_img/logistic_regression_19.png" alt="Logistic regression 19"></p>
+<p><img src="ML_img/logistic_regression_20.png" alt="Logistic regression 20"></p>
+<p><img src="ML_img/logistic_regression_21.png" alt="Logistic regression 21"></p>
+<hr>
+<h3 id="softmax-regression-&#xFF08;smr&#xFF09;---&#x53EF;&#x7528;&#x4E8E;&#x591A;&#x5206;&#x7C7B;"><a name="softmax-regression-&#xFF08;smr&#xFF09;---&#x53EF;&#x7528;&#x4E8E;&#x591A;&#x5206;&#x7C7B;" class="plugin-anchor" href="#softmax-regression-&#xFF08;smr&#xFF09;---&#x53EF;&#x7528;&#x4E8E;&#x591A;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>Softmax regression &#xFF08;SMR&#xFF09; - &#x53EF;&#x7528;&#x4E8E;&#x591A;&#x5206;&#x7C7B;</h3>
+<ul>
+<li>&#x4F7F;&#x7528;&#x5BF9;&#x6570;&#x7EBF;&#x6027;&#x6A21;&#x578B;</li>
+<li>softmax &#x56DE;&#x5F52;&#x662F;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;&#x4E00;&#x822C;&#x5F62;&#x5F0F;,&#x5F53;&#x7C7B;&#x522B;&#x6570;&#x4E3A; 2 &#x65F6;&#xFF0C;softmax &#x56DE;&#x5F52;&#x9000;&#x5316;&#x4E3A;&#x903B;&#x8F91;&#x56DE;&#x5F52;</li>
+<li>softmax&#x7528;&#x4E8E;&#x591A;&#x5206;&#x7C7B;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5B83;&#x5C06;&#x591A;&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x6620;&#x5C04;&#x5230;&#xFF08;0,1&#xFF09;&#x533A;&#x95F4;&#x5185;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x6982;&#x7387;&#x6765;&#x7406;&#x89E3;&#xFF0C;&#x4ECE;&#x800C;&#x6765;&#x8FDB;&#x884C;&#x591A;&#x5206;&#x7C7B;&#xFF01;</li>
+<li>&#x5728;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x5C42;&#x9690;&#x542B;&#x5C42;&#x548C;&#x8F93;&#x51FA;&#x5C42;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;logistic&#x56DE;&#x5F52;&#x6216;softmax&#x56DE;&#x5F52;&#x6A21;&#x578B;&#xFF0C;&#x4E4B;&#x524D;&#x7684;&#x5C42;&#x53EA;&#x662F;&#x4ECE;&#x539F;&#x59CB;&#x8F93;&#x5165;&#x6570;&#x636E;&#x4ECE;&#x5B66;&#x4E60;&#x7279;&#x5F81;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x5B66;&#x4E60;&#x5F97;&#x5230;&#x7684;&#x7279;&#x5F81;&#x4EA4;&#x7ED9;logistic&#x56DE;&#x5F52;&#x6216;softmax&#x56DE;&#x5F52;&#x5904;&#x7406;&#x3002;</li>
+<li>Softmax Regression&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x5F88;&#x9002;&#x5408;&#x7528;&#x6765;&#x5904;&#x7406;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x5F85;&#x5206;&#x7C7B;&#x5BF9;&#x8C61;&#x5728;&#x591A;&#x4E2A;&#x7C7B;&#x522B;&#x4E0A;&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;&#x3002;</li>
+</ul>
+<ul>
+<li><h4 id="&#x4E00;&#x822C;&#x6B65;&#x9AA4;"><a name="&#x4E00;&#x822C;&#x6B65;&#x9AA4;" class="plugin-anchor" href="#&#x4E00;&#x822C;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x822C;&#x6B65;&#x9AA4;</h4>
+<ul>
+<li>Step 1: add up the evidence of our input being in certain classes; </li>
+<li>Step 2: convert that evidence into probabilities.</li>
+</ul>
+</li>
+<li><h4 id="softmax&#x5B9A;&#x4E49;"><a name="softmax&#x5B9A;&#x4E49;" class="plugin-anchor" href="#softmax&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>Softmax&#x5B9A;&#x4E49;</h4>
+</li>
+</ul>
+<p><img src="ML_img/sr_20.png" alt="Softmax regression 20"></p>
+<p><img src="ML_img/sr_1.png" alt="Softmax regression 1"></p>
+<p><img src="ML_img/sr_4.png" alt="Softmax regression 4"></p>
+<p><img src="ML_img/sr_5.png" alt="Softmax regression 5"></p>
+<ul>
+<li><h4 id="softmax&#x6A21;&#x578B;&#x5B9A;&#x4E49;"><a name="softmax&#x6A21;&#x578B;&#x5B9A;&#x4E49;" class="plugin-anchor" href="#softmax&#x6A21;&#x578B;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>Softmax&#x6A21;&#x578B;&#x5B9A;&#x4E49;</h4>
+<ul>
+<li>&#x5047;&#x8BBE;&#x6709; K &#x4E2A;&#x5206;&#x7C7B; </li>
+</ul>
+</li>
+</ul>
+<p><img src="ML_img/sr_1.png" alt="Softmax regression 1"></p>
+<p><img src="ML_img/sr_2.png" alt="Softmax regression 2"></p>
+<p><img src="ML_img/sr_3.png" alt="Softmax regression 3"></p>
+<ul>
+<li><h4 id="softmax-cost-function---&#x5B9A;&#x4E49;&#x4E3A;-&#x4EA4;&#x53C9;&#x71B5;"><a name="softmax-cost-function---&#x5B9A;&#x4E49;&#x4E3A;-&#x4EA4;&#x53C9;&#x71B5;" class="plugin-anchor" href="#softmax-cost-function---&#x5B9A;&#x4E49;&#x4E3A;-&#x4EA4;&#x53C9;&#x71B5;"><i class="fa fa-link" aria-hidden="true"></i></a>Softmax cost function - &#x5B9A;&#x4E49;&#x4E3A; &#x4EA4;&#x53C9;&#x71B5;</h4>
+<p>  <img src="ML_img/sr_6.png" alt="Softmax regression 6"></p>
+<ul>
+<li><p>&#x5F97;&#x5230;costfunction&#x540E;&#x7684;&#x6B65;&#x9AA4;&#x53EF;&#x7528;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x5B8C;&#x6210;, &#x6839;&#x636E;&#x5B66;&#x4E60;&#x7387;&#xFF0C;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x6C42;&#x89E3;</p>
+<p>  <img src="ML_img/sr_10.png" alt="Softmax regression 10"></p>
+<p>   <img src="ML_img/sr_11.png" alt="Softmax regression 11"></p>
+<p><img src="ML_img/sr_12.png" alt="Softmax regression 12"></p>
+</li>
+</ul>
+</li>
+<li><h4 id="softmax-regression-&#x591A;&#x5206;&#x7C7B;&#x4F8B;&#x5B50;"><a name="softmax-regression-&#x591A;&#x5206;&#x7C7B;&#x4F8B;&#x5B50;" class="plugin-anchor" href="#softmax-regression-&#x591A;&#x5206;&#x7C7B;&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>Softmax Regression &#x591A;&#x5206;&#x7C7B;&#x4F8B;&#x5B50;</h4>
+</li>
+</ul>
+<p><img src="ML_img/sr_14.png" alt="Softmax regression 14"></p>
+<p><img src="ML_img/sr_15.png" alt="Softmax regression 15"></p>
+<p><img src="ML_img/sr_16.png" alt="Softmax regression 16"></p>
+<p><img src="ML_img/sr_17.png" alt="Softmax regression 17"></p>
+<p><img src="ML_img/sr_18.png" alt="Softmax regression 18"></p>
+<p><img src="ML_img/sr_19.png" alt="Softmax regression 19"></p>
+<p>&#x539F;&#x6587;&#x5730;&#x5740;<a href="https://www.kdnuggets.com/2016/07/softmax-regression-related-logistic-regression.html" target="_blank">https://www.kdnuggets.com/2016/07/softmax-regression-related-logistic-regression.html</a> </p>
+<ul>
+<li><h4 id="softmax-regression-&#x4E0E;-logistic-regression-&#x7684;&#x8054;&#x7CFB;"><a name="softmax-regression-&#x4E0E;-logistic-regression-&#x7684;&#x8054;&#x7CFB;" class="plugin-anchor" href="#softmax-regression-&#x4E0E;-logistic-regression-&#x7684;&#x8054;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>Softmax Regression &#x4E0E; logistic regression &#x7684;&#x8054;&#x7CFB;</h4>
+</li>
+</ul>
+<p><img src="ML_img/sr_7.png" alt="Softmax regression 7"></p>
+<p><img src="ML_img/sr_8.png" alt="Softmax regression 8"></p>
+<p><img src="ML_img/sr_13.png" alt="Softmax regression 13"></p>
+<ul>
+<li><h4 id="softmax-regression-&#x8FC7;&#x62DF;&#x5408;&#x95EE;&#x9898;---&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x4E3A;-&#x51CF;&#x5C11;&#x7279;&#x5F81;&#x6570;&#x91CF;-&#x6216;-&#x6B63;&#x5219;&#x5316;"><a name="softmax-regression-&#x8FC7;&#x62DF;&#x5408;&#x95EE;&#x9898;---&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x4E3A;-&#x51CF;&#x5C11;&#x7279;&#x5F81;&#x6570;&#x91CF;-&#x6216;-&#x6B63;&#x5219;&#x5316;" class="plugin-anchor" href="#softmax-regression-&#x8FC7;&#x62DF;&#x5408;&#x95EE;&#x9898;---&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x4E3A;-&#x51CF;&#x5C11;&#x7279;&#x5F81;&#x6570;&#x91CF;-&#x6216;-&#x6B63;&#x5219;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>Softmax Regression &#x8FC7;&#x62DF;&#x5408;&#x95EE;&#x9898; - &#x5904;&#x7406;&#x65B9;&#x6CD5;&#x4E3A; <code>&#x51CF;&#x5C11;&#x7279;&#x5F81;&#x6570;&#x91CF;</code> &#x6216; <code>&#x6B63;&#x5219;&#x5316;</code></h4>
+</li>
+</ul>
+<p><img src="ML_img/sr_9.png" alt="Softmax regression 9"></p>
+<hr>
+<h3 id="&#x51B3;&#x7B56;&#x6811;"><a name="&#x51B3;&#x7B56;&#x6811;" class="plugin-anchor" href="#&#x51B3;&#x7B56;&#x6811;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51B3;&#x7B56;&#x6811;</h3>
+<ul>
+<li>&#x57FA;&#x672C;&#x601D;&#x60F3;&#xFF1A;&#x91C7;&#x7528;&#x81EA;&#x9876;&#x5411;&#x4E0B;&#x7684;&#x9012;&#x5F52;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x4FE1;&#x606F;&#x71B5;&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x5EA6;&#x91CF;&#x6761;&#x4EF6;&#xFF09;&#x4E3A;&#x5EA6;&#x91CF;&#x6765;&#x6784;&#x9020;&#x4E00;&#x8BFE;&#x71B5;&#x503C;&#x4E0B;&#x964D;&#x6700;&#x5FEB;&#x7684;&#x6570;&#xFF0C;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5904;&#x7684;&#x71B5;&#x503C;&#x4E3A;0&#xFF0C;&#x6B64;&#x65F6;&#x6BCF;&#x4E2A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x4E2D;&#x7684;&#x5B9E;&#x4F8B;&#x90FD;&#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;&#x3002;</li>
+<li>&#x51B3;&#x7B56;&#x6811;&#xFF08;decision tree&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x6811;&#x7ED3;&#x6784;&#xFF08;&#x53EF;&#x4EE5;&#x662F;&#x4E8C;&#x53C9;&#x6811;&#x6216;&#x975E;&#x4E8C;&#x53C9;&#x6811;&#xFF09;&#x3002;&#x5176;&#x6BCF;&#x4E2A;&#x975E;&#x53F6;&#x8282;&#x70B9;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x7279;&#x5F81;&#x5C5E;&#x6027;&#x4E0A;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x6BCF;&#x4E2A;&#x5206;&#x652F;&#x4EE3;&#x8868;&#x8FD9;&#x4E2A;&#x7279;&#x5F81;&#x5C5E;&#x6027;&#x5728;&#x67D0;&#x4E2A;&#x503C;&#x57DF;&#x4E0A;&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x800C;&#x6BCF;&#x4E2A;&#x53F6;&#x8282;&#x70B9;&#x5B58;&#x653E;&#x4E00;&#x4E2A;&#x7C7B;&#x522B;&#x3002;&#x4F7F;&#x7528;&#x51B3;&#x7B56;&#x6811;&#x8FDB;&#x884C;&#x51B3;&#x7B56;&#x7684;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5F00;&#x59CB;&#xFF0C;&#x6D4B;&#x8BD5;&#x5F85;&#x5206;&#x7C7B;&#x9879;&#x4E2D;&#x76F8;&#x5E94;&#x7684;&#x7279;&#x5F81;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x6309;&#x7167;&#x5176;&#x503C;&#x9009;&#x62E9;&#x8F93;&#x51FA;&#x5206;&#x652F;&#xFF0C;&#x76F4;&#x5230;&#x5230;&#x8FBE;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5C06;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5B58;&#x653E;&#x7684;&#x7C7B;&#x522B;&#x4F5C;&#x4E3A;&#x51B3;&#x7B56;&#x7ED3;&#x679C;&#x3002;</li>
+<li>&#x51B3;&#x7B56;&#x6811;&#x5B66;&#x4E60;&#x7684;&#x7B97;&#x6CD5;&#x901A;&#x5E38;&#x662F;&#x4E00;&#x4E2A;&#x9012;&#x5F52;&#x5730;&#x9009;&#x62E9;&#x6700;&#x4F18;&#x7279;&#x5F81;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x8BE5;&#x7279;&#x5F81;&#x5BF9;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x8FDB;&#x884C;&#x5206;&#x5272;&#xFF0C;&#x4F7F;&#x5F97;&#x5BF9;&#x5404;&#x4E2A;&#x5B50;&#x6570;&#x636E;&#x96C6;&#x6709;&#x4E00;&#x4E2A;&#x6700;&#x597D;&#x7684;&#x5206;&#x7C7B;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x4E00;&#x8FC7;&#x7A0B;&#x5BF9;&#x5E94;&#x7740;&#x5BF9;&#x7279;&#x5F81;&#x7A7A;&#x95F4;&#x7684;&#x5212;&#x5206;&#xFF0C;&#x4E5F;&#x5BF9;&#x5E94;&#x7740;&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6784;&#x5EFA;&#x3002;</li>
+<li>&#x51B3;&#x7B56;&#x6811;&#x662F;&#x5728;&#x5DF2;&#x77E5;&#x5404;&#x79CD;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x6982;&#x7387;((&#x5404;&#x4E2A;&#x6837;&#x672C;&#x6570;&#x636E;&#x51FA;&#x73B0;&#x4E2D;&#xFF0C;&#x4E0D;&#x540C;&#x7279;&#x5F81;&#x51FA;&#x73B0;&#x7684;&#x6982;&#x7387;))&#x7684;&#x57FA;&#x7840;&#x4E0A;,&#x901A;&#x8FC7;&#x6784;&#x5EFA;&#x51B3;&#x7B56;&#x6811;&#x6765;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x3002;&#x5E38;&#x7528;&#x7B97;&#x6CD5;&#x6709;ID3&#x3001;C4.5&#x3001;CART&#x3002;</li>
+<li>&#x51B3;&#x7B56;&#x6811;&#x7684;&#x4E3B;&#x8981;&#x4F18;&#x52BF;&#x5C31;&#x5728;&#x4E8E;&#x6570;&#x636E;&#x5F62;&#x5F0F;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x3002;</li>
+</ul>
+<h4 id="&#x51B3;&#x7B56;&#x6811;&#x5173;&#x952E;&#x95EE;&#x9898;"><a name="&#x51B3;&#x7B56;&#x6811;&#x5173;&#x952E;&#x95EE;&#x9898;" class="plugin-anchor" href="#&#x51B3;&#x7B56;&#x6811;&#x5173;&#x952E;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51B3;&#x7B56;&#x6811;&#x5173;&#x952E;&#x95EE;&#x9898;</h4>
+<p><img src="ML_img/decision_tree_1.png" alt="Decision Tree 1"></p>
+<h4 id="&#x51B3;&#x7B56;&#x6811;&#x5B66;&#x4E60;"><a name="&#x51B3;&#x7B56;&#x6811;&#x5B66;&#x4E60;" class="plugin-anchor" href="#&#x51B3;&#x7B56;&#x6811;&#x5B66;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51B3;&#x7B56;&#x6811;&#x5B66;&#x4E60;</h4>
+<p><img src="ML_img/decision_tree_2.png" alt="Decision Tree 2"></p>
+<h4 id="&#x51B3;&#x7B56;&#x6811;&#x4E0E;&#x6982;&#x7387;&#x5206;&#x5E03;"><a name="&#x51B3;&#x7B56;&#x6811;&#x4E0E;&#x6982;&#x7387;&#x5206;&#x5E03;" class="plugin-anchor" href="#&#x51B3;&#x7B56;&#x6811;&#x4E0E;&#x6982;&#x7387;&#x5206;&#x5E03;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51B3;&#x7B56;&#x6811;&#x4E0E;&#x6982;&#x7387;&#x5206;&#x5E03;</h4>
+<p><img src="ML_img/decision_tree_3.png" alt="Decision Tree 3"></p>
+<h4 id="&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6784;&#x9020;&#x7B97;&#x6CD5;&#xFF1A;"><a name="&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6784;&#x9020;&#x7B97;&#x6CD5;&#xFF1A;" class="plugin-anchor" href="#&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6784;&#x9020;&#x7B97;&#x6CD5;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6784;&#x9020;&#x7B97;&#x6CD5;&#xFF1A;</h4>
+<ul>
+<li><code>&#x5206;&#x7C7B;&#x89E3;&#x51B3;&#x79BB;&#x6563;&#x95EE;&#x9898;&#xFF0C;&#x56DE;&#x5F52;&#x89E3;&#x51B3;&#x8FDE;&#x7EED;&#x95EE;&#x9898;</code>&#x3002;</li>
+<li>&#x6839;&#x7ED3;&#x70B9;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x7684;&#x8BAD;&#x7EC3;&#x6837;&#x672C;&#x3002;</li>
+<li>&#x5185;&#x90E8;&#x7ED3;&#x70B9;&#x5305;&#x542B;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x6D4B;&#x8BD5;&#xFF0C;&#x6BCF;&#x4E2A;&#x5185;&#x90E8;&#x7ED3;&#x70B9;&#x5305;&#x542B;&#x7684;&#x6837;&#x672C;&#x96C6;&#x5408;&#xFF0C;&#x4F9D;&#x636E;&#x5C5E;&#x6027;&#x6D4B;&#x8BD5;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x88AB;&#x5212;&#x5206;&#x5230;&#x5B83;&#x7684;&#x5B50;&#x7ED3;&#x70B9;&#x3002;</li>
+<li>&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x5BF9;&#x5E94;&#x4E8E;&#x51B3;&#x7B56;&#x7ED3;&#x754C;</li>
+<li>&#x4ECE;&#x6839;&#x7ED3;&#x70B9;&#x5230;&#x6BCF;&#x4E2A;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x5E94;&#x4E86;&#x4E00;&#x6761;&#x51B3;&#x7B56;&#x89C4;&#x5219;&#x3002;</li>
+</ul>
+<ul>
+<li>&#x57FA;&#x672C;&#x7B97;&#x6CD5;&#x9075;&#x5FAA;&#x81EA;&#x9876;&#x5411;&#x4E0B;&#x3001;&#x5206;&#x800C;&#x6CBB;&#x4E4B;&#x7684;&#x7B56;&#x7565;<ul>
+<li>&#x9009;&#x62E9;<code>&#x6700;&#x597D;&#x7684;&#x5C5E;&#x6027;</code>&#x4F5C;&#x4E3A;&#x6D4B;&#x8BD5;&#x5C5E;&#x6027;&#x5E76;&#x521B;&#x5EFA;&#x6811;&#x7684;&#x6839;&#x7ED3;&#x70B9;</li>
+<li>&#x4E3A;&#x6D4B;&#x8BD5;&#x5C5E;&#x6027;&#x6BCF;&#x4E2A;&#x53EF;&#x80FD;&#x7684;&#x53D6;&#x503C;<code>&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x5206;&#x652F;</code></li>
+<li>&#x8BAD;&#x7EC3;&#x6837;&#x672C;<code>&#x5212;&#x5206;&#x5230;&#x9002;&#x5F53;&#x7684;&#x5206;&#x652F;</code>&#x5F62;&#x6210;&#x5B50;&#x7ED3;&#x70B9;</li>
+<li>&#x5BF9;&#x6BCF;&#x4E2A;&#x5B50;&#x8282;&#x70B9;<code>&#x91CD;&#x590D;&#x4E0A;&#x9762;&#x7684;&#x8FC7;&#x7A0B;</code>&#xFF0C;&#x76F4;&#x5230;&#x6240;&#x6709;&#x7ED3;&#x70B9;&#x90FD;&#x662F;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>&#x51B3;&#x7B56;&#x6811;&#x6784;&#x9020;&#x8FC7;&#x7A0B;</li>
+<li>step1: &#x6570;&#x636E;&#x9884;&#x5904;&#x7406;,&#x7F3A;&#x5931;&#x503C;&#x5904;&#x7406;</li>
+<li>Step2&#xFF1A;&#x9009;&#x53D6;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x4F5C;&#x4E3A;&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6839;&#x7ED3;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x6240;&#x6709;&#x7684;&#x53D6;&#x503C;&#x521B;&#x5EFA;&#x6811;&#x7684;&#x5206;&#x652F;.&#xFF08;<code>&#x5212;&#x5206;&#x7279;&#x5F81;</code>&#xFF09;</li>
+<li>Step3&#xFF1A;&#x7528;&#x8FD9;&#x68F5;&#x6811;&#x6765;&#x5BF9;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x8FDB;&#x884C;&#x5206;&#x7C7B;&#xFF1A;&#xFF08;<code>&#x6784;&#x5EFA;&#x51B3;&#x7B56;&#x6811;</code>&#xFF09;<ul>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x53F6;&#x7ED3;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x90FD;&#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x7C7B;&#xFF0C;&#x5219;&#x4EE5;&#x8BE5;&#x7C7B;&#x4E3A;&#x6807;&#x8BB0;&#x6807;&#x8BC6;&#x6B64;&#x53F6; &#x7ED3;&#x70B9;.</li>
+<li>&#x5982;&#x679C;&#x6240;&#x6709;&#x7684;&#x53F6;&#x7ED3;&#x70B9;&#x90FD;&#x6709;&#x7C7B;&#x6807;&#x8BB0;&#xFF0C;&#x5219;&#x7B97;&#x6CD5; &#x7EC8;&#x6B62;.</li>
+</ul>
+</li>
+<li>Step4&#xFF1A;&#x5426;&#x5219;&#xFF0C;&#x9009;&#x53D6; &#x4E00;&#x4E2A;&#x4ECE;&#x8BE5;&#x7ED3;&#x70B9;&#x5230;&#x6839;&#x8DEF;&#x5F84;&#x4E2D;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x8FC7;&#x7684;&#x5C5E;&#x6027;&#x4F5C;&#x4E3A;&#x6807;&#x8BB0;&#x6807;&#x8BC6;&#x8BE5;&#x7ED3;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x6240;&#x6709;&#x53D6;&#x503C;&#x7EE7;&#x7EED;&#x521B;&#x5EFA;&#x6811;&#x7684;&#x5206;&#x652F;&#xFF1B;&#x91CD;&#x590D;&#x7B97;&#x6CD5; &#x6B65;&#x9AA4;3.</li>
+<li>step5: &#x51B3;&#x7B56;&#x5206;&#x7C7B;&#x3002;&#x5728;&#x6784;&#x5EFA;&#x597D;&#x51B3;&#x7B56;&#x6811;&#x4E4B;&#x540E;&#xFF0C;&#x6700;&#x7EC8;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x672A;&#x77E5;&#x6837;&#x672C;&#x8FDB;&#x884C;&#x9884;&#x6D4B;&#x5206;&#x7C7B;&#x3002;</li>
+</ul>
+<h4 id="&#x51B3;&#x7B56;&#x6811;&#x7684;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;"><a name="&#x51B3;&#x7B56;&#x6811;&#x7684;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x51B3;&#x7B56;&#x6811;&#x7684;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51B3;&#x7B56;&#x6811;&#x7684;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;</h4>
+<p>&#x7279;&#x5F81;&#x9009;&#x62E9;&#x5728;&#x4E8E;&#x9009;&#x53D6;&#x5BF9;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x5177;&#x6709;&#x5206;&#x7C7B;&#x80FD;&#x529B;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x51B3;&#x7B56;&#x6811;&#x5B66;&#x4E60;&#x7684;&#x6548;&#x7387;&#x3002;&#x5982;&#x679C;&#x5229;&#x7528;&#x4E00;&#x4E2A;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x5206;&#x7C7B;&#x7684;&#x7ED3;&#x679C;&#x4E0E;&#x968F;&#x673A;&#x5206;&#x7C7B;&#x7684;&#x7ED3;&#x679C;&#x6CA1;&#x6709;&#x5F88;&#x5927;&#x5DEE;&#x522B;&#xFF0C;&#x5219;&#x79F0;&#x8FD9;&#x4E2A;&#x7279;&#x5F81;&#x662F;&#x6CA1;&#x6709;&#x5206;&#x7C7B;&#x80FD;&#x529B;&#x7684;&#x3002;&#x7ECF;&#x9A8C;&#x4E0A;&#x6254;&#x6389;&#x8FD9;&#x6837;&#x7684;&#x7279;&#x5F81;&#x5BF9;&#x51B3;&#x7B56;&#x6811;&#x5B66;&#x4E60;&#x7684;&#x7CBE;&#x5EA6;&#x5F71;&#x54CD;&#x4E0D;&#x5927;&#x3002;&#x901A;&#x5E38;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x7684;&#x51C6;&#x5219;&#x662F;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6216;&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6BD4;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x9009;&#x53D6;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x7528;&#x5230;&#x4E24;&#x4E2A;&#x51C6;&#x5219;&#xFF1A;<code>&#x4FE1;&#x606F;&#x589E;&#x76CA;</code>&#x6216;<code>&#x4FE1;&#x606F;&#x589E;&#x76CA;&#x6BD4;</code>&#x3002;</p>
+<p><img src="ML_img/decision_tree_4.png" alt="Decision Tree 4"></p>
+<h4 id="id3-&#x7B97;&#x6CD5;"><a name="id3-&#x7B97;&#x6CD5;" class="plugin-anchor" href="#id3-&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>ID3 &#x7B97;&#x6CD5;</h4>
+<p><img src="ML_img/decision_tree_5.png" alt="Decision Tree 5"></p>
+<p><img src="ML_img/decision_tree_6.png" alt="Decision Tree 6"></p>
+<p><img src="ML_img/decision_tree_7.png" alt="Decision Tree 7"></p>
+<p><img src="ML_img/decision_tree_8.png" alt="Decision Tree 8"></p>
+<p><img src="ML_img/decision_tree_9.png" alt="Decision Tree 9"></p>
+<h5 id="id3-&#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;"><a name="id3-&#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;" class="plugin-anchor" href="#id3-&#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;"><i class="fa fa-link" aria-hidden="true"></i></a>ID3 &#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;</h5>
+<p><img src="ML_img/decision_tree_10.png" alt="Decision Tree 10"></p>
+<h4 id="c45-&#x7B97;&#x6CD5;"><a name="c45-&#x7B97;&#x6CD5;" class="plugin-anchor" href="#c45-&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>C4.5 &#x7B97;&#x6CD5;</h4>
+<h5 id="c45-&#x7B97;&#x6CD5;&#x6539;&#x8FDB;"><a name="c45-&#x7B97;&#x6CD5;&#x6539;&#x8FDB;" class="plugin-anchor" href="#c45-&#x7B97;&#x6CD5;&#x6539;&#x8FDB;"><i class="fa fa-link" aria-hidden="true"></i></a>C4.5 &#x7B97;&#x6CD5;&#x6539;&#x8FDB;</h5>
+<p><img src="ML_img/decision_tree_11.png" alt="Decision Tree 11"></p>
+<p><img src="ML_img/decision_tree_12.png" alt="Decision Tree 12"></p>
+<p><img src="ML_img/decision_tree_13.png" alt="Decision Tree 13"></p>
+<h5 id="c45-&#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;"><a name="c45-&#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;" class="plugin-anchor" href="#c45-&#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;"><i class="fa fa-link" aria-hidden="true"></i></a>C4.5 &#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x8DB3;</h5>
+<p><img src="ML_img/decision_tree_14.png" alt="Decision Tree 14"></p>
+<h4 id="cart&#x6811;"><a name="cart&#x6811;" class="plugin-anchor" href="#cart&#x6811;"><i class="fa fa-link" aria-hidden="true"></i></a>CART&#x6811;</h4>
+<ul>
+<li>CART(Classification and Regression Tree)&#x6811;&#x65E2;&#x53EF;&#x4EE5;&#x505A;&#x5206;&#x7C7B;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x505A;&#x56DE;&#x5F52;&#x3002;</li>
+</ul>
+<h5 id="cart-&#x5206;&#x7C7B;&#x6811;&#x6811;-&#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;"><a name="cart-&#x5206;&#x7C7B;&#x6811;&#x6811;-&#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#cart-&#x5206;&#x7C7B;&#x6811;&#x6811;-&#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>CART &#x5206;&#x7C7B;&#x6811;&#x6811; &#x7279;&#x5F81;&#x9009;&#x62E9;&#x65B9;&#x6CD5;</h5>
+<p><img src="ML_img/decision_tree_15.png" alt="Decision Tree 15"></p>
+<p><img src="ML_img/decision_tree_16.png" alt="Decision Tree 16"></p>
+<p><img src="ML_img/decision_tree_17.png" alt="Decision Tree 17"></p>
+<p><img src="ML_img/decision_tree_18.png" alt="Decision Tree 18"></p>
+<h5 id="cart&#x5206;&#x7C7B;&#x6811;&#x5BF9;&#x4E8E;&#x8FDE;&#x7EED;&#x7279;&#x5F81;&#x548C;&#x79BB;&#x6563;&#x7279;&#x5F81;&#x7684;&#x5904;&#x7406;"><a name="cart&#x5206;&#x7C7B;&#x6811;&#x5BF9;&#x4E8E;&#x8FDE;&#x7EED;&#x7279;&#x5F81;&#x548C;&#x79BB;&#x6563;&#x7279;&#x5F81;&#x7684;&#x5904;&#x7406;" class="plugin-anchor" href="#cart&#x5206;&#x7C7B;&#x6811;&#x5BF9;&#x4E8E;&#x8FDE;&#x7EED;&#x7279;&#x5F81;&#x548C;&#x79BB;&#x6563;&#x7279;&#x5F81;&#x7684;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>CART&#x5206;&#x7C7B;&#x6811;&#x5BF9;&#x4E8E;&#x8FDE;&#x7EED;&#x7279;&#x5F81;&#x548C;&#x79BB;&#x6563;&#x7279;&#x5F81;&#x7684;&#x5904;&#x7406;</h5>
+<p><img src="ML_img/decision_tree_19.png" alt="Decision Tree 19"></p>
+<h5 id="cart&#x5206;&#x7C7B;&#x6811;&#x7B97;&#x6CD5;"><a name="cart&#x5206;&#x7C7B;&#x6811;&#x7B97;&#x6CD5;" class="plugin-anchor" href="#cart&#x5206;&#x7C7B;&#x6811;&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>CART&#x5206;&#x7C7B;&#x6811;&#x7B97;&#x6CD5;</h5>
+<p><img src="ML_img/decision_tree_20.png" alt="Decision Tree 20"></p>
+<h5 id="cart&#x56DE;&#x5F52;&#x6811;&#x7B97;&#x6CD5;"><a name="cart&#x56DE;&#x5F52;&#x6811;&#x7B97;&#x6CD5;" class="plugin-anchor" href="#cart&#x56DE;&#x5F52;&#x6811;&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>CART&#x56DE;&#x5F52;&#x6811;&#x7B97;&#x6CD5;</h5>
+<p><img src="ML_img/decision_tree_21.png" alt="Decision Tree 21"></p>
+<h5 id="cart&#x6811;&#x7B97;&#x6CD5;&#x7684;&#x526A;&#x679D;"><a name="cart&#x6811;&#x7B97;&#x6CD5;&#x7684;&#x526A;&#x679D;" class="plugin-anchor" href="#cart&#x6811;&#x7B97;&#x6CD5;&#x7684;&#x526A;&#x679D;"><i class="fa fa-link" aria-hidden="true"></i></a>CART&#x6811;&#x7B97;&#x6CD5;&#x7684;&#x526A;&#x679D;</h5>
+<p><img src="ML_img/decision_tree_22.png" alt="Decision Tree 22"></p>
+<p><img src="ML_img/decision_tree_23.png" alt="Decision Tree 23"></p>
+<p><img src="ML_img/decision_tree_24.png" alt="Decision Tree 24"></p>
+<p><img src="ML_img/decision_tree_25.png" alt="Decision Tree 25"></p>
+<p><img src="ML_img/decision_tree_51.png" alt="Decision Tree 51"></p>
+<h5 id="cart&#x4E2D;-&#x7C7B;&#x522B;&#x4E0D;&#x5E73;&#x8861;-&#x95EE;&#x9898;"><a name="cart&#x4E2D;-&#x7C7B;&#x522B;&#x4E0D;&#x5E73;&#x8861;-&#x95EE;&#x9898;" class="plugin-anchor" href="#cart&#x4E2D;-&#x7C7B;&#x522B;&#x4E0D;&#x5E73;&#x8861;-&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>CART&#x4E2D; &#x7C7B;&#x522B;&#x4E0D;&#x5E73;&#x8861; &#x95EE;&#x9898;</h5>
+<p><img src="ML_img/decision_tree_26.png" alt="Decision Tree 26"></p>
+<h5 id="cart&#x6811;&#x7F3A;&#x70B9;"><a name="cart&#x6811;&#x7F3A;&#x70B9;" class="plugin-anchor" href="#cart&#x6811;&#x7F3A;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>CART&#x6811;&#x7F3A;&#x70B9;</h5>
+<p><img src="ML_img/decision_tree_27.png" alt="Decision Tree 27"></p>
+<h4 id="&#x591A;&#x53D8;&#x91CF;&#x51B3;&#x7B56;&#x6811;&#x659C;&#x51B3;&#x7B56;&#x6811;oc1&#x7B97;&#x6CD5;"><a name="&#x591A;&#x53D8;&#x91CF;&#x51B3;&#x7B56;&#x6811;&#x659C;&#x51B3;&#x7B56;&#x6811;oc1&#x7B97;&#x6CD5;" class="plugin-anchor" href="#&#x591A;&#x53D8;&#x91CF;&#x51B3;&#x7B56;&#x6811;&#x659C;&#x51B3;&#x7B56;&#x6811;oc1&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x53D8;&#x91CF;&#x51B3;&#x7B56;&#x6811;_&#x659C;&#x51B3;&#x7B56;&#x6811;(OC1&#x7B97;&#x6CD5;)</h4>
+<p><img src="ML_img/decision_tree_52.png" alt="Decision Tree 52"></p>
+<p><img src="ML_img/decision_tree_53.png" alt="Decision Tree 53"></p>
+<h4 id="&#x51B3;&#x7B56;&#x6811;&#x603B;&#x7ED3;"><a name="&#x51B3;&#x7B56;&#x6811;&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x51B3;&#x7B56;&#x6811;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51B3;&#x7B56;&#x6811;&#x603B;&#x7ED3;</h4>
+<p><img src="ML_img/decision_tree_28.png" alt="Decision Tree 28"></p>
+<h4 id="&#x51B3;&#x7B56;&#x6811;&#x4F8B;&#x5B50;"><a name="&#x51B3;&#x7B56;&#x6811;&#x4F8B;&#x5B50;" class="plugin-anchor" href="#&#x51B3;&#x7B56;&#x6811;&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51B3;&#x7B56;&#x6811;&#x4F8B;&#x5B50;</h4>
+<ul>
+<li>&#x4F8B;1&#xFF1A;<a href="https://www.cnblogs.com/bonheur/p/12469858.html" target="_blank">https://www.cnblogs.com/bonheur/p/12469858.html</a><ul>
+<li><a href="https://blog.csdn.net/jeryjeryjery/article/details/78884324" target="_blank">https://blog.csdn.net/jeryjeryjery/article/details/78884324</a></li>
+</ul>
+</li>
+<li>&#x4F8B;2&#xFF1A;
+<img src="ML_img/decision_tree_29.png" alt="Decision Tree 29">
+<img src="ML_img/decision_tree_30.png" alt="Decision Tree 30">
+<img src="ML_img/decision_tree_31.png" alt="Decision Tree 31">
+<img src="ML_img/decision_tree_32.png" alt="Decision Tree 32">
+<img src="ML_img/decision_tree_33.png" alt="Decision Tree 33">
+<img src="ML_img/decision_tree_34.png" alt="Decision Tree 34">
+<img src="ML_img/decision_tree_35.png" alt="Decision Tree 35">
+<img src="ML_img/decision_tree_36.png" alt="Decision Tree 36">
+<img src="ML_img/decision_tree_37.png" alt="Decision Tree 37">
+<img src="ML_img/decision_tree_38.png" alt="Decision Tree 38">
+<img src="ML_img/decision_tree_39.png" alt="Decision Tree 39">
+<img src="ML_img/decision_tree_40.png" alt="Decision Tree 40">
+<img src="ML_img/decision_tree_41.png" alt="Decision Tree 41">
+<img src="ML_img/decision_tree_42.png" alt="Decision Tree 42">
+<img src="ML_img/decision_tree_43.png" alt="Decision Tree 43">
+<img src="ML_img/decision_tree_44.png" alt="Decision Tree 44">
+<img src="ML_img/decision_tree_45.png" alt="Decision Tree 45">
+<img src="ML_img/decision_tree_46.png" alt="Decision Tree 46">
+<img src="ML_img/decision_tree_47.png" alt="Decision Tree 47">
+<img src="ML_img/decision_tree_48.png" alt="Decision Tree 48">
+<img src="ML_img/decision_tree_49.png" alt="Decision Tree 49">
+<img src="ML_img/decision_tree_50.png" alt="Decision Tree 50"></li>
+</ul>
+<hr>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; GUORONG LI 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-11-29 00:09:37
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ML_intro.html" class="navigation navigation-prev " aria-label="Previous page: Machine learning">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Unsupervised.html" class="navigation navigation-next " aria-label="Next page: Unsupervised machine learning algorithms">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Supervised machine learning algorithms","level":"4.2.1","depth":2,"next":{"title":"Unsupervised machine learning algorithms","level":"4.2.2","depth":2,"path":"Artificial_Intelligence/Machine_Learning/Unsupervised.md","ref":"Artificial_Intelligence/Machine_Learning/Unsupervised.md","articles":[]},"previous":{"title":"Machine learning","level":"4.2","depth":1,"path":"Artificial_Intelligence/Machine_Learning/ML_intro.md","ref":"Artificial_Intelligence/Machine_Learning/ML_intro.md","articles":[{"title":"Supervised machine learning algorithms","level":"4.2.1","depth":2,"path":"Artificial_Intelligence/Machine_Learning/Supervised.md","ref":"Artificial_Intelligence/Machine_Learning/Supervised.md","articles":[]},{"title":"Unsupervised machine learning algorithms","level":"4.2.2","depth":2,"path":"Artificial_Intelligence/Machine_Learning/Unsupervised.md","ref":"Artificial_Intelligence/Machine_Learning/Unsupervised.md","articles":[]},{"title":"模型优化-集成学习(模型融合)","level":"4.2.3","depth":2,"path":"Artificial_Intelligence/Machine_Learning/Boosting.md","ref":"Artificial_Intelligence/Machine_Learning/Boosting.md","articles":[]},{"title":"模型优化-Optimization","level":"4.2.4","depth":2,"path":"Artificial_Intelligence/Machine_Learning/Optimization.md","ref":"Artificial_Intelligence/Machine_Learning/Optimization.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["anchors","search-pro","back-to-top-button","livereload","chapter-fold","splitter","hide-element","pageview-count","tbfed-pagefooter","katex","github-buttons","alerts","sharing","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy GUORONG LI 2020","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"alerts":{},"github-buttons":{"repo":"44825762/Review","types":["star","watch","fork"],"size":"small"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"GUORONG LI <44825762@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"计算机知识总结","gitbook":"*","description":"一路走来，总结自己在计算机方面需要用到的一些知识，温故而知新，也是极好的"},"file":{"path":"Artificial_Intelligence/Machine_Learning/Supervised.md","mtime":"2020-11-28T16:09:37.305Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-02T04:23:57.568Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
