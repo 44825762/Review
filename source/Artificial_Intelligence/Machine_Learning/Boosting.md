@@ -14,7 +14,7 @@
             * [GBDT回归树](#GBDT回归树)
             * [GBDT分类树](#GBDT分类树)
             * [GBDT 例题](#GBDT%20例题)
-        * [XGBoost](#XGBoost)
+        * [XGBoost](#(eXtreme%20Gradient%20Boosting))
             * [GBDT特征选择](#GBDT特征选择)
             * [XGBoost 与 GBDT 区别于联系](#XGBoost%20与%20GBDT%20区别于联系)
             * [XGBoost原理](#XGBoost原理)
@@ -195,7 +195,7 @@ L2Boosting全称：Least Squares Boosting；该算法由Buhlmann和Yu在2003年�
 
 -----
 
-### XGBoost
+### XGBoost(eXtreme Gradient Boosting)
 
 #### XGBoost 与 GBDT 区别于联系
 
