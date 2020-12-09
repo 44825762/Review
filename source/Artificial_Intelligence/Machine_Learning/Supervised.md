@@ -33,6 +33,11 @@
             * [Softmax Regression 多分类例子](#Softmax%20Regression%20多分类例子)
             * [Softmax Regression 与 logistic regression 的联系](#Softmax%20Regression%20与%20logistic%20regression%20的联系)
             * [Softmax Regression 过拟合问题 - 处理方法为减少特征数量或正则化](#Softmax%20Regression%20过拟合问题%20-%20处理方法为%20`减少特征数量`%20或%20`正则化`)
+        * [朴素贝叶斯](#朴素贝叶斯分类)
+            * [朴素贝叶斯算法过程](#朴素贝叶斯算法过程)
+            * [朴素贝叶斯详解](#朴素贝叶斯详解)
+            * [朴素贝叶斯例子](#朴素贝叶斯例子)
+            * [朴素贝叶斯优缺点](#朴素贝叶斯优缺点)
     * [回归分类都可以的算法]()
         * [决策树](#决策树)
             * [决策树关键问题](#决策树关键问题)
@@ -58,11 +63,14 @@
             * [决策树总结](#决策树总结)
             * [决策树例子](#决策树例子)
         * [SVM](#SVM详解)
-            * [SVM 例子(KCL-course work)](#SVM 例子(KCL-course work))   
+            * [SVM 例子(KCL-course work)](#SVM详解)   
             * [SVM详解](#SVM详解)
-    * 【k-Nearest Neighbors (KNN)】(待补充)
-    * 【朴素贝叶斯】
-    * 【深度学习 - CNN 卷积神经网络】
+        * [k-Nearest Neighbors (KNN)](#KNN算法解析)
+            * [KNN算法解析](#KNN算法解析)
+            * [KNN算法实现](#KNN算法实现)
+            * [KNN算法拓展](#KNN算法拓展)
+            * [KNN算法优缺点](#KNN算法优缺点)
+
 
 
 
@@ -375,6 +383,34 @@
 
 ---
 
+### 朴素贝叶斯分类
+
+#### 朴素贝叶斯算法过程
+
+![Naive Bayes Model 10](ML_img/Naive_Bayes_Model_10.png)
+
+#### 朴素贝叶斯详解
+![Naive Bayes Model 1](ML_img/Naive_Bayes_Model_1.png)
+![Naive Bayes Model 2](ML_img/Naive_Bayes_Model_2.png)
+![Naive Bayes Model 3](ML_img/Naive_Bayes_Model_3.png)
+![Naive Bayes Model 4](ML_img/Naive_Bayes_Model_4.png)
+![Naive Bayes Model 5](ML_img/Naive_Bayes_Model_5.png)
+
+#### 朴素贝叶斯例子
+
+![Naive Bayes Model 6](ML_img/Naive_Bayes_Model_6.png)
+![Naive Bayes Model 7](ML_img/Naive_Bayes_Model_7.png)
+![Naive Bayes Model 8](ML_img/Naive_Bayes_Model_8.png)
+
+![Naive Bayes Model 11](ML_img/Naive_Bayes_Model_11.png)
+![Naive Bayes Model 12](ML_img/Naive_Bayes_Model_12.png)
+
+#### 朴素贝叶斯优缺点
+
+![Naive Bayes Model 9](ML_img/Naive_Bayes_Model_9.png)
+
+----
+
 
 ### 决策树
 * 基本思想：采用自顶向下的递归方法，以信息熵（或其他度量条件）为度量来构造一课熵值下降最快的数，到叶子节点处的熵值为0，此时每个叶子节点中的实例都属于同一个类。
@@ -578,24 +614,39 @@
 ![SVM 22](ML_img/svm_22.png)
 ![SVM 23](ML_img/svm_23.png)
 
----
 
 
+----
 
 
+### KNN(k-nearest neighbors)
 
+![KNN 1](ML_img/KNN_1.png)
 
+#### KNN算法解析
 
+![KNN 2](ML_img/KNN_2.png)
 
+#### KNN算法实现
 
+![KNN 3](ML_img/KNN_3.png)
+![KNN 4](ML_img/KNN_4.png)
+![KNN 5](ML_img/KNN_5.png)
+![KNN 6](ML_img/KNN_6.png)
+![KNN 7](ML_img/KNN_7.png)
+![KNN 8](ML_img/KNN_8.png)
+![KNN 9](ML_img/KNN_9.png)
+![KNN 10](ML_img/KNN_10.png)
 
+#### KNN算法拓展
 
+![KNN 11](ML_img/KNN_11.png)
 
+#### KNN算法优缺点
 
+![KNN 12](ML_img/KNN_12.png)
 
-
-
-
+----
 
 
 
