@@ -57,6 +57,9 @@
             * [多变量决策树-斜决策树(OC1算法)](#多变量决策树_斜决策树(OC1算法))
             * [决策树总结](#决策树总结)
             * [决策树例子](#决策树例子)
+        * [SVM](#SVM详解)
+            * [SVM 例子(KCL-course work)](#SVM 例子(KCL-course work))   
+            * [SVM详解](#SVM详解)
     * 【k-Nearest Neighbors (KNN)】(待补充)
     * 【朴素贝叶斯】
     * 【深度学习 - CNN 卷积神经网络】
@@ -545,8 +548,37 @@
 
 
 
+### SVM(support vector machine) 支持向量机
 
+#### SVM 例子(KCL-course work)
+![SVM 1](ML_img/svm_1.png)
+![SVM 2](ML_img/svm_2.png)
+![SVM 3](ML_img/svm_3.png)
+![SVM 4](ML_img/svm_4.png)
 
+#### SVM详解
+
+![SVM 5](ML_img/svm_5.png)
+![SVM 6](ML_img/svm_6.png)
+![SVM 7](ML_img/svm_7.png)
+![SVM 8](ML_img/svm_8.png)
+![SVM 9](ML_img/svm_9.png)
+![SVM 10](ML_img/svm_10.png)
+![SVM 11](ML_img/svm_11.png)
+![SVM 12](ML_img/svm_12.png)
+![SVM 13](ML_img/svm_13.png)
+![SVM 14](ML_img/svm_14.png)
+![SVM 15](ML_img/svm_15.png)
+![SVM 16](ML_img/svm_16.png)
+![SVM 17](ML_img/svm_17.png)
+![SVM 18](ML_img/svm_18.png)
+![SVM 19](ML_img/svm_19.png)
+![SVM 20](ML_img/svm_20.png)
+![SVM 21](ML_img/svm_21.png)
+![SVM 22](ML_img/svm_22.png)
+![SVM 23](ML_img/svm_23.png)
+
+---
 
 
 

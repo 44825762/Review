@@ -21,6 +21,7 @@
             * [XGBoost推导](#XGBoost推导)
             * [XGBoost 例题](#XGBoost%20例题)
             * [XGBoost 高频题 ](#XGBoost%20高频题)
+    * [Bagging方法](#Bagging方法)
 
 ----
 ## 集成学习
@@ -259,15 +260,68 @@ L2Boosting全称：Least Squares Boosting；该算法由Buhlmann和Yu在2003年�
 ------
 
 
+## Bagging方法
+
+* Bagging是并行式集成学习方法最著名的代表。
+* 它基于自助采样法(bootstrap sampling)。给定包含m个样本的数据集，我们先随机取出一个样本放入采样集中，再把该样本放回到初始数据集，使得下次采样时该样本仍然由可能被采到。这样，经过m次随机采样操作，我们可以得到含有m个样本的采样集。初始训练集中有的样本被多次采到，有的则一次也没有被采样到，初始样本集中大约会有63.2%的样本出现在采样集中。
+* 通过上述的自助采样法可以得到T个集合，每个集合包含m个样本。然后，基于每个集合训练出一个基学习器，再将这些基学习器进行集合。
+* 在对各个基学习器的预测结果进行结合时，Bagging通常对分类任务使用简单投票法，对回归任务使用简单平均法。若分类预测时出现两个类收到同样票数的情形，则最简单的做法是随机选一个，也可以进一步考察投票的置信度来确定最终胜者。
+* 从方差—偏差分解的角度看，Bagging主要关注降低方差，（高方差对应的是过拟合问题），因此它在不剪枝决策树、神经网络等易受样本扰动的学习器上效果更为明显。
 
 
+![bagging 1](ML_img/bagging_1.png)
 
 
+### Random Forest(RF) 随机森林
+
+#### 随机森林简介
+
+* 随机森林（Random Forest，RF）是bagging的一个扩展变体。RF在 以决策树为基学习器构建Bagging集成 的基础上，进一步在决策树的训练过程中引入了`随机属性选择`。具体来说，传统决策树在选择划分属性时，是在当前节点的属性集合（假定由d个集合）中选择一个最优属性；而在RF中，对基决策树的每个节点，先从该节点属性中随机选择一个包含k个属性的属性子集，然后从这个子集中选择一个最优属性用于划分。这里的参数k控制了随机性的引入程度，若k=d，则基决策树的构建与传统的决策树相同；若k=1，则是随机选择一个属性用于划分；一般情况下，推荐k=log2d。 这种随机选择属性也会使得RF的训练效率比bagging更高。
+
+* 随机森林简单，容易实现，计算开销小，令人惊奇的是它在很多现实任务中展现出了很强大的性能，被誉为“代表集成学习技术水平方法”。 随机森林法仅仅对bagging做了小改动，但是，与bagging中基学习器的“多样性”仅仅通过样本扰动（通过对初始训练集bootstrap采样）而来不同，RF中基学习器的多样性不仅仅来自样本扰动，而且还来自属性扰动，这就使得最终集成的泛化性能可通过个体学习器之间差异度的增加而进一步提高。
 
 
+#### 随机森林特点
+
+* 在当前所有算法中，具有极好的准确率/It is unexcelled in accuracy among current algorithms；
+* 能够有效地运行在大数据集上/It runs efficiently on large data bases；
+* 能够处理具有高维特征的输入样本，而且不需要降维/It can handle thousands of input variables without variable deletion；
+* 能够评估各个特征在分类问题上的重要性/It gives estimates of what variables are important in the classification；
+* 在生成过程中，能够获取到内部生成误差的一种无偏估计/It generates an internal unbiased estimate of the generalization error as the forest building progresses；
+* 对于缺省值问题也能够获得很好得结果/It has an effective method for estimating missing data and maintains accuracy when a large proportion of the data are missing
+* 它就相当于机器学习领域的Leatherman（多面手），你几乎可以把任何东西扔进去，它基本上都是可供使用的。在估计推断映射方面特别好用，以致都不需要像SVM那样做很多参数的调试。
+
+##### 随机森林算法流程(bagging + 决策树 = 随机森林)
+
+![Random Forest 4](ML_img/rf_4.png)
+
+###### Bagging
+Bagging是并行式集成学习方法最著名的代表。它直接基于自助采样法(bootstrap sampling)
+1. 从原始样本集中有放回随机抽取n个训练样本，独立进行k轮抽取，得到k个训练集
+2. 独立训练k个模型（基学习器可以是：决策树，ANN等）
+3. 分类问题：投票产生分类结果； 回归问题：取k个模型预测结果的均值
+4. 预测函数可以并行生成
 
 
+![Random Forest 1](ML_img/rf_1.png)
 
+![Random Forest 9](ML_img/rf_9.png)
+
+![Random Forest 3](ML_img/rf_3.png)
+
+![Random Forest 2](ML_img/rf_2.png)
+
+
+##### 随机森林算法优缺点
+![Random Forest 5](ML_img/rf_5.png)
+
+##### 随机森林算法例子
+
+![Random Forest 6](ML_img/rf_6.png)
+![Random Forest 7](ML_img/rf_7.png)
+![Random Forest 8](ML_img/rf_8.png)
+
+------
 
 
 
