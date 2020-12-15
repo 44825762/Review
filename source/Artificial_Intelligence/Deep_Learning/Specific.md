@@ -16,7 +16,7 @@
 ----
 
 ### Specific artificial neural networks
-
+----
 * #### Linear Threshold Unit (or Perceptron)   - 感知机 又称 基于LTN的人工神经元
     * Each unit receives a vector of inputs, x (from other units or the external environment).
     * Each input is associated with a weight, w, which determines the strength of influence of each input.
@@ -33,7 +33,53 @@
 
     ![Perceptron rule](img/decision_boundary.png)
 
+----
 
+* #### Multilayer Perceptrons    -   多层感知机
+![Multilayer Perceptrons](img/mlp.png)
+----
+* #### Back Propagation Neural Network  -   反向传播神经网络
+    * ##### 激活函数
+    ![Back Propagation Neural Network 31](img/bp_31.png)
+    * ##### bp算法
+     ![Back Propagation Neural Network 28](img/bp_28.png)
+     ![Back Propagation Neural Network 29](img/bp_29.png)
+     ![Back Propagation Neural Network 30](img/bp_30.png)
+
+    * ##### 反向传播神经网络计算过程
+    ![Back Propagation Neural Network 32](img/bp_32.png)
+    ![Back Propagation Neural Network 1](img/bp_1.png)
+    ![Back Propagation Neural Network 2](img/bp_2.png)
+    ![Back Propagation Neural Network 3](img/bp_3.png)
+    ![Back Propagation Neural Network 4](img/bp_4.png)
+    ![Back Propagation Neural Network 5](img/bp_5.png)
+    ![Back Propagation Neural Network 6](img/bp_6.png)
+    ![Back Propagation Neural Network 7](img/bp_7.png)
+    ![Back Propagation Neural Network 8](img/bp_8.png)
+    ![Back Propagation Neural Network 9](img/bp_9.png)
+    ![Back Propagation Neural Network 10](img/bp_10.png)
+    ![Back Propagation Neural Network 11](img/bp_11.png)
+    ![Back Propagation Neural Network 12](img/bp_12.png)
+    ![Back Propagation Neural Network 13](img/bp_13.png)
+    ![Back Propagation Neural Network 14](img/bp_14.png)
+    ![Back Propagation Neural Network 15](img/bp_15.png)
+    ![Back Propagation Neural Network 16](img/bp_16.png)
+    ![Back Propagation Neural Network 17](img/bp_17.png)
+    ![Back Propagation Neural Network 18](img/bp_18.png)
+    ![Back Propagation Neural Network 19](img/bp_19.png)
+    ![Back Propagation Neural Network 20](img/bp_20.png)
+    
+    * ##### 反向传播总结
+    ![Back Propagation Neural Network 21](img/bp_21.png)
+    ![Back Propagation Neural Network 22](img/bp_22.png)
+    ![Back Propagation Neural Network 23](img/bp_23.png)
+    ![Back Propagation Neural Network 24](img/bp_24.png)
+    ![Back Propagation Neural Network 25](img/bp_25.png)
+    ![Back Propagation Neural Network 26](img/bp_26.png)
+    ![Back Propagation Neural Network 27](img/bp_27.png)
+
+
+----
 
 * #### generic artificial neural network    -   遗传神经网络
 
@@ -44,7 +90,7 @@
 * An `activation function` that determines the output the neuron produces.
 * An `activation state`, yj, for every unit (‘response’, ‘output’).
 * A `method` for setting/changing the connection weights.
-
+------
 
 * #### Competitive Learning Networks -   竞争学习神经网络
 
@@ -54,10 +100,6 @@
 
 
 * #### Autoencoder Networks  -   自编码网络
-
-
-* #### Multilayer Perceptrons    -   多层感知机
-
 
 
 * #### Radial Basis Function Networks    -   径向基函数神经网络
@@ -78,15 +120,11 @@
 * #### Capsule Networks  -   胶囊网络
 
 
-* #### Back Propagation Neural Network  -   反向传播神经网络
 
 
 -----
 
-#### 训练方式   (权重更新方式)
 
-* Delta Learning Rule （supervised）
-* Hebbian learning rule （unsupervised）
 
 
 

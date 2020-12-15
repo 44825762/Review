@@ -1,7 +1,24 @@
 ### Deep Learning
-
+* [深度学习 - 神经网络](#)
+    * [Specific artificial neural networks](#Specific%20artificial%20neural%20networks)
+    * [学习方式](#学习方式)
+    * [LDF (Linear Discriminant Functions) 线性二分方程](#)
+        * [Perceptron Learning](#Perceptron%20Learning)
+        * [Minimum Squared Error Learning (Widrow-Hoff) - 最小二乘错误学习](#)
+        * [Delta Learning Rule （supervised）](#)
+        * [Hebbian learning rule （unsupervised）](#)
+    * [必备网络](#必备网络)
 ---
 
+![NNA](img/NNA.png)
+
+----
+
+### 神经网络发展分类
+
+![Deep learning](img/Deep_learning_1.png)
+
+----
 #### Specific artificial neural networks
 
 * generic artificial neural network    -   遗传神经网络
@@ -79,12 +96,28 @@
 
 
 * Delta Learning Rule （supervised）
-
-
-
-
+![Delta Leearning Rule 1](img/Delta_learning_1.png)
+![Delta Leearning Rule 2](img/Delta_learning_2.png)
+![Delta Leearning Rule 3](img/Delta_learning_3.png)
+![Delta Leearning Rule 4](img/Delta_learning_4.png)
+    * Sequential Delta Learning Algorithm 例子
+![Delta Leearning Rule 5](img/Delta_learning_5.png)
+![Delta Leearning Rule 6](img/Delta_learning_6.png)
+![Delta Leearning Rule 7](img/Delta_learning_7.png)
+![Delta Leearning Rule 8](img/Delta_learning_8.png)
+![Delta Leearning Rule 9](img/Delta_learning_9.png)
+![Delta Leearning Rule 10](img/Delta_learning_10.png)
+![Delta Leearning Rule 11](img/Delta_learning_11.png)
+![Delta Leearning Rule 12](img/Delta_learning_12.png)
+![Delta Leearning Rule 13](img/Delta_learning_13.png)
+![Delta Leearning Rule 14](img/Delta_learning_14.png)
+![Delta Leearning Rule 15](img/Delta_learning_15.png)
+![Delta Leearning Rule 16](img/Delta_learning_16.png)
+![Delta Leearning Rule 17](img/Delta_learning_17.png)
 
 * Hebbian learning rule （unsupervised）
+
+![Hebbian Learning Rule 1](img/Hebbian_Learning_Rule_1.png)
 
 ----
 
