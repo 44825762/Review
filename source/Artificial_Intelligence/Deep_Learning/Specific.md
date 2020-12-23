@@ -67,6 +67,7 @@
     ![Back Propagation Neural Network 17](img/bp_17.png)
     ![Back Propagation Neural Network 18](img/bp_18.png)
     ![Back Propagation Neural Network 19](img/bp_19.png)
+    ![Back Propagation Neural Network 33](img/bp_33.png)
     ![Back Propagation Neural Network 20](img/bp_20.png)
     
     * ##### 反向传播总结
@@ -77,6 +78,65 @@
     ![Back Propagation Neural Network 25](img/bp_25.png)
     ![Back Propagation Neural Network 26](img/bp_26.png)
     ![Back Propagation Neural Network 27](img/bp_27.png)
+
+----
+
+* #### Convolutional Neural Networks -   卷积神经网络
+https://cs231n.github.io/convolutional-networks/
+    * 基本结构
+    ![CNN 1](img/cnn_1.png)
+    ![CNN 2](img/cnn_2.png)
+    * CNN训练方法
+    ![CNN 4](img/cnn_4.png)
+    
+
+* CNN的卷积层
+![CNN 3](img/cnn_3.png)
+![CNN 11](img/cnn_11.png)
+![CNN 14](img/cnn_14.png)
+![CNN 15](img/cnn_15.png)
+![CNN 16](img/cnn_16.png)
+![CNN 17](img/cnn_17.png)
+![CNN 18](img/cnn_18.png)
+![CNN 19](img/cnn_19.png)
+![CNN 22](img/cnn_22.png)
+![CNN 23](img/cnn_23.png)
+![CNN 24](img/cnn_24.png)
+
+* CNN的池化层 - 数据降维,避免过拟合
+池化层相比卷积层可以更有效的降低数据维度，这么做不但可以大大减少运算量，还可以有效的避免过拟合。
+
+![CNN 10](img/cnn_10.png)
+![CNN 20](img/cnn_20.png)
+
+
+* CNN全连接网络
+![CNN 12](img/cnn_12.png)
+![CNN 13](img/cnn_13.png)
+
+
+* CNN 公式计算
+训练方式为反向传播
+![CNN 25](img/cnn_25.png)
+![CNN 26](img/cnn_26.png)
+![CNN 27](img/cnn_27.png)
+![CNN 28](img/cnn_28.png)
+![CNN 29](img/cnn_29.png)
+![CNN 30](img/cnn_30.png)
+![CNN 31](img/cnn_31.png)
+![CNN 32](img/cnn_32.png)
+
+* CNN 例子
+![CNN 5](img/cnn_5.png)
+![CNN 6](img/cnn_6.png)
+![CNN 7](img/cnn_7.png)
+![CNN 8](img/cnn_8.png)
+![CNN 9](img/cnn_9.png)
+
+
+* CNN 框架发展
+
+![CNN 21](img/cnn_21.png)
 
 
 ----
@@ -92,9 +152,20 @@
 * A `method` for setting/changing the connection weights.
 ------
 
+
+
+
+
+
+
+
+
+
+
+
 * #### Competitive Learning Networks -   竞争学习神经网络
 
-
+所谓竞争学习神经网络，是在输出层对多个节点返回的数据做选择。选择方法可以是投票可以是算平均值等。
 
 * #### Inhibitory Feedback Networks  -   抑制反馈网络
 
@@ -105,7 +176,6 @@
 * #### Radial Basis Function Networks    -   径向基函数神经网络
 
 
-* #### Convolutional Neural Networks -   卷积神经网络
 
 
 * #### Restricted Boltzmann Machines -   受限玻尔兹曼机
