@@ -85,6 +85,8 @@
     * [Deep leearning demo in Pytorch](Artificial_Intelligence/Deep_Learning/Pytorch.md)
     * [目标检测](Artificial_Intelligence/Deep_Learning/Object_Detection/Detection.md)
     * [图神经网络](Artificial_Intelligence/Deep_Learning/GNN/GNN.md)
+    * [模型 压缩 和 加速](Artificial_Intelligence/Deep_Learning/Model_Compression_and_Acceleration/Model_Compression_and_Acceleration.md)
+
 
 * [Model evaluation](Artificial_Intelligence/Model_evaluation/Evaluation.md)
 
