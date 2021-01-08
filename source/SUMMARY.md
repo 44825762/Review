@@ -81,6 +81,10 @@
 
 * [Deep learning](Artificial_Intelligence/Deep_Learning/Deep_learning.md)
     * [Specific artificial neural networks](Artificial_Intelligence/Deep_Learning/Specific.md)
+    * [Network Optimization](Artificial_Intelligence/Deep_Learning/Optimization.md)
+    * [Deep leearning demo in Pytorch](Artificial_Intelligence/Deep_Learning/Pytorch.md)
+    * [目标检测](Artificial_Intelligence/Deep_Learning/Object_Detection/Detection.md)
+    * [图神经网络](Artificial_Intelligence/Deep_Learning/GNN/GNN.md)
 
 * [Model evaluation](Artificial_Intelligence/Model_evaluation/Evaluation.md)
 
