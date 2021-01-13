@@ -38,8 +38,32 @@
         * [Recursive Neural Network 递归神经网络](#Recursive%20Neural%20Network%20递归神经网络)
         * [Graph Neural Networks(GNN) 图神经网络](#)
         * [Competitive Learning Networks - 竞争学习神经网络](#Competitive%20Learning%20Networks%20-%20竞争学习神经网络)
+
+        * [Attention机制](#Attention机制)
+            * [Attention Mechanism 原理](#)
+            * [Attention Mechanism 模块图解](#)
+            * [Attention 分类 ](#)
+                * [Soft Attention 和 Hard Attention](#)
+                * [Soft Attention 和 Hard Attention](#)
+                * [Global Attention 和 Local Attention](#)
+                * [Self Attention 及计算](#)
+                * [Multi-Head Attention 及计算](#)
+            * [Attention 的其他组合应用 ](#)
+                * [Hierarchical Attention](#)
+                * [Attention over Attention](#)
+                * [Multi-step Attention](#)
+                * [Multi-dimension Attention](#)
+                * [Memory-based Attention](#)
+            * [Attention 在图像领域的应用](#)
+                * [学习权重分部](#) 
+                    * [精细分类](#)
+                    * [图像分类](#)
+                    * [图像分割](#)
+                    * [看图说话](#)
+                * [任务聚焦/解耦](#)
+                    * [图像分割](#)
+            * [Attention 计算过程](#)
         * [待补充](#)
-            * [Attention机制](#Attention机制)
             * [Inhibitory Feedback Networks - 抑制反馈网络](#Inhibitory%20Feedback%20Networks%20-%20抑制反馈网络)
             * [Radial Basis Function Networks - 径向基函数神经网络](#Radial%20Basis%20Function%20Networks%20-%20径向基函数神经网络)
             * [Hopfield Networks - 一种单层反馈神经网络](#Hopfield%20Networks%20-%20一种单层反馈神经网络)
@@ -464,7 +488,66 @@ https://www.cnblogs.com/YiXiaoZhou/p/6058890.html
 
 * #### Attention机制
 
+![Attention 1](img/attention_1.png)
+![Attention 2](img/attention_2.png)
+![Attention 3](img/attention_3.png)
+![Attention 4](img/attention_4.png)
+![Attention 5](img/attention_5.png)
+![Attention 6](img/attention_6.png)
+![Attention 7](img/attention_7.png)
+![Attention 8](img/attention_8.png)
+![Attention 9](img/attention_9.png)
+![Attention 10](img/attention_10.png)
+![Attention 11](img/attention_11.png)
+![Attention 12](img/attention_12.png)
+![Attention 13](img/attention_13.png)
+![Attention 14](img/attention_14.png)
+![Attention 15](img/attention_15.png)
+![Attention 16](img/attention_16.png)
+![Attention 17](img/attention_17.png)
+![Attention 18](img/attention_18.png)
+![Attention 19](img/attention_19.png)
+![Attention 20](img/attention_20.png)
+![Attention 21](img/attention_21.png)
+![Attention 22](img/attention_22.png)
+![Attention 23](img/attention_23.png)
+![Attention 24](img/attention_24.png)
+![Attention 25](img/attention_25.png)
+![Attention 26](img/attention_26.png)
+![Attention 27](img/attention_27.png)
+![Attention 28](img/attention_28.png)
+![Attention 29](img/attention_29.png)
+![Attention 30](img/attention_30.png)
+![Attention 31](img/attention_31.png)
+![Attention 32](img/attention_32.png)
+![Attention 33](img/attention_33.png)
+![Attention 34](img/attention_34.png)
+![Attention 35](img/attention_35.png)
+![Attention 36](img/attention_36.png)
+![Attention 37](img/attention_37.png)
+![Attention 38](img/attention_38.png)
+![Attention 38](img/attention_39.png)
+![Attention 40](img/attention_40.png)
+![Attention 41](img/attention_41.png)
+![Attention 42](img/attention_42.png)
+![Attention 43](img/attention_43.png)
+![Attention 44](img/attention_44.png)
+
+
 -----
+
+* #### Capsule Networks - 胶囊网络
+
+--------
+
+
+
+
+
+
+
+
+--------
 
 * #### Inhibitory Feedback Networks - 抑制反馈网络
 
