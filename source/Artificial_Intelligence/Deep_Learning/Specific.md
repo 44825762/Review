@@ -538,6 +538,90 @@ https://www.cnblogs.com/YiXiaoZhou/p/6058890.html
 
 * #### Capsule Networks - 胶囊网络
 
+https://jhui.github.io/2017/11/03/Dynamic-Routing-Between-Capsules/
+
+![capsule 1](img/capsule_1.png)
+![capsule 5](img/capsule_5.png)
+![capsule 6](img/capsule_6.png)
+![capsule 7](img/capsule_7.png)
+![capsule 8](img/capsule_8.png)
+![capsule 9](img/capsule_9.png)
+![capsule 10](img/capsule_10.png)
+
+![capsule 11](img/capsule_11.png)
+![capsule 12](img/capsule_12.png)
+![capsule 13](img/capsule_13.png)
+![capsule 14](img/capsule_14.png)
+![capsule 15](img/capsule_15.png)
+![capsule 16](img/capsule_16.png)
+![capsule 17](img/capsule_17.png)
+![capsule 18](img/capsule_18.png)
+![capsule 19](img/capsule_19.png)
+![capsule 20](img/capsule_20.png)
+
+![capsule 21](img/capsule_21.png)
+![capsule 22](img/capsule_22.png)
+![capsule 23](img/capsule_23.png)
+![capsule 24](img/capsule_24.png)
+![capsule 25](img/capsule_25.png)
+![capsule 26](img/capsule_26.png)
+![capsule 27](img/capsule_27.png)
+![capsule 28](img/capsule_28.png)
+![capsule 29](img/capsule_29.png)
+![capsule 30](img/capsule_30.png)
+![capsule 31](img/capsule_31.png)
+![capsule 32](img/capsule_32.png)
+![capsule 35](img/capsule_35.png)
+![capsule 33](img/capsule_33.png)
+
+![capsule 36](img/capsule_36.png)
+![capsule 42](img/capsule_42.png)
+![capsule 43](img/capsule_43.png)
+
+![capsule 37](img/capsule_37.png)
+![capsule 38](img/capsule_38.png)
+![capsule 39](img/capsule_39.png)
+![capsule 40](img/capsule_40.png)
+![capsule 41](img/capsule_41.png)
+
+* 各层参数计算
+
+![capsule 44](img/capsule_44.png)
+![capsule 45](img/capsule_45.png)
+![capsule 46](img/capsule_46.png)
+![capsule 47](img/capsule_47.png)
+![capsule 48](img/capsule_48.png)
+![capsule 49](img/capsule_49.png)
+![capsule 50](img/capsule_50.png)
+![capsule 51](img/capsule_51.png)
+
+
+* 胶囊网络-动态路由算法
+
+![capsule 52](img/capsule_52.png)
+![capsule 53](img/capsule_53.png)
+![capsule 54](img/capsule_54.png)
+![capsule 55](img/capsule_55.png)
+![capsule 56](img/capsule_56.png)
+![capsule 57](img/capsule_57.png)
+![capsule 58](img/capsule_58.png)
+![capsule 59](img/capsule_59.png)
+![capsule 60](img/capsule_60.png)
+![capsule 61](img/capsule_61.png)
+
+矩阵胶囊： https://jhui.github.io/2017/11/14/Matrix-Capsules-with-EM-routing-Capsule-Network/
+
+![capsule 62](img/capsule_62.png)
+![capsule 63](img/capsule_63.png)
+![capsule 64](img/capsule_64.png)
+![capsule 65](img/capsule_65.png)
+
+* 胶囊网络实现
+
+    https://blog.csdn.net/bhneo/article/details/79391469
+
+
+
 --------
 
 
