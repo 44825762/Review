@@ -1,24 +1,67 @@
+## 哈希表
+------
+
 哈希表（Hash Table，也叫散列表），是根据关键码值 (Key-Value) 而直接进行访问的数据结构。也就是说，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。哈希表的实现主要需要解决两个问题，哈希函数和冲突解决。
 
-## 哈希函数
+![hash 1](img/hash_1.png)
+![hash 2](img/hash_2.png)
+![hash 3](img/hash_3.png)
+![hash 4](img/hash_4.png)
+![hash 5](img/hash_5.png)
+![hash 6](img/hash_6.png)
+![hash 7](img/hash_7.png)
+![hash 8](img/hash_8.png)
+![hash 9](img/hash_9.png)
+![hash 10](img/hash_10.png)
 
-哈希函数也叫散列函数，它对不同的输出值得到一个固定长度的消息摘要。理想的哈希函数对于不同的输入应该产生不同的结构，同时散列结果应当具有同一性（输出值尽量均匀）和雪崩效应（微小的输入值变化使得输出值发生巨大的变化）。
 
-## 冲突解决
+------
 
-现实中的哈希函数不是完美的，当两个不同的输入值对应一个输出值时，就会产生“碰撞”，这个时候便需要解决冲突。
 
-常见的冲突解决方法有开放定址法，链地址法，建立公共溢出区等。实际的哈希表实现中，使用最多的是链地址法
+C++ 中的实现：
+C++ 中涉及哈希表的算法，通常使用 map 或 unordered_map 实现。
+unordered_map的底层是一个防冗余的哈希表（开链法避免地址冲突）。unordered_map的key需要定义hash_value函数并且重载operator ==。
+![hash 11](img/hash_11.png)
+![hash 12](img/hash_12.png)
+![hash 13](img/hash_13.png)
+![hash 14](img/hash_14.png)
+![hash 15](img/hash_15.png)
 
-#### 链地址法
 
-链地址法的基本思想是，为每个 Hash 值建立一个单链表，当发生冲突时，将记录插入到链表中。
+------
+[LeetCode 30](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)
 
-例 2 设有 8 个元素 { a,b,c,d,e,f,g,h } ，采用某种哈希函数得到的地址分别为： {0 ， 2 ， 4 ， 1 ， 0 ， 8 ， 7 ， 2} ，当哈希表长度为 10 时，采用链地址法解决冲突的哈希表如下图所示：
+一个不成熟的思路，找出 words 在 s 中所有的出现次数，再判断出现次数和 words 的长度，如果绝对值等于 words 的长度，则认定 words 中的词相连，但问题是，如果 words 中的词多于 3 个，则需要使用多维数组，且计算 words 中的词是否相连也很困难，因为相连的词位置可能会变。 此题最好的方法还是 哈希表。
 
-![hash](https://github.com/HIT-Alibaba/interview/blob/master/img/hash-table.jpg?raw=true)
+```cpp
+vector<int> findSubstring(string s, vector<string>& words) {
+    vector<int> index;
+    if (s.empty() || words.empty()) return index;
+    unordered_map<string,int > m1; //words
+    for(auto a : words){
+        ++m1[a];
+    }
+    int n = words.size(), m = words[0].size();
+    for (int i = 0; i <= (int)s.size() -m * n ; ++i) {
+        int j=0;
+        unordered_map<string,int > m2;
+        for (j = 0; j < n; ++j) { // 检查三个 words 能否完全匹配
+            string sub = s.substr(i + j * m, m);
+            if (m1.find(sub) == m1.end()) break;
+            ++m2[sub];
+            if (m2[sub] > m1[sub]){break;}
+        }
+        if (j == n){
+            index.push_back(i);
+        }
+        m2.clear(); // 清空map
+    }
+    return index;
+}
+```
 
-### 参考资料
+--------
 
-* [哈希表的 C 实现](http://www.cnblogs.com/xiekeli/archive/2012/01/13/2321207.html)
-* [解决哈希表的冲突-开放地址法和链地址法](http://blog.csdn.net/w_fenghui/article/details/2010387)
+
+
+

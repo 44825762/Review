@@ -15,7 +15,9 @@
       "katex",
       "github-buttons",
       "alerts",
-      "sharing"
+      "sharing",
+      "search"
+
       
 
    ],
@@ -39,6 +41,9 @@
       },
       "theme-default": {
         "showLevel": true
-    }
+    },
+    "search": {
+      "maxIndexSize": 100000
+ }
   }
 }

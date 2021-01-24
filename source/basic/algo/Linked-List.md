@@ -1,44 +1,245 @@
+## 链表
+
+-------
+### C++ 
+涉及以下操作
+1. 链表定义
+2. 插入函数
+3. 在指定位置插入
+4. 删除指定数据节点
+5. 修改指定数据
+6. 反转链表 (递归)
+7. 打印
+8. 获取链表节点个数
+8. 待补充
+    * 检测是否有环,找到环的入口
+    * 循环链表
+    * 逆序遍历
+    * 单链表排序
+    * [在 O(1) 时间删除链表节点](https://zhuanlan.zhihu.com/p/43142694)
+        * [删除单链表倒数第 n 个节点](https://zhuanlan.zhihu.com/p/43142694)
+        * 判断两个无环单链表是否相交
+        * 两个链表相交扩展：求两个无环单链表的第一个相交点
+        * 两个链表相交扩展：判断两个有环单链表是否相交
+
+```cpp
+
+// 在链表的后面插入
+// 前插
+// 在指定位置后插入
+// 查看链表长度
+// 打印链表
+// 删除指定位置元素
+// 修改指定位置数据
+// 反转链表-递归 LeetCode 206
+// 反转链表-非递归
+
+
+
+#include <iostream>
+using namespace std;
+
+struct ListNode{
+    float data;
+    ListNode *next;
+};
+
+// 在链表的后面插入
+// 指针的引用 使用 *&
+void insert(struct ListNode *&Node, float num){
+    ListNode *per = Node;
+    // 这地方的关键是，插入前要把 Node 指针移动到链表的最后，否则就是不停地在第二个节点多次赋值
+    while (per->next != NULL){
+        per = per->next;
+    }
+    ListNode *NewNode = new ListNode;
+    NewNode->data = num;
+    NewNode->next = NULL;
+    per->next = NewNode;
+}
+
+// 前插
+void insert_forward(ListNode *&Node, float num){
+    ListNode *temp = new ListNode;
+    temp->data = num;
+    temp->next = Node;
+    Node = temp;
+}
+
+// 在指定位置后插入
+void insert_in_loc(ListNode *&Node, int loc, float num){
+    ListNode *per = Node;
+    for (int i = 0; i < loc - 1 ; ++i) {
+        Node = Node->next;
+    }
+    ListNode *temp = new ListNode;
+    temp->data = num;
+    temp->next = Node->next;
+    Node->next = temp;
+
+    Node = per;
+
+}
+
+// 查看链表长度
+int check_length(ListNode *&Node){
+    // 每一次遍历都需要使用临时指针，遍历完再将头指针给到原来的链表
+    ListNode *per = Node;
+    int i=0;
+    if (Node != NULL) {
+        do {
+            ++i;
+            // cout << Node->data << endl;
+            Node = Node->next;
+        }while (Node != NULL);
+    }
+    Node = per;
+    return i;
+}
+
+// 打印链表
+void show_list(ListNode *&Node){
+    ListNode *per = Node;
+    cout << "show_list: " << endl;
+    if (Node != NULL) {
+        do {
+            cout << Node->data << endl;
+            Node = Node->next;
+        } while (Node != NULL);
+    }
+    Node = per;
+    cout << "show_list end " << endl;
+}
+
+// 删除指定位置元素
+void delete_loc_node(ListNode *&Node, int loc){
+    ListNode *per = Node;
+    int length = check_length(Node);
+    if (loc == 0){
+        Node = Node->next;
+    } else {
+        for (int i = 0; i < loc - 2; ++i) {
+            Node = Node->next;
+        }
+        ListNode *temp = Node->next->next;
+        Node->next = temp;
+        Node = per;
+    }
+}
+
+// 修改指定位置数据
+void alert_loc_data(ListNode *&Node, int loc,float num){
+    ListNode *per = Node;
+    if (loc == 0){
+        Node->data = num;
+    }else {
+        for (int i = 0; i < loc - 1; ++i) {
+            Node = Node->next;
+        }
+        Node->data = num;
+        Node=per;
+    }
+}
+
+// 反转链表-递归
+ListNode* reverseList_recursion(ListNode *&head)
+{
+    if (head == NULL || head->next == NULL) return head;
+    ListNode *p = reverseList_recursion(head->next);
+    head->next->next = head;
+    head->next = NULL;
+    return p;
+}
+
+// 反转链表-非递归
+ListNode* reverseList(ListNode* head) {
+    ListNode* cur = NULL, *pre = head;
+    while (pre != NULL) {
+        ListNode* t = pre->next;
+        pre->next = cur;
+        cur = pre;
+        pre = t;
+    }
+    return cur;
+}
+
+// 融合两个排序链表
+ListNode* mergeTwoLists(ListNode *&l1, ListNode *&l2) {
+    if(l1 == NULL)
+        return l2;
+    if(l2 == NULL)
+        return l1;
+    ListNode* merge = NULL;
+    if(l1->val<=l2->val){
+        merge = l1;
+        merge->next = mergeTwoLists(l1->next,l2);
+    }
+    else{
+        merge = l2;
+        merge->next = mergeTwoLists(l1,l2->next);
+    }
+    return merge;
+}
+
+
+
+int main() {
+    struct ListNode *Node = nullptr;
+    Node = new ListNode;
+    Node->data = 0;
+    Node->next = NULL;
+    insert_forward(Node, -1);
+    insert(Node, 1);
+    insert(Node, 2);
+    insert(Node, 3);
+    insert_in_loc(Node,3,1.5);
+    delete_loc_node(Node,4);
+    //show_list(Node);
+    alert_loc_data(Node,5,5);
+    show_list(Node);
+    int length = check_length(Node);
+    cout << "length " << length << endl;
+    cout << " " << endl;
+
+    ListNode *new_node = reverseList(Node);
+    show_list(new_node);
+
+}
+
+
+```
+
+
+
+-----------
 ## 例题
 
 #### 单链表翻转 [LeetCode 206](https://leetcode.com/problems/reverse-linked-list/)
 
-这个问题可以使用递归和非递归两种方法解决。
-
-递归算法实现：
-
 ```cpp
-ListNode* reverseList(ListNode* head)
+// 反转链表-递归
+ListNode* reverseList_recursion(ListNode *&head)
 {
-    if(NULL == head || NULL == head->next)
-        return head;
-    ListNode * p = reverseList(head->next);
+    if (head == NULL || head->next == NULL) return head;
+    ListNode *p = reverseList_recursion(head->next);
     head->next->next = head;
     head->next = NULL;
-
     return p;
 }
-```
 
-非递归算法实现：
-
-```cpp
+// 反转链表-非递归
 ListNode* reverseList(ListNode* head) {
-    ListNode *curr = head;
-    if (curr == NULL) {
-        return NULL;
+    ListNode* cur = NULL, *pre = head;
+    while (pre != NULL) {
+        ListNode* t = pre->next;
+        pre->next = cur;
+        cur = pre;
+        pre = t;
     }
-
-    ListNode *prev = NULL, *temp = NULL;
-    while (curr != NULL) {
-        temp = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = temp;
-    }
-
-    return prev;
+    return cur;
 }
 ```
+
 
 #### 单链表判断是否有环 [LeetCode 141](https://leetcode.com/problems/linked-list-cycle/)
 
@@ -159,7 +360,7 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
 
 #### 单链表找中间节点 [LeetCode 876](https://leetcode.com/problems/middle-of-the-linked-list/)
 
-用快慢指针法，当快指针走到链表结尾时，慢指针刚好走到链表的中间：
+用快慢指针法,快指针走两个，慢指针走一个，当快指针走到链表结尾时，慢指针刚好走到链表的中间：
 
 ```cpp
 ListNode* middleNode(ListNode* head) {
@@ -179,25 +380,22 @@ ListNode* middleNode(ListNode* head) {
 两个链表本身都是排序过的，把两个链表从头节点开始，逐个节点开始进行比较，最后剩下的节点接到尾部：
 
 ```cpp
-ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
-    if (l1 == nullptr) {
+// 融合两个排序链表
+ListNode* mergeTwoLists(ListNode *&l1, ListNode *&l2) {
+    if(l1 == NULL)
         return l2;
-    }
-    if (l2 == nullptr) {
+    if(l2 == NULL)
         return l1;
+    ListNode* merge = NULL;
+    if(l1->val<=l2->val){
+        merge = l1;
+        merge->next = mergeTwoLists(l1->next,l2);
     }
-    ListNode dummy(-1);
-    ListNode *p = &dummy;
-    for (; l1 && l2; p = p->next) {
-        if (l1->val < l2->val) {
-            p->next = l1;
-            l1 = l1->next;
-        } else {
-            p->next = l2;
-            l2 = l2->next;
-        }
+    else{
+        merge = l2;
+        merge->next = mergeTwoLists(l1,l2->next);
     }
-    p->next = l1 != nullptr ? l1 : l2;
-    return dummy.next;
+    return merge;
 }
+
 ```
