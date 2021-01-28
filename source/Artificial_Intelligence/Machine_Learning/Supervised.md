@@ -143,6 +143,7 @@
 
 * 以下是多元线性回归 最小二乘法 推导过程
     ![linear formula](ML_img/linear_formula.png)
+    ![linear formula](ML_img/linear_regression_3.png)
 
     * #### 梯度下降
         * 由上一步，根据最小二乘法得到 cost function (损失函数)，这里使用梯度下降方法求解损失函数最小值时的参数值。（最优化问题）

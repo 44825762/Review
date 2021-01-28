@@ -77,6 +77,7 @@
 
 ## 第四章 人工智能
 * [AI杂谈面试问题](Artificial_Intelligence/AI_intro.md)
+* [机器学习数学基础](Artificial_Intelligence/math.md)
 * [Machine learning](Artificial_Intelligence/Machine_Learning/ML_intro.md)
     * [Supervised machine learning algorithms](Artificial_Intelligence/Machine_Learning/Supervised.md) 
     * [Unsupervised machine learning algorithms](Artificial_Intelligence/Machine_Learning/Unsupervised.md)
