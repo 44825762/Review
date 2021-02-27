@@ -563,6 +563,7 @@ CV - DETR (https://github.com/facebookresearch/detr)
 CV - SCA-CNN
 目标检测：ResNeSt - Split-Attention Networks (https://github.com/zhanghang1989/ResNeSt)(https://hangzhang.org/files/resnest.pdf)
 [重要参考](http://jalammar.github.io/illustrated-transformer/)
+[参考](https://wmathor.com/index.php/archives/1438/)
 ![Transformer 1](img/Transformer_1.png)
 ![Transformer 2](img/Transformer_2.png)
 ![Transformer 3](img/Transformer_3.png)
