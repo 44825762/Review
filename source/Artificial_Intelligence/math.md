@@ -33,6 +33,11 @@
 β分布（连续）Dirichlet 分布（连续）伽马分布（连续）指数分布（连续）高斯分布（连续）正态分布（连续）
 卡方分布（连续）t 分布（连续）
 
+* ##### 概率密度函数
+
+![Distribution 2](img/distribution_2.png)
+![Distribution 3](img/distribution_3.png)
+
 
 
 * ##### 期望 方差

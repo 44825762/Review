@@ -1847,6 +1847,7 @@
 </ul>
 <hr>
 <h3 id="&#x4E8C;&#x53C9;&#x6811;"><a name="&#x4E8C;&#x53C9;&#x6811;" class="plugin-anchor" href="#&#x4E8C;&#x53C9;&#x6811;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x6811;</h3>
+<p><a href="https://www.cnblogs.com/A-FM/p/11604720.html" target="_blank">&#x53C2;&#x8003;</a></p>
 <p><img src="img/tree_1.png" alt="Tree 1">
 <img src="img/tree_2.png" alt="Tree 2"></p>
 <p><strong>&#x4E8C;&#x53C9;&#x6811;</strong>
@@ -1865,6 +1866,13 @@
 <p><strong>&#x6CE8;&#x610F;</strong></p>
 <ul>
 <li>&#x4EC5;&#x6709;&#x524D;&#x5E8F;&#x548C;&#x540E;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x4E0D;&#x80FD;&#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5FC5;&#x987B;&#x6709;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x7684;&#x7ED3;&#x679C;</li>
+</ul>
+<p><strong>&#x6811;&#x7684;&#x904D;&#x5386;</strong></p>
+<ul>
+<li>&#x5148;&#x5E8F;&#x904D;&#x5386;</li>
+<li>&#x4E2D;&#x5E8F;&#x904D;&#x5386;</li>
+<li>&#x540E;&#x5E8F;&#x904D;&#x5386;</li>
+<li>&#x5C42;&#x6B21;&#x904D;&#x5386; (&#x4F7F;&#x7528;&#x961F;&#x5217; queue &#x5B8C;&#x6210;)</li>
 </ul>
 <p><strong>&#x6811;&#x7C7B;&#x641C;&#x7D22;&#x7B97;&#x6CD5;</strong></p>
 <p><a href="https://www.acwing.com/blog/content/173/" target="_blank">&#x53C2;&#x8003;</a></p>
@@ -1909,6 +1917,28 @@
 <li>&#x6CA1;&#x6709;&#x952E;&#x503C;&#x76F8;&#x7B49;&#x7684;&#x8282;&#x70B9;</li>
 </ol>
 <p>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;O(log(n))&#xFF0C;&#x6700;&#x574F;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;O(n)&#xFF08;&#x76F8;&#x5F53;&#x4E8E;&#x987A;&#x5E8F;&#x67E5;&#x627E;&#xFF09;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> Tree{
+    <span class="hljs-keyword">int</span> val;
+    Tree *left;
+    Tree *right;
+    Tree():val(<span class="hljs-number">0</span>),left(<span class="hljs-literal">nullptr</span>),right(<span class="hljs-literal">nullptr</span>) {};
+    Tree(<span class="hljs-keyword">int</span> x):val(x),left(<span class="hljs-literal">nullptr</span>),right(<span class="hljs-literal">nullptr</span>) {};
+    Tree(<span class="hljs-keyword">int</span> x, Tree *&amp;left, Tree *&amp;right):val(x),right(right),left(left) {};
+};
+
+<span class="hljs-function">Tree *<span class="hljs-title">build_insert</span><span class="hljs-params">(Tree *&amp;root, <span class="hljs-keyword">int</span> val)</span></span>{
+    <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">NULL</span>){
+        root = <span class="hljs-keyword">new</span> Tree(val);
+        <span class="hljs-keyword">return</span> root;
+    }
+    <span class="hljs-keyword">if</span> (val &lt; root-&gt;val){
+        root-&gt;left = build_insert(root-&gt;left,val);
+    }<span class="hljs-keyword">else</span>{
+        root-&gt;right = build_insert(root-&gt;right,val);
+    }
+    <span class="hljs-keyword">return</span> root;
+}
+</code></pre>
 <hr>
 <h3 id="&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;"><a name="&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;" class="plugin-anchor" href="#&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;</h3>
 <p>&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;&#xFF08;balanced  binary  tree&#xFF09;,&#x53C8;&#x79F0; AVL &#x6811;&#x3002;&#x5B83;&#x6216;&#x8005;&#x662F;&#x4E00;&#x68F5;&#x7A7A;&#x6811;,&#x6216;&#x8005;&#x662F;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x6027;&#x8D28;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#xFF1A;</p>
@@ -1916,7 +1946,28 @@
 <li>&#x5B83;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x548C;&#x53F3;&#x5B50;&#x6811;&#x90FD;&#x662F;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;</li>
 <li>&#x5DE6;&#x5B50;&#x6811;&#x548C;&#x53F3;&#x5B50;&#x6811;&#x7684;&#x6DF1;&#x5EA6;&#x4E4B;&#x5DEE;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x4E0D;&#x8D85;&#x8FC7;1&#x3002;</li>
 </ol>
+<p>&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;&#x662F;&#x5728;&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;&#x7684;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#x4E4B;&#x540E;&#x52A0;&#x6811;&#x7684;&#x65CB;&#x8F6C;&#xFF0C;&#x65CB;&#x8F6C;&#x7B97;&#x6CD5;&#x662F;&#x96BE;&#x70B9;&#x3002;&#x5B9E;&#x73B0;&#x65F6;&#x9700;&#x52A0;&#x5165;&#x5E73;&#x8861;&#x56E0;&#x5B50;&#x3002;</p>
+<ul>
+<li>&#x6838;&#x5FC3;&#x601D;&#x60F3;&#xFF1A; &#x8BA9;&#x540C;&#x4E00;&#x4E2A;root&#x7684;&#x4E24;&#x4E2A;&#x5B50;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#x4E4B;&#x5DEE;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x4E0D;&#x8D85;&#x8FC7;1&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x201C;&#x6362;&#x6839;&#x201D;&#x64CD;&#x4F5C;&#xFF0C;&#x5373;&#x65CB;&#x8F6C;&#xFF0C;&#x65CB;&#x8F6C;&#x53C8;&#x5206;&#x5355;&#x65CB;&#x8F6C;&#x548C;&#x53CC;&#x65CB;&#x8F6C;&#x3002;</li>
+</ul>
 <p>&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;&#x662F;&#x5BF9;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;(&#x53C8;&#x79F0;&#x4E3A;&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;)&#x7684;&#x4E00;&#x79CD;&#x6539;&#x8FDB;&#x3002;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x6709;&#x4E00;&#x4E2A;&#x7F3A;&#x70B9;&#x5C31;&#x662F;&#xFF0C;&#x6811;&#x7684;&#x7ED3;&#x6784;&#x662F;&#x65E0;&#x6CD5;&#x9884;&#x6599;&#x7684;&#xFF0C;&#x968F;&#x610F;&#x6027;&#x5F88;&#x5927;&#xFF0C;&#x5B83;&#x53EA;&#x4E0E;&#x8282;&#x70B9;&#x7684;&#x503C;&#x548C;&#x63D2;&#x5165;&#x7684;&#x987A;&#x5E8F;&#x6709;&#x5173;&#x7CFB;&#xFF0C;&#x5F80;&#x5F80;&#x5F97;&#x5230;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x5E73;&#x8861;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#x3002;&#x5728;&#x6700;&#x574F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x80FD;&#x5F97;&#x5230;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x652F;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5176;&#x9AD8;&#x5EA6;&#x548C;&#x8282;&#x70B9;&#x6570;&#x76F8;&#x540C;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x5355;&#x94FE;&#x8868;&#xFF0C;&#x5BF9;&#x5176;&#x6B63;&#x5E38;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x6709;O(log(n))&#x53D8;&#x6210;&#x4E86;O(n)&#xFF0C;&#x4ECE;&#x800C;&#x4E27;&#x5931;&#x4E86;&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;&#x7684;&#x4E00;&#x4E9B;&#x5E94;&#x8BE5;&#x6709;&#x7684;&#x4F18;&#x70B9;&#x3002;</p>
+<p><img src="img/tree_28.png" alt="Tree 28">
+<img src="img/tree_29.png" alt="Tree 29">
+<img src="img/tree_30.png" alt="Tree 30">
+<img src="img/tree_31.png" alt="Tree 31">
+<img src="img/tree_32.png" alt="Tree 32"></p>
+<ul>
+<li>&#x65CB;&#x8F6C;&#x65B9;&#x5F0F;&#x89E3;&#x6790;</li>
+</ul>
+<p><img src="img/tree_33.png" alt="Tree 33">
+<img src="img/tree_34.png" alt="Tree 34">
+<img src="img/tree_35.png" alt="Tree 35">
+<img src="img/tree_36.png" alt="Tree 36">
+<img src="img/tree_37.png" alt="Tree 37">
+<img src="img/tree_38.png" alt="Tree 38">
+<img src="img/tree_39.png" alt="Tree 39">
+<img src="img/tree_40.png" alt="Tree 40">
+<img src="img/tree_41.png" alt="Tree 41"></p>
 <hr>
 <h3 id="b-&#x6811;"><a name="b-&#x6811;" class="plugin-anchor" href="#b-&#x6811;"><i class="fa fa-link" aria-hidden="true"></i></a>B-&#x6811;</h3>
 <p><strong>B-&#x6811;</strong>&#xFF1A;B-&#x6811;&#x662F;&#x4E00;&#x79CD;&#x975E;&#x4E8C;&#x53C9;&#x7684;&#x67E5;&#x627E;&#x6811;&#xFF0C; &#x9664;&#x4E86;&#x8981;&#x6EE1;&#x8DB3;&#x67E5;&#x627E;&#x6811;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x8FD8;&#x8981;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x7ED3;&#x6784;&#x7279;&#x6027;&#xFF1A;</p>
@@ -1962,29 +2013,53 @@
 <h2 id="&#x4F8B;&#x9898;"><a name="&#x4F8B;&#x9898;" class="plugin-anchor" href="#&#x4F8B;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F8B;&#x9898;</h2>
 <h3 id="&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;"><a name="&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;" class="plugin-anchor" href="#&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;</h3>
 <h4 id="&#x4E8C;&#x53C9;&#x6811;&#x524D;&#x4E2D;&#x540E;&#x5E8F;&#x904D;&#x5386;"><a name="&#x4E8C;&#x53C9;&#x6811;&#x524D;&#x4E2D;&#x540E;&#x5E8F;&#x904D;&#x5386;" class="plugin-anchor" href="#&#x4E8C;&#x53C9;&#x6811;&#x524D;&#x4E2D;&#x540E;&#x5E8F;&#x904D;&#x5386;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x6811;&#x524D;&#x4E2D;&#x540E;&#x5E8F;&#x904D;&#x5386;</h4>
-<p>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x524D;&#x4E2D;&#x540E;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#x6700;&#x4E3A;&#x7B80;&#x5355;&#xFF0C;&#x4EE5;&#x524D;&#x5E8F;&#x904D;&#x5386;&#xFF08;<a href="https://leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank">LeetCode 144</a>&#xFF09;&#x4E3A;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-cpp"> <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">preorder</span><span class="hljs-params">(TreeNode *p, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; result)</span> </span>{
-    <span class="hljs-keyword">if</span> (p == <span class="hljs-literal">NULL</span>) {
-        <span class="hljs-keyword">return</span>;
-    }
+<p>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x524D;&#x4E2D;&#x540E;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#x6700;&#x4E3A;&#x7B80;&#x5355;&#xFF0C;&#x524D;&#x5E8F;&#x904D;&#x5386;&#xFF08;<a href="https://leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank">LeetCode 144</a>&#xFF09;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> Tree{
+    <span class="hljs-keyword">int</span> val;
+    Tree *left;
+    Tree *right;
+    Tree():val(<span class="hljs-number">0</span>),left(<span class="hljs-literal">nullptr</span>),right(<span class="hljs-literal">nullptr</span>) {};
+    Tree(<span class="hljs-keyword">int</span> x):val(x),left(<span class="hljs-literal">nullptr</span>),right(<span class="hljs-literal">nullptr</span>) {};
+    Tree(<span class="hljs-keyword">int</span> x, Tree *&amp;left, Tree *&amp;right):val(x),right(right),left(left) {};
+};
 
-    result.push_back(p-&gt;val);
-    preorder(p-&gt;left, result);
-    preorder(p-&gt;right, result);
+<span class="hljs-comment">// &#x5148;&#x5E8F;&#x904D;&#x5386; &#x9012;&#x5F52;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">search_xian</span><span class="hljs-params">(Tree *&amp;root)</span></span>{
+    Tree *t = root;
+    <span class="hljs-keyword">if</span> (root != <span class="hljs-literal">NULL</span>){
+        <span class="hljs-built_in">cout</span> &lt;&lt; root-&gt;val &lt;&lt; <span class="hljs-built_in">endl</span>;
+        search_xian(root-&gt;left);
+        search_xian(root-&gt;right);
+    }
+    root = t;
 }
 
-<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; preorderTraversal(TreeNode* root) {
-    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; result;
-        <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">nullptr</span>) {
-        <span class="hljs-keyword">return</span> result;
+<span class="hljs-comment">// &#x4E2D;&#x5E8F;&#x904D;&#x5386; &#x9012;&#x5F52;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">search_zhong</span><span class="hljs-params">(Tree *&amp;root)</span></span>{
+    Tree *t = root;
+    <span class="hljs-keyword">if</span> (root != <span class="hljs-literal">NULL</span>){
+        search_zhong(root-&gt;left);
+        <span class="hljs-built_in">cout</span> &lt;&lt; root-&gt;val &lt;&lt; <span class="hljs-built_in">endl</span>;
+        search_zhong(root-&gt;right);
     }
+    root = t;
+}
 
-    preorder(root, result);
-    <span class="hljs-keyword">return</span> result;
+<span class="hljs-comment">// &#x540E;&#x5E8F;&#x904D;&#x5386; &#x9012;&#x5F52;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">search_hou</span><span class="hljs-params">(Tree *&amp;root)</span></span>{
+    Tree *t = root;
+    <span class="hljs-keyword">if</span> (root != <span class="hljs-literal">NULL</span>){
+        search_hou(root-&gt;left);
+
+        search_hou(root-&gt;right);
+        <span class="hljs-built_in">cout</span> &lt;&lt; root-&gt;val &lt;&lt; <span class="hljs-built_in">endl</span>;
+    }
+    root = t;
 }
 </code></pre>
 <p>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x975E;&#x9012;&#x5F52;&#x904D;&#x5386;&#xFF0C;&#x4E3B;&#x8981;&#x7684;&#x601D;&#x60F3;&#x662F;&#x4F7F;&#x7528;&#x6808;&#xFF08;Stack&#xFF09;&#x6765;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x64CD;&#x4F5C;&#xFF0C;&#x8BB0;&#x5F55;&#x7ECF;&#x8FC7;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
-<p>&#x975E;&#x9012;&#x5F52;&#x524D;&#x5E8F;&#x904D;&#x5386;&#xFF08;<a href="https://leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank">LeetCode 144</a>&#xFF09;&#xFF1A;</p>
+<p>&#x975E;&#x9012;&#x5F52;&#x524D;&#x5E8F;&#x904D;&#x5386;&#xFF08;<a href="https://leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank">LeetCode 144</a>&#xFF09;&#xFF1A;
+&#x975E;&#x9012;&#x5F52;&#x4E0D;&#x662F;&#x6211;&#x5199;&#x7684;&#xFF0C;&#x4EC5;&#x505A;&#x53C2;&#x8003;</p>
 <pre><code class="lang-cpp"><span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; preorderTraversal(TreeNode* root) {
     TreeNode *p = root;
     <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; result;
@@ -2085,41 +2160,32 @@
 }
 </code></pre>
 <p>&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#xFF08;BFS&#xFF09;&#x5B9E;&#x73B0;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; levelOrder(TreeNode* root) {
-    <span class="hljs-built_in">std</span>:<span class="hljs-built_in">queue</span>&lt;TreeNode *&gt; q;
-    TreeNode *p;
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> Tree{
+    <span class="hljs-keyword">int</span> val;
+    Tree *left;
+    Tree *right;
+    Tree():val(<span class="hljs-number">0</span>),left(<span class="hljs-literal">nullptr</span>),right(<span class="hljs-literal">nullptr</span>) {};
+    Tree(<span class="hljs-keyword">int</span> x):val(x),left(<span class="hljs-literal">nullptr</span>),right(<span class="hljs-literal">nullptr</span>) {};
+    Tree(<span class="hljs-keyword">int</span> x, Tree *&amp;left, Tree *&amp;right):val(x),right(right),left(left) {};
+};
 
-    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; result;
-    <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">NULL</span>) <span class="hljs-keyword">return</span> result;
-
-    q.push(root);
-
-    <span class="hljs-keyword">while</span> (!q.empty()) {
-        <span class="hljs-keyword">int</span> size = q.size();
-        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; levelResult;
-
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; size; i++) {
-            p = q.front();
-            q.pop();
-
-            levelResult.push_back(p-&gt;val);
-
-            <span class="hljs-keyword">if</span> (p-&gt;left) {
-                q.push(p-&gt;left);
-            }
-            <span class="hljs-keyword">if</span> (p-&gt;right) {
-                q.push(p-&gt;right);
-            }
-        }
-
-        result.push_back(levelResult);
+<span class="hljs-comment">// &#x5C42;&#x6B21;&#x904D;&#x5386; BFS &#x5E7F;&#x5EA6;&#x4F18;&#x5148;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">search_ceng</span><span class="hljs-params">(Tree *&amp;root)</span></span>{
+    Tree *t = root;
+    <span class="hljs-built_in">queue</span>&lt;Tree*&gt; q;
+    <span class="hljs-keyword">while</span> (root!= <span class="hljs-literal">NULL</span>){
+        <span class="hljs-built_in">cout</span> &lt;&lt; root-&gt;val &lt;&lt; <span class="hljs-built_in">endl</span>;
+        <span class="hljs-keyword">if</span> (root-&gt;left) {q.push(root-&gt;left);}
+        <span class="hljs-keyword">if</span> (root-&gt;right) {q.push(root-&gt;right);}
+        <span class="hljs-keyword">if</span> (q.empty()) { <span class="hljs-keyword">break</span>; }
+        root = q.front();
+        q.pop();
     }
-
-    <span class="hljs-keyword">return</span> result;
+    root = t;
 }
 </code></pre>
 <h3 id="&#x4E8C;&#x53C9;&#x6811;&#x5B50;&#x6811;-leetcode-572"><a name="&#x4E8C;&#x53C9;&#x6811;&#x5B50;&#x6811;-leetcode-572" class="plugin-anchor" href="#&#x4E8C;&#x53C9;&#x6811;&#x5B50;&#x6811;-leetcode-572"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x6811;&#x5B50;&#x6811; <a href="https://leetcode.com/problems/subtree-of-another-tree/" target="_blank">LeetCode 572</a></h3>
-<p>&#x5224;&#x65AD;&#x4E8C;&#x53C9;&#x6811;&#x662F;&#x5426;&#x662F;&#x53E6;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x5B50;&#x6811;&#xFF0C;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<p>&#x5224;&#x65AD;&#x4E8C;&#x53C9;&#x6811;&#x662F;&#x5426;&#x662F;&#x53E6;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x5B50;&#x6811;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x5B50;&#x6811;&#x6307;&#x7ED3;&#x6784;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x6307;&#x9488;&#x4E5F;&#x9700;&#x76F8;&#x540C;&#xFF0C;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#xFF1A;</p>
 <pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">isSubtree</span><span class="hljs-params">(TreeNode* s, TreeNode* t)</span> </span>{
     <span class="hljs-keyword">if</span> (!s) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
     <span class="hljs-keyword">if</span> (sameTree(s, t)) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
@@ -2135,20 +2201,96 @@
 </code></pre>
 <h3 id="&#x7FFB;&#x8F6C;&#x4E8C;&#x53C9;&#x6811;-leetcode-226"><a name="&#x7FFB;&#x8F6C;&#x4E8C;&#x53C9;&#x6811;-leetcode-226" class="plugin-anchor" href="#&#x7FFB;&#x8F6C;&#x4E8C;&#x53C9;&#x6811;-leetcode-226"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7FFB;&#x8F6C;&#x4E8C;&#x53C9;&#x6811; <a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank">LeetCode 226</a></h3>
 <p>&#x4EA4;&#x4E92;&#x6811;&#x7684;&#x5DE6;&#x53F3;&#x513F;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-function">TreeNode* <span class="hljs-title">invertTree</span><span class="hljs-params">(TreeNode* root)</span> </span>{
-    <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">nullptr</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">nullptr</span>;
+<pre><code class="lang-cpp">
+<span class="hljs-function">Tree *<span class="hljs-title">inverse</span><span class="hljs-params">(Tree *&amp;tree)</span></span>{
+    <span class="hljs-keyword">if</span> (tree == <span class="hljs-literal">NULL</span>){
+        <span class="hljs-keyword">return</span> tree;
     }
-    TreeNode *tmp = root-&gt;left;
-    root-&gt;left = root-&gt;right;
-    root-&gt;right = tmp;
-    <span class="hljs-keyword">if</span> (root-&gt;left) {
-        invertTree(root-&gt;left);
+    Tree *tmp = tree-&gt;left;
+    tree-&gt;left = tree-&gt;right;
+    tree-&gt;right = tmp;
+    inverse(tree-&gt;left);
+    inverse(tree-&gt;right);
+    <span class="hljs-keyword">return</span> tree;
+}
+</code></pre>
+<h4 id="&#x7531;-&#x5148;&#x5E8F;&#x904D;&#x5386;-&#x548C;-&#x4E2D;&#x5E8F;&#x904D;&#x5386;-&#x91CD;&#x5EFA;&#x4E8C;&#x53C9;&#x6811;"><a name="&#x7531;-&#x5148;&#x5E8F;&#x904D;&#x5386;-&#x548C;-&#x4E2D;&#x5E8F;&#x904D;&#x5386;-&#x91CD;&#x5EFA;&#x4E8C;&#x53C9;&#x6811;" class="plugin-anchor" href="#&#x7531;-&#x5148;&#x5E8F;&#x904D;&#x5386;-&#x548C;-&#x4E2D;&#x5E8F;&#x904D;&#x5386;-&#x91CD;&#x5EFA;&#x4E8C;&#x53C9;&#x6811;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7531; &#x5148;&#x5E8F;&#x904D;&#x5386; &#x548C; &#x4E2D;&#x5E8F;&#x904D;&#x5386; &#x91CD;&#x5EFA;&#x4E8C;&#x53C9;&#x6811;</h4>
+<pre><code class="lang-cpp">
+<span class="hljs-comment">// &#x7531; &#x5148;&#x5E8F;&#x904D;&#x5386; &#x548C; &#x4E2D;&#x5E8F;&#x904D;&#x5386; &#x91CD;&#x5EFA;&#x4E8C;&#x53C9;&#x6811;</span>
+
+<span class="hljs-function">Tree* <span class="hljs-title">rebuild</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; preorder,<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; inorder)</span></span>{
+    <span class="hljs-keyword">if</span>(preorder.size()==<span class="hljs-number">0</span>||inorder.size()==<span class="hljs-number">0</span>)<span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+
+    Tree* root= <span class="hljs-keyword">new</span> Tree(preorder[<span class="hljs-number">0</span>]);<span class="hljs-comment">//&#x521B;&#x5EFA;&#x5F53;&#x524D;&#x7684;&#x6839;&#x8282;&#x70B9;</span>
+    <span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span>(inorder[i]!=preorder[<span class="hljs-number">0</span>])i++;<span class="hljs-comment">//&#x627E;&#x5230;&#x5F53;&#x524D;&#x6839;&#x8282;&#x70B9;&#x5728;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;i</span>
+    <span class="hljs-keyword">int</span> left=i;   <span class="hljs-comment">//&#x5DE6;&#x5B50;&#x6811;&#x7684;&#x957F;&#x5EA6;</span>
+    <span class="hljs-keyword">int</span> right=inorder.size()-i <span class="hljs-number">-1</span>;  <span class="hljs-comment">//&#x53F3;&#x5B50;&#x6811;&#x7684;&#x957F;&#x5EA6;</span>
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; sub_left_preorder,sub_left_inorder,sub_right_preorder,sub_right_inorder={};
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; ++j) {
+        sub_left_inorder.push_back(inorder[j]);
     }
-    <span class="hljs-keyword">if</span> (root-&gt;right) {
-        invertTree(root-&gt;right);
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = sub_left_inorder.size()+<span class="hljs-number">1</span>; j &lt; inorder.size(); ++j) {
+        sub_right_inorder.push_back(inorder[j]);
     }
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; preorder.size(); ++j) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; sub_left_inorder.size(); ++k) {
+            <span class="hljs-keyword">if</span> (preorder[j] == sub_left_inorder[k]){
+                sub_left_preorder.push_back(preorder[j]);
+            }
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; sub_right_inorder.size(); ++k) {
+            <span class="hljs-keyword">if</span> (preorder[j] == sub_right_inorder[k]){
+                sub_right_preorder.push_back(preorder[j]);
+            }
+        }
+    }
+    <span class="hljs-keyword">if</span>(left&gt;<span class="hljs-number">0</span>)root-&gt;left=rebuild(sub_left_preorder,sub_left_inorder);
+    <span class="hljs-keyword">if</span>(right&gt;<span class="hljs-number">0</span>)root-&gt;right=rebuild(sub_right_preorder,sub_right_inorder);
     <span class="hljs-keyword">return</span> root;
+}
+
+&#x6216;&#x8005; &#x5355;&#x72EC;&#x8BB0;&#x5F55;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x5E8F;&#x5217;&#x4F4D;&#x7F6E;&#xFF0C;&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x5224;&#x65AD;
+
+<span class="hljs-function">Tree* <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; preorder,<span class="hljs-keyword">int</span> a1,<span class="hljs-keyword">int</span> b1,<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; inorder,<span class="hljs-keyword">int</span> a2,<span class="hljs-keyword">int</span> b2)</span></span>{
+    Tree* root= <span class="hljs-keyword">new</span> Tree(preorder[a1]);<span class="hljs-comment">//&#x521B;&#x5EFA;&#x5F53;&#x524D;&#x7684;&#x6839;&#x8282;&#x70B9;</span>
+    <span class="hljs-keyword">int</span> i=a2;
+    <span class="hljs-keyword">while</span>(inorder[i]!=preorder[a1])i++;<span class="hljs-comment">//&#x627E;&#x5230;&#x5F53;&#x524D;&#x6839;&#x8282;&#x70B9;&#x5728;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;i</span>
+    <span class="hljs-keyword">int</span> left=i-a2;   <span class="hljs-comment">//&#x5DE6;&#x5B50;&#x6811;&#x7684;&#x957F;&#x5EA6;</span>
+    <span class="hljs-keyword">int</span> right=b2-i;  <span class="hljs-comment">//&#x53F3;&#x5B50;&#x6811;&#x7684;&#x957F;&#x5EA6;</span>
+    <span class="hljs-keyword">if</span>(left&gt;<span class="hljs-number">0</span>)root-&gt;left=build(preorder,a1+<span class="hljs-number">1</span>,a1+left,inorder,a2,i<span class="hljs-number">-1</span>);
+    <span class="hljs-keyword">if</span>(right&gt;<span class="hljs-number">0</span>)root-&gt;right=build(preorder,a1+left+<span class="hljs-number">1</span>,b1,inorder,i+<span class="hljs-number">1</span>,b2);
+    <span class="hljs-keyword">return</span> root;
+}
+
+<span class="hljs-function">Tree* <span class="hljs-title">buildTree</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; preorder, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; inorder)</span> </span>{
+    <span class="hljs-comment">//&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x524D;&#x5E8F;&#x904D;&#x5386;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4F4D;&#x4E00;&#x5B9A;&#x662F;&#x6839;&#x8282;&#x70B9;</span>
+    <span class="hljs-keyword">if</span>(preorder.size()==<span class="hljs-number">0</span>||inorder.size()==<span class="hljs-number">0</span>)<span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    <span class="hljs-comment">//&#x627E;&#x5230;&#x6839;&#x8282;&#x70B9;&#x5728;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x4E4B;&#x524D;&#x7684;&#x8282;&#x70B9;&#x90FD;&#x662F;&#x5DE6;&#x5B50;&#x6811;&#x8282;&#x70B9;&#xFF0C;&#x4E4B;&#x540E;&#x90FD;&#x662F;&#x53F3;&#x5B50;&#x6811;&#x8282;&#x70B9;</span>
+    <span class="hljs-keyword">return</span> build(preorder,<span class="hljs-number">0</span>,preorder.size()<span class="hljs-number">-1</span>,inorder,<span class="hljs-number">0</span>,inorder.size()<span class="hljs-number">-1</span>);
+}
+</code></pre>
+<h4 id="&#x5224;&#x65AD;&#x6811;&#x662F;&#x5426;&#x662F;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;-leetcode-110"><a name="&#x5224;&#x65AD;&#x6811;&#x662F;&#x5426;&#x662F;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;-leetcode-110" class="plugin-anchor" href="#&#x5224;&#x65AD;&#x6811;&#x662F;&#x5426;&#x662F;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;-leetcode-110"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5224;&#x65AD;&#x6811;&#x662F;&#x5426;&#x662F;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811; <a href="https://leetcode.com/problems/balanced-binary-tree/" target="_blank">LeetCode 110</a></h4>
+<pre><code class="lang-cpp">
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">get_depth</span><span class="hljs-params">(Tree *&amp;tree)</span></span>{
+    <span class="hljs-keyword">if</span> (tree == <span class="hljs-literal">NULL</span>){
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">int</span> left = get_depth(tree-&gt;left);
+    <span class="hljs-keyword">int</span> right = get_depth(tree-&gt;right);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>+ max(left,right);
+}
+
+<span class="hljs-comment">// &#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;</span>
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">is_balanced_tree</span><span class="hljs-params">(Tree *&amp;tree)</span> </span>{
+    <span class="hljs-keyword">if</span> (tree == <span class="hljs-literal">NULL</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">int</span> left = get_depth(tree-&gt;left);
+    <span class="hljs-keyword">int</span> right = get_depth(tree-&gt;right);
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(left-right) &gt;<span class="hljs-number">1</span>){
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+    <span class="hljs-keyword">return</span> is_balanced_tree(tree-&gt;left) &amp;&amp; is_balanced_tree(tree-&gt;right);
 }
 </code></pre>
 <h3 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a name="&#x53C2;&#x8003;&#x8D44;&#x6599;" class="plugin-anchor" href="#&#x53C2;&#x8003;&#x8D44;&#x6599;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h3>
@@ -2162,7 +2304,7 @@
 <li><a href="http://baike.baidu.com/view/9875057.htm" target="_blank">&#x767E;&#x5EA6;&#x767E;&#x79D1;&#xFF1A;&#x524D;&#x7F00;&#x6811;</a> </li>
 </ul>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; GUORONG LI 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2021-01-24 23:56:54
+2021-02-10 20:59:44
 </span></footer>
                                 
                                 </section>
@@ -2222,7 +2364,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"树","level":"1.2.2.4","depth":3,"next":{"title":"DFS BFS搜索","level":"1.2.2.5","depth":3,"path":"basic/algo/search.md","ref":"basic/algo/search.md","articles":[]},"previous":{"title":"哈希表","level":"1.2.2.3","depth":3,"path":"basic/algo/Hash-Table.md","ref":"basic/algo/Hash-Table.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","search-pro","back-to-top-button","livereload","chapter-fold","splitter","hide-element","pageview-count","tbfed-pagefooter","katex","github-buttons","alerts","sharing","search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy GUORONG LI 2020","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"search":{"maxIndexSize":100000},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"alerts":{},"github-buttons":{"repo":"44825762/Review","types":["star","watch","fork"],"size":"small"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"GUORONG LI <44825762@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"计算机知识总结","gitbook":"*","description":"一路走来，总结自己在计算机方面需要用到的一些知识，温故而知新，也是极好的"},"file":{"path":"basic/algo/Tree.md","mtime":"2021-01-24T15:56:54.365Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-28T00:05:09.678Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"树","level":"1.2.2.4","depth":3,"next":{"title":"DFS BFS搜索","level":"1.2.2.5","depth":3,"path":"basic/algo/search.md","ref":"basic/algo/search.md","articles":[]},"previous":{"title":"哈希表","level":"1.2.2.3","depth":3,"path":"basic/algo/Hash-Table.md","ref":"basic/algo/Hash-Table.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","search-pro","back-to-top-button","livereload","chapter-fold","splitter","hide-element","pageview-count","tbfed-pagefooter","katex","github-buttons","alerts","sharing","search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy GUORONG LI 2020","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"search":{"maxIndexSize":100000},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"alerts":{},"github-buttons":{"repo":"44825762/Review","types":["star","watch","fork"],"size":"small"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"GUORONG LI <44825762@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"计算机知识总结","gitbook":"*","description":"一路走来，总结自己在计算机方面需要用到的一些知识，温故而知新，也是极好的"},"file":{"path":"basic/algo/Tree.md","mtime":"2021-02-10T12:59:44.563Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-26T02:53:23.732Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

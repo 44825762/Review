@@ -19,6 +19,7 @@
             * [CNN 公式计算](#CNN%20公式计算)
             * [CNN 例子](#CNN%20例子)
             * [CNN 框架发展](#CNN%20框架发展)
+        * [Batch Normalization](#Batch%20Normalization)
         * [AlexNet](#AlexNet)
         * [Restricted Boltzmann Machines - 受限玻尔兹曼机](#Restricted%20Boltzmann%20Machines%20-%20受限玻尔兹曼机)
             * [RBM 计算](#RBM%20计算)
@@ -36,9 +37,6 @@
         * [Long short-term memory(LSTM) 长短时记忆网络](#)
             * [推导](#推导)
         * [Recursive Neural Network 递归神经网络](#Recursive%20Neural%20Network%20递归神经网络)
-        * [Graph Neural Networks(GNN) 图神经网络](#)
-        * [Competitive Learning Networks - 竞争学习神经网络](#Competitive%20Learning%20Networks%20-%20竞争学习神经网络)
-
         * [Attention机制](#Attention机制)
             * [Attention Mechanism 原理](#)
             * [Attention Mechanism 模块图解](#)
@@ -62,7 +60,12 @@
                     * [看图说话](#)
                 * [任务聚焦/解耦](#)
                     * [图像分割](#)
-            * [Attention 计算过程](#)
+                * [Attention 计算过程](#)
+        * [Attention -> Transformer](#CAttention%20->%20Transformer)
+        * [Capsule Networks - 胶囊网络](#Capsule%20Networks%20-%20胶囊网络)
+        * [Competitive Learning Networks - 竞争学习神经网络](#Competitive%20Learning%20Networks%20-%20竞争学习神经网络)
+        * [Graph Neural Networks(GNN) 图神经网络](#Graph%20Neural%20Networks(GNN)%20图神经网络)
+
         * [待补充](#)
             * [Inhibitory Feedback Networks - 抑制反馈网络](#Inhibitory%20Feedback%20Networks%20-%20抑制反馈网络)
             * [Radial Basis Function Networks - 径向基函数神经网络](#Radial%20Basis%20Function%20Networks%20-%20径向基函数神经网络)
@@ -211,6 +214,37 @@ https://cs231n.github.io/convolutional-networks/
 * CNN 框架发展
 
 ![CNN 21](img/cnn_21.png)
+
+----
+
+* #### Batch Normalization
+
+![Batch Normalization 1](img/Batch_Normalization_1.png)
+![Batch Normalization 2](img/Batch_Normalization_2.png)
+![Batch Normalization 3](img/Batch_Normalization_3.png)
+![Batch Normalization 4](img/Batch_Normalization_4.png)
+![Batch Normalization 5](img/Batch_Normalization_5.png)
+![Batch Normalization 6](img/Batch_Normalization_6.png)
+![Batch Normalization 7](img/Batch_Normalization_7.png)
+![Batch Normalization 8](img/Batch_Normalization_8.png)
+![Batch Normalization 9](img/Batch_Normalization_9.png)
+![Batch Normalization 13](img/Batch_Normalization_13.png)
+![Batch Normalization 14](img/Batch_Normalization_14.png)
+![Batch Normalization 15](img/Batch_Normalization_15.png)
+![Batch Normalization 16](img/Batch_Normalization_16.png)
+![Batch Normalization 17](img/Batch_Normalization_17.png)
+![Batch Normalization 18](img/Batch_Normalization_18.png)
+![Batch Normalization 19](img/Batch_Normalization_19.png)
+![Batch Normalization 20](img/Batch_Normalization_20.png)
+![Batch Normalization 10](img/Batch_Normalization_10.png)
+![Batch Normalization 11](img/Batch_Normalization_11.png)
+![Batch Normalization 12](img/Batch_Normalization_12.png)
+
+![Batch Normalization 21](img/Batch_Normalization_21.png)
+![Batch Normalization 22](img/Batch_Normalization_22.png)
+![Batch Normalization 23](img/Batch_Normalization_23.png)
+![Batch Normalization 24](img/Batch_Normalization_24.png)
+
 
 ----
 
@@ -451,41 +485,6 @@ https://www.cnblogs.com/YiXiaoZhou/p/6058890.html
 
 ----------
 
-
-* #### Graph Neural Networks(GNN) 图神经网络
-
-清华大学GNN paper list: https://github.com/thunlp/GNNPapers/blob/master/README.md#survey-papers
-
-![GNN 1](img/GNN_1.png)
-![GNN 2](img/GNN_2.png)
-![GNN 3](img/GNN_3.png)
-![GNN 4](img/GNN_4.png)
-![GNN 5](img/GNN_5.png)
-![GNN 6](img/GNN_6.png)
-![GNN 7](img/GNN_7.png)
-![GNN 8](img/GNN_8.png)
-![GNN 9](img/GNN_9.png)
-![GNN 10](img/GNN_10.png)
-![GNN 11](img/GNN_11.png)
-![GNN 12](img/GNN_12.png)
-![GNN 13](img/GNN_13.png)
-![GNN 14](img/GNN_14.png)
-![GNN 15](img/GNN_15.png)
-![GNN 16](img/GNN_16.png)
-![GNN 17](img/GNN_17.png)
-![GNN 18](img/GNN_18.png)
-![GNN 19](img/GNN_19.png)
-![GNN 20](img/GNN_20.png)
-![GNN 21](img/GNN_21.png)
-
-
-----
-* #### Competitive Learning Networks - 竞争学习神经网络
-
-所谓竞争学习神经网络，是在输出层对多个节点返回的数据做选择。选择方法可以是投票可以是算平均值等。
-
------
-
 * #### Attention机制
 
 ![Attention 1](img/attention_1.png)
@@ -533,8 +532,62 @@ https://www.cnblogs.com/YiXiaoZhou/p/6058890.html
 ![Attention 43](img/attention_43.png)
 ![Attention 44](img/attention_44.png)
 
+![Attention 45](img/attention_45.png)
+![Attention 46](img/attention_46.png)
+![Attention 47](img/attention_47.png)
+![Attention 48](img/attention_48.png)
+![Attention 49](img/attention_49.png)
+![Attention 50](img/attention_50.png)
+![Attention 51](img/attention_51.png)
+![Attention 52](img/attention_52.png)
+![Attention 53](img/attention_53.png)
+![Attention 54](img/attention_54.png)
+![Attention 55](img/attention_55.png)
+![Attention 56](img/attention_56.png)
+![Attention 57](img/attention_57.png)
+![Attention 58](img/attention_58.png)
+![Attention 59](img/attention_59.png)
+![Attention 60](img/attention_60.png)
+![Attention 61](img/attention_61.png)
+![Attention 62](img/attention_62.png)
+![Attention 63](img/attention_63.png)
+![Attention 64](img/attention_64.png)
+![Attention 65](img/attention_65.png)
+![Attention 66](img/attention_66.png)
+![Attention 67](img/attention_67.png)
 
 -----
+
+* #### Attention -> Transformer
+CV - DETR (https://github.com/facebookresearch/detr)
+CV - SCA-CNN
+目标检测：ResNeSt - Split-Attention Networks (https://github.com/zhanghang1989/ResNeSt)(https://hangzhang.org/files/resnest.pdf)
+[重要参考](http://jalammar.github.io/illustrated-transformer/)
+![Transformer 1](img/Transformer_1.png)
+![Transformer 2](img/Transformer_2.png)
+![Transformer 3](img/Transformer_3.png)
+![Transformer 4](img/Transformer_4.png)
+![Transformer 5](img/Transformer_5.png)
+![Transformer 6](img/Transformer_6.png)
+[方法2参考文献](https://arxiv.org/abs/1705.03122)
+![Transformer 7](img/Transformer_7.png)
+![Transformer 8](img/Transformer_8.png)
+![Transformer 9](img/Transformer_9.png)
+![Transformer 10](img/Transformer_10.png)
+![Transformer 17](img/Transformer_17.png)
+![Transformer 11](img/Transformer_11.png)
+![Transformer 12](img/Transformer_12.png)
+![Transformer 13](img/Transformer_13.png)
+![Transformer 14](img/Transformer_14.png)
+![Transformer 15](img/Transformer_15.png)
+![Transformer 18](img/Transformer_18.png)
+![Transformer 16](img/Transformer_16.png)
+![Transformer 19](img/Transformer_19.png)
+
+
+
+-----
+
 
 * #### Capsule Networks - 胶囊网络
 
@@ -625,8 +678,40 @@ https://jhui.github.io/2017/11/03/Dynamic-Routing-Between-Capsules/
 --------
 
 
+* #### Competitive Learning Networks - 竞争学习神经网络
+
+所谓竞争学习神经网络，是在输出层对多个节点返回的数据做选择。选择方法可以是投票可以是算平均值等。
+
+-----
+
+* #### Graph Neural Networks(GNN) 图神经网络
+
+清华大学GNN paper list: https://github.com/thunlp/GNNPapers/blob/master/README.md#survey-papers
+
+![GNN 1](img/GNN_1.png)
+![GNN 2](img/GNN_2.png)
+![GNN 3](img/GNN_3.png)
+![GNN 4](img/GNN_4.png)
+![GNN 5](img/GNN_5.png)
+![GNN 6](img/GNN_6.png)
+![GNN 7](img/GNN_7.png)
+![GNN 8](img/GNN_8.png)
+![GNN 9](img/GNN_9.png)
+![GNN 10](img/GNN_10.png)
+![GNN 11](img/GNN_11.png)
+![GNN 12](img/GNN_12.png)
+![GNN 13](img/GNN_13.png)
+![GNN 14](img/GNN_14.png)
+![GNN 15](img/GNN_15.png)
+![GNN 16](img/GNN_16.png)
+![GNN 17](img/GNN_17.png)
+![GNN 18](img/GNN_18.png)
+![GNN 19](img/GNN_19.png)
+![GNN 20](img/GNN_20.png)
+![GNN 21](img/GNN_21.png)
 
 
+----
 
 
 

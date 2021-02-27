@@ -13,7 +13,7 @@
 
 新的监测网络使用 Transformer ，如： Detection Transformer
 
-
+Faster R-CNN
 RetinaNet 
 
 

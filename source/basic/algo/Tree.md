@@ -21,6 +21,8 @@
 
 -----------------
 ### 二叉树
+[参考](https://www.cnblogs.com/A-FM/p/11604720.html)
+
 
 ![Tree 1](img/tree_1.png)
 ![Tree 2](img/tree_2.png)
@@ -49,6 +51,12 @@
 * 仅有前序和后序遍历，不能确定一个二叉树，必须有中序遍历的结果
 
 
+**树的遍历**
+
+* 先序遍历
+* 中序遍历
+* 后序遍历
+* 层次遍历 (使用队列 queue 完成)
 
 **树类搜索算法**
 
@@ -106,6 +114,31 @@
 
 二分查找的时间复杂度是O(log(n))，最坏情况下的时间复杂度是O(n)（相当于顺序查找）
 
+```cpp
+struct Tree{
+    int val;
+    Tree *left;
+    Tree *right;
+    Tree():val(0),left(nullptr),right(nullptr) {};
+    Tree(int x):val(x),left(nullptr),right(nullptr) {};
+    Tree(int x, Tree *&left, Tree *&right):val(x),right(right),left(left) {};
+};
+
+Tree *build_insert(Tree *&root, int val){
+    if (root == NULL){
+        root = new Tree(val);
+        return root;
+    }
+    if (val < root->val){
+        root->left = build_insert(root->left,val);
+    }else{
+        root->right = build_insert(root->right,val);
+    }
+    return root;
+}
+```
+
+
 -----
 
 ### 平衡二叉树
@@ -115,7 +148,30 @@
 1. 它的左子树和右子树都是平衡二叉树，
 2. 左子树和右子树的深度之差的绝对值不超过1。
 
+平衡二叉树是在二叉排序树的插入和删除之后加树的旋转，旋转算法是难点。实现时需加入平衡因子。
+
+* 核心思想： 让同一个root的两个子树的高度之差的绝对值不超过1，因此，我们需要进行“换根”操作，即旋转，旋转又分单旋转和双旋转。
+
 平衡二叉树是对二叉搜索树(又称为二叉排序树)的一种改进。二叉搜索树有一个缺点就是，树的结构是无法预料的，随意性很大，它只与节点的值和插入的顺序有关系，往往得到的是一个不平衡的二叉树。在最坏的情况下，可能得到的是一个单支二叉树，其高度和节点数相同，相当于一个单链表，对其正常的时间复杂度有O(log(n))变成了O(n)，从而丧失了二叉排序树的一些应该有的优点。
+
+![Tree 28](img/tree_28.png)
+![Tree 29](img/tree_29.png)
+![Tree 30](img/tree_30.png)
+![Tree 31](img/tree_31.png)
+![Tree 32](img/tree_32.png)
+
+* 旋转方式解析
+
+![Tree 33](img/tree_33.png)
+![Tree 34](img/tree_34.png)
+![Tree 35](img/tree_35.png)
+![Tree 36](img/tree_36.png)
+![Tree 37](img/tree_37.png)
+![Tree 38](img/tree_38.png)
+![Tree 39](img/tree_39.png)
+![Tree 40](img/tree_40.png)
+![Tree 41](img/tree_41.png)
+
 
 --------
 
@@ -182,34 +238,57 @@ Trie 树常用于搜索提示。如当输入一个网址，可以自动搜索出
 
 #### 二叉树前中后序遍历
 
-二叉树的前中后序遍历，使用递归算法实现最为简单，以前序遍历（[LeetCode 144](https://leetcode.com/problems/binary-tree-preorder-traversal/)）为例：
+二叉树的前中后序遍历，使用递归算法实现最为简单，前序遍历（[LeetCode 144](https://leetcode.com/problems/binary-tree-preorder-traversal/)）为例：
 
 ```cpp
- void preorder(TreeNode *p, vector<int>& result) {
-    if (p == NULL) {
-        return;
-    }
+struct Tree{
+    int val;
+    Tree *left;
+    Tree *right;
+    Tree():val(0),left(nullptr),right(nullptr) {};
+    Tree(int x):val(x),left(nullptr),right(nullptr) {};
+    Tree(int x, Tree *&left, Tree *&right):val(x),right(right),left(left) {};
+};
 
-    result.push_back(p->val);
-    preorder(p->left, result);
-    preorder(p->right, result);
+// 先序遍历 递归
+void search_xian(Tree *&root){
+    Tree *t = root;
+    if (root != NULL){
+        cout << root->val << endl;
+        search_xian(root->left);
+        search_xian(root->right);
+    }
+    root = t;
 }
 
-vector<int> preorderTraversal(TreeNode* root) {
-    vector<int> result;
-        if (root == nullptr) {
-        return result;
+// 中序遍历 递归
+void search_zhong(Tree *&root){
+    Tree *t = root;
+    if (root != NULL){
+        search_zhong(root->left);
+        cout << root->val << endl;
+        search_zhong(root->right);
     }
+    root = t;
+}
 
-    preorder(root, result);
-    return result;
+// 后序遍历 递归
+void search_hou(Tree *&root){
+    Tree *t = root;
+    if (root != NULL){
+        search_hou(root->left);
+
+        search_hou(root->right);
+        cout << root->val << endl;
+    }
+    root = t;
 }
 ```
 
 二叉树的非递归遍历，主要的思想是使用栈（Stack）来进行存储操作，记录经过的节点。
 
 非递归前序遍历（[LeetCode 144](https://leetcode.com/problems/binary-tree-preorder-traversal/)）：
-
+非递归不是我写的，仅做参考
 ```cpp
 vector<int> preorderTraversal(TreeNode* root) {
     TreeNode *p = root;
@@ -326,43 +405,34 @@ vector<vector<int> > levelOrder(TreeNode *root) {
 广度优先（BFS）实现：
 
 ```cpp
-vector<vector<int>> levelOrder(TreeNode* root) {
-    std:queue<TreeNode *> q;
-    TreeNode *p;
+struct Tree{
+    int val;
+    Tree *left;
+    Tree *right;
+    Tree():val(0),left(nullptr),right(nullptr) {};
+    Tree(int x):val(x),left(nullptr),right(nullptr) {};
+    Tree(int x, Tree *&left, Tree *&right):val(x),right(right),left(left) {};
+};
 
-    vector<vector<int>> result;
-    if (root == NULL) return result;
-
-    q.push(root);
-
-    while (!q.empty()) {
-        int size = q.size();
-        vector<int> levelResult;
-
-        for (int i = 0; i < size; i++) {
-            p = q.front();
-            q.pop();
-
-            levelResult.push_back(p->val);
-
-            if (p->left) {
-                q.push(p->left);
-            }
-            if (p->right) {
-                q.push(p->right);
-            }
-        }
-
-        result.push_back(levelResult);
+// 层次遍历 BFS 广度优先
+void search_ceng(Tree *&root){
+    Tree *t = root;
+    queue<Tree*> q;
+    while (root!= NULL){
+        cout << root->val << endl;
+        if (root->left) {q.push(root->left);}
+        if (root->right) {q.push(root->right);}
+        if (q.empty()) { break; }
+        root = q.front();
+        q.pop();
     }
-
-    return result;
+    root = t;
 }
 ```
 
 ### 二叉树子树 [LeetCode 572](https://leetcode.com/problems/subtree-of-another-tree/)
 
-判断二叉树是否是另一棵二叉树的子树，使用递归实现：
+判断二叉树是否是另一棵二叉树的子树，这里的子树指结构完全相同，所以需要注意叶子节点的指针也需相同，使用递归实现：
 
 ```cpp
 bool isSubtree(TreeNode* s, TreeNode* t) {
@@ -384,22 +454,108 @@ bool sameTree(TreeNode* s, TreeNode* t) {
 交互树的左右儿子节点，使用递归实现：
 
 ```cpp
-TreeNode* invertTree(TreeNode* root) {
-    if (root == nullptr) {
-        return nullptr;
+
+Tree *inverse(Tree *&tree){
+    if (tree == NULL){
+        return tree;
     }
-    TreeNode *tmp = root->left;
-    root->left = root->right;
-    root->right = tmp;
-    if (root->left) {
-        invertTree(root->left);
-    }
-    if (root->right) {
-        invertTree(root->right);
-    }
-    return root;
+    Tree *tmp = tree->left;
+    tree->left = tree->right;
+    tree->right = tmp;
+    inverse(tree->left);
+    inverse(tree->right);
+    return tree;
 }
 ```
+#### 由 先序遍历 和 中序遍历 重建二叉树 
+
+```cpp
+
+// 由 先序遍历 和 中序遍历 重建二叉树
+
+Tree* rebuild(vector<int>& preorder,vector<int>& inorder){
+    if(preorder.size()==0||inorder.size()==0)return NULL;
+
+    Tree* root= new Tree(preorder[0]);//创建当前的根节点
+    int i=0;
+    while(inorder[i]!=preorder[0])i++;//找到当前根节点在中序遍历中的位置i
+    int left=i;   //左子树的长度
+    int right=inorder.size()-i -1;  //右子树的长度
+    vector<int> sub_left_preorder,sub_left_inorder,sub_right_preorder,sub_right_inorder={};
+    for (int j = 0; j < i; ++j) {
+        sub_left_inorder.push_back(inorder[j]);
+    }
+    for (int j = sub_left_inorder.size()+1; j < inorder.size(); ++j) {
+        sub_right_inorder.push_back(inorder[j]);
+    }
+
+    for (int j = 0; j < preorder.size(); ++j) {
+        for (int k = 0; k < sub_left_inorder.size(); ++k) {
+            if (preorder[j] == sub_left_inorder[k]){
+                sub_left_preorder.push_back(preorder[j]);
+            }
+        }
+        for (int k = 0; k < sub_right_inorder.size(); ++k) {
+            if (preorder[j] == sub_right_inorder[k]){
+                sub_right_preorder.push_back(preorder[j]);
+            }
+        }
+    }
+    if(left>0)root->left=rebuild(sub_left_preorder,sub_left_inorder);
+    if(right>0)root->right=rebuild(sub_right_preorder,sub_right_inorder);
+    return root;
+}
+
+或者 单独记录左右子树序列位置，进行递归判断
+
+Tree* build(vector<int>& preorder,int a1,int b1,vector<int>& inorder,int a2,int b2){
+    Tree* root= new Tree(preorder[a1]);//创建当前的根节点
+    int i=a2;
+    while(inorder[i]!=preorder[a1])i++;//找到当前根节点在中序遍历中的位置i
+    int left=i-a2;   //左子树的长度
+    int right=b2-i;  //右子树的长度
+    if(left>0)root->left=build(preorder,a1+1,a1+left,inorder,a2,i-1);
+    if(right>0)root->right=build(preorder,a1+left+1,b1,inorder,i+1,b2);
+    return root;
+}
+
+Tree* buildTree(vector<int>& preorder, vector<int>& inorder) {
+    //二叉树的前序遍历中的第一位一定是根节点
+    if(preorder.size()==0||inorder.size()==0)return NULL;
+    //找到根节点在中序遍历中的位置，中序遍历之前的节点都是左子树节点，之后都是右子树节点
+    return build(preorder,0,preorder.size()-1,inorder,0,inorder.size()-1);
+}
+
+```
+
+
+
+#### 判断树是否是平衡二叉树 [LeetCode 110](https://leetcode.com/problems/balanced-binary-tree/)
+```cpp
+
+int get_depth(Tree *&tree){
+    if (tree == NULL){
+        return 0;
+    }
+    int left = get_depth(tree->left);
+    int right = get_depth(tree->right);
+    return 1+ max(left,right);
+}
+
+// 判断是否是平衡二叉树
+bool is_balanced_tree(Tree *&tree) {
+    if (tree == NULL) return true;
+    int left = get_depth(tree->left);
+    int right = get_depth(tree->right);
+    if (abs(left-right) >1){
+        return false;
+    }
+    return is_balanced_tree(tree->left) && is_balanced_tree(tree->right);
+}
+
+```
+
+
 
 ### 参考资料
 

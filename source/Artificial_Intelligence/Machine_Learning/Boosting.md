@@ -182,9 +182,10 @@ L2Boosting全称：Least Squares Boosting；该算法由Buhlmann和Yu在2003年�
 #### GBDT分类树
 
 ![GBDT 8](ML_img/gbdt_8.png)
-![GBDT 9](ML_img/gbdt_9.png)
+![GBDT 9](ML_img/gbdt_9.png) 
 ![GBDT 10](ML_img/gbdt_10.png)
 ![GBDT 11](ML_img/gbdt_11.png)
+![GBDT 15](ML_img/gbdt_15.png)
 [多分类例题及代码实现](https://www.cnblogs.com/bnuvincent/p/9693190.html)
 
 #### GBDT 例题
